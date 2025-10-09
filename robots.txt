@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://addev-studio.com/sitemap.xml
