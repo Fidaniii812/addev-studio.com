@@ -1,4 +1,10 @@
-
+<main>
+  <article>
+    <h2><a href="article1.html">How to Grow Your Business Online in 2025 — Simple Steps for Success</a></h2>
+    <p>Discover effective digital marketing and web strategies to grow your small business online with AdDev Studio.</p>
+    <a href="article1.html">Read more →</a>
+  </article>
+</main>
 <!DOCTYPE html>
 <html lang="en">
 <head>
