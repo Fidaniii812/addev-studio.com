@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Grow Your Business Online in 2025 | AdDev Studio</title>
+  <meta name="description" content="Learn the most effective digital strategies to grow your business online in 2025. Tips by AdDev Studio.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>AdDev Studio Blog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>How to Grow Your Business Online in 2025 — Simple Steps</h2>
+      <p>In 2025, having a strong online presence is no longer optional — it’s essential. Whether you’re a small business or a growing brand, your website is your digital storefront.</p>
+      <h3>1. Build a Modern Website</h3>
+      <p>Your website should be fast, mobile-friendly, and visually appealing. Use clear messages and calls to action that guide visitors to your services.</p>
+
+      <h3>2. Optimize for SEO</h3>
+      <p>Search engine optimization helps your business get discovered. Focus on keywords related to your products and services.</p>
+
+      <h3>3. Use Social Media</h3>
+      <p>Share valuable content on social media platforms to connect with potential customers and build trust in your brand.</p>
+
+      <h3>4. Invest in Digital Advertising</h3>
+      <p>Platforms like Google Ads and Meta Ads help you reach targeted audiences and bring real traffic to your website.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 AdDev Studio — Digital Marketing & Web Development</p>
+  </footer>
+</body>
+</html>
