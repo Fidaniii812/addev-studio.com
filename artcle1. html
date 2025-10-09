@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Grow Your Business Online in 2025 | AdDev Studio</title>
-  <meta name="description" content="Learn the most effective digital strategies to grow your business online in 2025. Tips by AdDev Studio.">
+  <meta name="description" content="Learn the best strategies to grow your business online in 2025 — SEO, social media, and smart web design tips from AdDev Studio.">
+  <meta name="keywords" content="grow business online, digital marketing 2025, SEO tips, AdDev Studio, website growth">
+  <meta name="author" content="AdDev Studio">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,31 +14,37 @@
     <h1>AdDev Studio Blog</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
+      <a href="blog.html" class="active">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
     <article>
-      <h2>How to Grow Your Business Online in 2025 — Simple Steps</h2>
-      <p>In 2025, having a strong online presence is no longer optional — it’s essential. Whether you’re a small business or a growing brand, your website is your digital storefront.</p>
-      <h3>1. Build a Modern Website</h3>
-      <p>Your website should be fast, mobile-friendly, and visually appealing. Use clear messages and calls to action that guide visitors to your services.</p>
+      <h2>How to Grow Your Business Online in 2025 — Simple Steps for Success</h2>
+      <p>In 2025, growing your business online is all about having a strong presence and delivering value. Whether you're a small startup or an established company, digital growth starts with a clear strategy.</p>
 
-      <h3>2. Optimize for SEO</h3>
-      <p>Search engine optimization helps your business get discovered. Focus on keywords related to your products and services.</p>
+      <h3>1. Focus on Your Website</h3>
+      <p>Your website is the digital face of your business. Make sure it's fast, mobile-friendly, and clearly explains what you offer. Use clean design and SEO-optimized content to attract visitors.</p>
 
-      <h3>3. Use Social Media</h3>
-      <p>Share valuable content on social media platforms to connect with potential customers and build trust in your brand.</p>
+      <h3>2. Use Smart SEO</h3>
+      <p>SEO (Search Engine Optimization) helps your site appear higher on Google. Use relevant keywords, create valuable content, and make sure your pages load quickly.</p>
 
-      <h3>4. Invest in Digital Advertising</h3>
-      <p>Platforms like Google Ads and Meta Ads help you reach targeted audiences and bring real traffic to your website.</p>
+      <h3>3. Engage on Social Media</h3>
+      <p>Platforms like Instagram, LinkedIn, and TikTok are essential tools for reaching your audience. Post regularly and share insights, tips, and updates about your business.</p>
+
+      <h3>4. Use Email Marketing</h3>
+      <p>Build an email list and send newsletters or offers to your customers. It’s one of the most effective ways to keep people engaged and coming back.</p>
+
+      <h3>5. Track Your Performance</h3>
+      <p>Use tools like Google Analytics to understand what works best. Track your traffic, audience behavior, and conversions to improve continuously.</p>
+
+      <p><strong>Conclusion:</strong> Digital growth in 2025 is all about being authentic, consistent, and data-driven. With the right approach, any small business can achieve big success online — and AdDev Studio is here to help.</p>
     </article>
   </main>
 
   <footer>
-    <p>© 2025 AdDev Studio — Digital Marketing & Web Development</p>
+    <p>© 2025 AdDev Studio. All rights reserved.</p>
   </footer>
 </body>
 </html>
