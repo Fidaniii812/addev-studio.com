@@ -17,5 +17,106 @@
   <p>Në një botë ku çdo gjë po zhvendoset online, mungesa e një faqeje interneti do të thotë mungesë mundësish. Një faqe e thjeshtë ndihmon biznesin të prezantohet, të fitojë besim dhe të tërheqë klientë të rinj.</p>
   <p>Faqja jote është dera digjitale e biznesit. Sa më shpejt ta hapësh, aq më shpejt fillon rritja.</p>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdDev Studio — Digital Solutions for Every Business</title>
+  <meta name="description" content="AdDev Studio helps small businesses get online with clean websites, basic SEO, and simple marketing that works." />
+
+  <!-- AdSense loader (ok to keep in head; ads will show only after approval) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8174125118127927" crossorigin="anonymous"></script>
+
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0f172a; --muted:#586173; --soft:#f1f5f9; --brand:#0b57d0; --ring:#e5e7eb;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .logo{font-weight:800;letter-spacing:.2px}
+    .menu a{margin-left:16px}
+    .hero{display:grid;grid-template-columns:1.2fr;gap:18px;padding:24px;border:1px solid var(--ring);border-radius:16px;background:linear-gradient(180deg,#ffffff, #f8fbff)}
+    .hero h1{font-size:2rem;margin:.2rem 0 0}
+    .hero p{color:var(--muted);margin:.2rem 0 1rem}
+    .cta{display:inline-block;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px}
+    .ghost{background:transparent;color:var(--ink);border:1px solid var(--ring)}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin:26px 0}
+    .card{border:1px solid var(--ring);border-radius:14px;padding:16px;background:#fff}
+    .card h3{margin:.2rem 0}
+    .muted{color:var(--muted)}
+    footer{margin:28px 0 14px;color:var(--muted);font-size:.95rem}
+    .tag{display:inline-block;background:#eef4ff;color:var(--brand);border-radius:999px;padding:4px 10px;font-size:.85rem;margin-right:6px}
+
+    /* widen on larger screens */
+    @media (min-width:900px){
+      .hero{grid-template-columns:1.1fr .9fr;align-items:center}
+      .grid{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="logo">AdDev Studio</div>
+      <div class="menu">
+        <a href="/">Home</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div>
+        <h1>Digital Solutions for Every Business</h1>
+        <p>We build simple, fast websites and help you show up on Google with practical SEO and clean design. Start small, grow steady.</p>
+        <a class="cta" href="/blog.html">Read our first article →</a>
+        <a class="cta ghost" style="margin-left:8px" href="mailto:info@addev-studio.com?subject=Website%20request">Get a free suggestion</a>
+        <div style="margin-top:12px">
+          <span class="tag">#WebDesign</span>
+          <span class="tag">#SEO</span>
+          <span class="tag">#Marketing</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>What we do</h3>
+        <ul class="muted" style="margin:8px 0 0 18px">
+          <li>Starter website (one-page) for small business</li>
+          <li>Basic SEO setup (titles, speed, structure)</li>
+          <li>Simple content & blog to attract visitors</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Fast & Clean</h3>
+        <p class="muted">Lightweight pages that load quickly on phones. Better experience → better results.</p>
+      </div>
+      <div class="card">
+        <h3>SEO Basics</h3>
+        <p class="muted">Your site is structured so Google can understand and index it easily.</p>
+      </div>
+      <div class="card">
+        <h3>Built to Grow</h3>
+        <p class="muted">Add new pages and articles anytime to increase traffic over time.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Latest from the Blog</h3>
+      <p class="muted">Start with the fundamentals and keep things simple.</p>
+      <p><a href="/blog.html">How to Grow Your Business Online in 2025 — Simple Steps for Beginners</a></p>
+    </section>
+
+    <footer>
+      <hr style="border:0;border-top:1px solid var(--ring);margin:18px 0">
+      <div>© <span id="y"></span> AdDev Studio · <a href="/privacy.html">Privacy</a></div>
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
 </html>
-<!-- refresh -->
