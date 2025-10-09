@@ -1,94 +1,63 @@
+
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pse çdo biznes ka nevojë për një faqe interneti (+ si ta fillosh sot)</title>
-  <meta name="description" content="Udhëzues praktik për bizneset: pse një faqe interneti është thelbësore në 2025 dhe si ta nisësh falas me GitHub Pages. SEO, kontakt, shpejtësi dhe besueshmëri." />
-  <!-- Google AdSense (opsionale – mund ta lësh edhe pa të, por s’prish punë) -->
+  <title>How to Grow Your Business Online in 2025 — Simple Steps for Beginners</title>
+  <meta name="description" content="A simple guide to launch and grow your business online in 2025: clean websites, basic SEO, helpful content and consistent improvements." />
+  
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8174125118127927" crossorigin="anonymous"></script>
+  
   <style>
-    body{margin:0;padding:24px;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.65;color:#1a1a1a;background:#fff;}
-    header,footer{max-width:860px;margin:auto}
-    main{max-width:860px;margin:18px auto}
-    h1{font-size:2.1rem;line-height:1.2;margin:0 0 10px}
-    h2{margin-top:2rem}
-    p,li{font-size:1.05rem}
-    .meta{color:#666;font-size:.95rem;margin-bottom:18px}
-    .box{background:#f7f7f9;border:1px solid #ececf2;border-radius:10px;padding:14px;margin:14px 0}
-    .cta{display:inline-block;background:#111;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;margin-top:10px}
-    nav a{color:#0b57d0;text-decoration:none;margin-right:14px}
-    .tag{display:inline-block;background:#eef4ff;color:#0b57d0;border-radius:999px;padding:4px 10px;font-size:.85rem;margin-right:6px}
-    hr{border:0;border-top:1px solid #eee;margin:28px 0}
+    body {margin:0; padding:24px; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    header, footer {max-width:860px; margin:auto;}
+    main {max-width:860px; margin:18px auto;}
+    h1 {font-size:2rem; line-height:1.2; margin:1rem 0;}
+    h2 {margin-top:2rem;}
+    p, li {font-size:1.05rem; line-height:1.6;}
+    .meta {color:#666; font-size:.95rem; margin-bottom:18px;}
+    .cta {display:inline-block; background:#0073e6; color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; margin-top:20px;}
+    .cta:hover {background:#005bb5;}
   </style>
 </head>
+
 <body>
   <header>
     <nav>
-      <a href="/">Kreu</a>
-      <a href="/blog.html">Blog</a>
-      <a href="#kontakto">Kontakt</a>
+      <a href="index.html">🏠 Home</a> |
+      <a href="blog.html">📰 Blog</a> |
+      <a href="contact.html">✉️ Contact</a>
     </nav>
   </header>
 
   <main>
-    <h1>Pse çdo biznes ka nevojë për një faqe interneti në 2025 (dhe si ta fillosh sot)</h1>
-    <div class="meta">Publikuar: <time datetime="2025-10-07">7 Tetor 2025</time> · nga AdDev Studio
-      <span class="tag">#ZhvillimWeb</span> <span class="tag">#MarketingDigjital</span> <span class="tag">#SEO</span>
-    </div>
+    <h1>How to Grow Your Business Online in 2025 — Simple Steps for Beginners</h1>
+    <p class="meta">Published: October 2025 • By AdDev Studio</p>
 
-    <p>Në një botë ku klientët kërkojnë gjithçka në Google dhe blejnë nga telefoni, mungesa e një faqeje interneti do të thotë mundësi të humbura. Një faqe e thjeshtë dhe e shpejtë i jep biznesit <strong>besim</strong>, <strong>kontakt të qartë</strong> dhe <strong>gjetje në kërkim</strong>.</p>
+    <p>In a world where customers search, compare, and buy online, not having a website means missing out on new opportunities. 
+    A simple website can help you present your business, build trust, and attract new clients.</p>
 
-    <h2>5 arsyet kryesore</h2>
-    <ol>
-      <li><strong>Besueshmëri:</strong> klientët kontrollojnë faqen para se të blejnë.</li>
-      <li><strong>Gjetje në Google (SEO):</strong> një faqe e optimizuar sjell vizita organike pa pagesë.</li>
-      <li><strong>Kontakte të qarta:</strong> telefon, Whatsapp, hartë dhe orare në një vend.</li>
-      <li><strong>Fushata reklamuese:</strong> Google/Meta Ads kërkojnë një “destinacion” cilësor.</li>
-      <li><strong>Matje:</strong> me analitika kupton çfarë kërkojnë klientët dhe ç’funksionon.</li>
-    </ol>
+    <h2>1. Create a Simple Website</h2>
+    <p>Start with a clean, mobile-friendly website that clearly shows who you are, what you do, and how people can contact you.</p>
 
-    <div class="box">
-      <strong>Shembull i shpejtë:</strong> një berber në qytet shton një faqe të thjeshtë me shërbimet, çmimet, vendndodhjen dhe një buton “Rezervo tani”. Brenda javës fillon të marrë rezervime të reja nga kërkimi “berber pranë meje”.
-    </div>
+    <h2>2. Add Useful Content</h2>
+    <p>Post helpful articles about your products or services. Google values useful, original content that answers people’s questions.</p>
 
-    <h2>Si ta nisësh falas me GitHub Pages (3 hapa)</h2>
-    <ol>
-      <li>Krijo një depo (repository) dhe ngarko <code>index.html</code> me përmbajtjen bazë të biznesit.</li>
-      <li>Aktivo <strong>GitHub Pages</strong> nga Settings → Pages (burimi: <em>main / (root)</em>).</li>
-      <li>Lidh një <strong>domain</strong> si <em>addev-studio.com</em> për një adresë profesionale.</li>
-    </ol>
+    <h2>3. Use Basic SEO</h2>
+    <p>Include clear titles, descriptions, and keywords. Write naturally but keep in mind what your customers search for.</p>
 
-    <h2>SEO bazë për fillestarë</h2>
-    <ul>
-      <li>Vendos një <strong>titull</strong> dhe <strong>meta description</strong> të qarta (çfarë bën biznesi, në cilin qytet).</li>
-      <li>Përdor titujt <code>H1, H2</code> me fjalët kyçe (p.sh. “Rregullim banjosh në Prishtinë”).</li>
-      <li>Shto <strong>faqe shërbimesh</strong> dhe një <strong>faqe pyetje–përgjigje</strong> (FAQ) me pyetjet e klientëve.</li>
-      <li>Mbaje faqen të <strong>shpejtë</strong> (imazhe të kompresuara, dizajn i thjeshtë).</li>
-      <li>Regjistro biznesin në <strong>Google Business Profile</strong> për rezultate lokale.</li>
-    </ul>
+    <h2>4. Promote on Social Media</h2>
+    <p>Share your posts and updates on Facebook, Instagram, or LinkedIn. Consistency helps you reach more people.</p>
 
-    <h2>Çfarë të përfshish në faqen tënde</h2>
-    <ul>
-      <li>Përshkrim i shkurtër i biznesit + avantazhet.</li>
-      <li>Lista e shërbimeve dhe çmimeve orientuese.</li>
-      <li>Galeri punimesh / dëshmi klientësh (nëse i ke).</li>
-      <li>Kontakt i dukshëm: telefon, WhatsApp, email, lokacion.</li>
-      <li>Buton veprimi: <em>“Kontakto tani”</em> ose <em>“Kërko ofertë”</em>.</li>
-    </ul>
+    <h2>5. Keep Improving</h2>
+    <p>Update your site regularly — add testimonials, new projects, or blog posts. Small, steady improvements make a big difference.</p>
 
-    <hr>
-
-    <h2 id="kontakto">Gati ta ndërtojmë për ty?</h2>
-    <p>AdDev Studio ndihmon me krijimin e faqeve të shpejta dhe optimizimin për reklama e SEO. Nëse do të fillosh, na shkruaj dhe ta përgatisim paketën bazë.</p>
-    <a class="cta" href="mailto:info@addev-studio.com?subject=Interes%20p%C3%ABr%20faqe%20internet">Kontakto tani</a>
+    <a href="contact.html" class="cta">Contact Us to Get Started →</a>
   </main>
 
   <footer>
-    <hr>
-    <p>&copy; <span id="y"></span> AdDev Studio · <a href="/">Kreu</a></p>
+    <p>© 2025 AdDev Studio — Digital Marketing & Web Solutions</p>
   </footer>
-
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
