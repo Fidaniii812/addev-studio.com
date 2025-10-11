@@ -1,28 +1,87 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studioja AdDev</title>
+  <title>Contact | AdDev Studio</title>
 
-  <!-- Verifikimi i Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8174121518147927"
-          crossorigin="anonymous"></script>
+  <!-- Google AdSense Verification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+    nav {
+      text-align: center;
+      padding: 12px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    nav a {
+      color: #0b57d0;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background: #0b57d0;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #0844a4;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="About.html">Rreth Nesh</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="contact.html">Kontakt</a>
-  </nav>
-</header>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="About.html">About Us</a> |
+      <a href="blog.html">Blog</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <h3>Gati për të filluar?</h3>
-    <p>Na kontakto për konfigurimin dhe publikimin.</p>
-    <a class="btn hollow" href="#">Kontakto tani</a>
+    <h3>Ready to Get Started?</h3>
+    <p>Contact us to configure your website and prepare it for publishing.</p>
+    <a class="btn" href="mailto:info@addev-studio.com">Contact Now</a>
   </div>
+
+  <footer>
+    <p>© <span id="year"></span> AdDev Studio — Digital Marketing & Web Solutions</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
