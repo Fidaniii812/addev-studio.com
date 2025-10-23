@@ -6,18 +6,41 @@
   <title>3 Easy Ways to Make Money Online in 2025 | AdDev Studio</title>
   <link rel="stylesheet" href="style.css">
 
+  
   <style>
-    /* Efekti i butë “fade-in” për foton */
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1.5s ease-in-out forwards;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const image = document.querySelector(".fade-in");
+    setTimeout(() => image.classList.add("visible"), 300);
+  });
+</script>  
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const image = document.querySelector(".fade-in");
+    setTimeout(() => image.classList.add("visible"), 300);
+  });
+</script> 
 </head>
 
 <body>
