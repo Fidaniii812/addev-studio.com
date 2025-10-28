@@ -1,51 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-     xmlns:media="http://search.yahoo.com/mrss/"
-     xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0">
   <channel>
     <title>AdDev Studio</title>
     <link>https://addev-studio.com/</link>
-    <atom:link href="https://addev-studio.com/feed.xml" rel="self" type="application/rss+xml" />
-    <description>AdDev Studio — Digital Marketing, Web Development & Automation Solutions.</description>
+    <description>Web Design, SEO, and Digital Marketing Solutions by AdDev Studio.</description>
     <language>en</language>
-    <copyright>© 2025 AdDev Studio. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 27 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <ttl>1800</ttl>
+    <lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0000</lastBuildDate>
 
-    <!-- Article 1 -->
     <item>
       <title>Welcome to AdDev Studio</title>
-      <link>https://addev-studio.com/articles/welcome</link>
-      <description><![CDATA[
-        Discover how AdDev Studio helps businesses grow through creative digital marketing, automation, and web design strategies that deliver measurable results.
-      ]]></description>
-      <pubDate>Mon, 27 Oct 2025 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://addev-studio.com/articles/welcome</guid>
-      <media:content url="https://addev-studio.com/images/welcome.jpg" medium="image" />
+      <link>https://addev-studio.com/</link>
+      <description><![CDATA[Helping small and medium-sized businesses grow their online presence through modern, effective websites and digital marketing.]]></description>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
     </item>
 
-    <!-- Article 2 -->
     <item>
-      <title>How Automation Transforms Digital Marketing</title>
-      <link>https://addev-studio.com/articles/automation-in-marketing</link>
-      <description><![CDATA[
-        Learn how marketing automation tools such as Zapier and AI-driven workflows can increase engagement, save time, and help your brand scale smarter.
-      ]]></description>
-      <pubDate>Mon, 27 Oct 2025 00:10:00 +0000</pubDate>
-      <guid isPermaLink="true">https://addev-studio.com/articles/automation-in-marketing</guid>
-      <media:content url="https://addev-studio.com/images/automation.jpg" medium="image" />
-    </item>
-
-    <!-- Article 3 -->
-    <item>
-      <title>Design that Converts: UI/UX for Business Growth</title>
-      <link>https://addev-studio.com/articles/design-that-converts</link>
-      <description><![CDATA[
-        Explore how effective design blends aesthetics with usability to create powerful customer experiences that drive conversions and long-term brand trust.
-      ]]></description>
-      <pubDate>Mon, 27 Oct 2025 00:20:00 +0000</pubDate>
-      <guid isPermaLink="true">https://addev-studio.com/articles/design-that-converts</guid>
-      <media:content url="https://addev-studio.com/images/uiux.jpg" medium="image" />
+      <title>Boost Your Online Presence with Simple Steps</title>
+      <link>https://addev-studio.com/blog.html</link>
+      <description><![CDATA[Discover simple SEO and content strategies that improve your visibility online.]]></description>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
     </item>
 
   </channel>
