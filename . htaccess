@@ -1,0 +1,3 @@
+# Ezoic Ads.txt Redirect
+RewriteEngine On
+RewriteRule ^ads\.txt$ https://srv.adstxtmanager.com/19390/addev-studio.com [R=301,L]
