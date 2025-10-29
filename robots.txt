@@ -1,3 +1,16 @@
+# ================================
+# robots.txt for AdDev Studio
+# ================================
+
 User-agent: *
 Allow: /
+
+# Block internal or private pages
+Disallow: /404.html
+Disallow: /assets/
+Disallow: /drafts/
+
+# Sitemap
 Sitemap: https://addev-studio.com/sitemap.xml
+
+# End of file
