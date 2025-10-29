@@ -96,7 +96,7 @@
         head.y >= 400 ||
         snake.some((s) => s.x === head.x && s.y === head.y)
       ) {
-        alert("Loja përfundoi! Piket: " + (snake.length - 1));
+       alert("Loja përfundoi! Pikët: " + Math.max(0, snake.length - 1)); 
         document.location.reload();
       }
 
