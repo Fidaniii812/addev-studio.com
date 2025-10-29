@@ -1,155 +1,153 @@
-        <!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="AdDev Studio" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <title>AdDev Studio | Web Design, SEO & Digital Marketing</title>
+  <meta name="description" content="AdDev Studio helps small and medium businesses grow online through web design, SEO, and digital marketing services that deliver real results." />
+  <link rel="canonical" href="https://addev-studio.com/" />
 
-  <!-- 🌐 SEO optimized meta tags -->
-  <title>AdDev Studio | Digital Marketing, Web Design & Growth Solutions</title>
-  <meta name="description" content="AdDev Studio helps small and medium businesses grow online through smart web design, digital marketing, SEO, and creative strategies to boost visibility and sales.">
-  <meta name="keywords" content="AdDev Studio, digital marketing, web design, SEO, online growth, business solutions, creative studio, branding, digital agency, design">
-
-  <!-- 🔗 Open Graph / Social Media Preview -->
-  <meta property="og:title" content="AdDev Studio | Digital Marketing & Web Design Solutions" />
-  <meta property="og:description" content="Grow your business online with AdDev Studio — smart web design, SEO, and creative digital marketing strategies." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/Fidanii1812/addev-studio.com/main/images/Screenshot_20251022_005320_ChatGPT.jpg" />
-  <meta property="og:url" content="https://addev-studio.com/" />
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="AdDev Studio | Web Design, SEO & Digital Marketing" />
+  <meta property="og:description" content="Grow your business online with AdDev Studio — web design, SEO, and marketing solutions that convert." />
+  <meta property="og:url" content="https://addev-studio.com/" />
+  <meta property="og:image" content="https://addev-studio.com/assets/img/og-image.jpg" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AdDev Studio | Web Design, SEO & Digital Marketing" />
+  <meta name="twitter:description" content="Grow your business online with AdDev Studio — web design, SEO, and marketing solutions that convert." />
+  <meta name="twitter:image" content="https://addev-studio.com/assets/img/og-image.jpg" />
 
-  <link rel="icon" href="https://raw.githubusercontent.com/Fidanii1812/addev-studio.com/main/images/Screenshot_20251022_005320_ChatGPT.jpg" />
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AdDev Studio",
+    "url": "https://addev-studio.com",
+    "logo": "https://addev-studio.com/assets/img/og-image.jpg",
+    "sameAs": [
+      "https://www.facebook.com/addevstudio",
+      "https://www.instagram.com/addevstudio",
+      "https://www.linkedin.com/company/addevstudio"
+    ]
+  }
+  </script>
 
+  <link rel="stylesheet" href="/assets/css/styles.css" />
   <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9fafc;
-      color: #222;
-      line-height: 1.6;
-    }
+    /* Basic page layout */
+    body { font-family: Arial, sans-serif; margin: 0; color: #222; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    header, footer { background: #fff; border-bottom: 1px solid #eee; }
+    footer { border-top: 1px solid #eee; padding: 20px 0; text-align: center; font-size: 14px; }
 
-    header {
-      text-align: center;
-      background: #0b57d0;
-      color: white;
-      padding: 25px 10px;
-      font-size: 1.6em;
-      font-weight: bold;
-    }
+    /* Navigation */
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+    .logo { font-weight: bold; font-size: 1.4rem; text-decoration: none; color: #000; }
+    .menu a { text-decoration: none; color: #333; margin: 0 12px; font-weight: 500; }
+    .btn { background: #007aff; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; }
+    .btn:hover { background: #005fcc; }
 
-    nav {
-      text-align: center;
-      background: #fff;
-      padding: 10px 0;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Dropdown */
+    .dropdown { position: relative; display: inline-block; }
+    .dropbtn { cursor: pointer; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      min-width: 180px;
+      z-index: 10;
     }
-
-    nav a {
-      color: #0b57d0;
+    .dropdown-content a {
+      display: block;
+      padding: 8px 14px;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
+      color: #333;
     }
+    .dropdown-content a:hover { background: #f5f5f5; }
+    .dropdown:hover .dropdown-content { display: block; }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+    /* Hero */
+    .hero { text-align: center; padding: 80px 20px; background: #f9fafb; border-radius: 20px; margin: 30px 0; }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.1rem; color: #555; max-width: 600px; margin: 0 auto 20px; }
 
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 30px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
+    /* Grid */
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 24px; margin: 40px 0; }
+    .card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); text-align: left; }
 
-    section {
-      margin-bottom: 30px;
-    }
+    /* CTA */
+    .cta { background: #007aff; color: white; text-align: center; padding: 60px 20px; border-radius: 16px; margin: 60px 0; }
+    .cta h2 { font-size: 1.8rem; margin-bottom: 16px; }
+    .cta .btn { background: white; color: #007aff; }
 
-    h1, h2, h3 {
-      color: #0b57d0;
-      text-align: center;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin: 10px 25px;
-    }
-
-    footer {
-      background: #fff;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
-      margin-top: 50px;
-    }
-
-    img.banner {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .cta h2 { font-size: 1.5rem; }
     }
   </style>
-  <!-- Ezoic Privacy Scripts -->
-  <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
-  <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
-
-  <!-- Ezoic Header Script -->
-  <script async src="https://www.ezojs.com/ezoic/sa.min.js"></script>
-  <script>
-    window.ezstandalone = window.ezstandalone || {};
-    ezstandalone.cmd = ezstandalone.cmd || [];
-  </script>
 </head>
-
 <body>
-  <header>
-    AdDev Studio | Digital Marketing & Web Design
+  <header class="container">
+    <nav class="nav">
+      <a href="/" class="logo">AdDev Studio</a>
+      <div class="menu">
+        <a href="/about.html">About</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="/services-web-design.html">Web Design</a>
+            <a href="/services-seo.html">SEO Services</a>
+            <a href="/services-marketing.html">Digital Marketing</a>
+          </div>
+        </div>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html" class="btn">Get a Quote</a>
+      </div>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main>
-    <img src="https://raw.githubusercontent.com/Fidanii1812/addev-studio.com/main/images/Screenshot_20251022_005320_ChatGPT.jpg" alt="AdDev Studio banner" class="banner" />
-
-    <section>
-      <h1>Welcome to AdDev Studio</h1>
-      <p>We help small and medium businesses grow their digital presence through effective web design, SEO optimization, and creative marketing strategies that boost online success.</p>
-      <p>Join hundreds of businesses that have improved their online visibility and built strong brands with <strong>AdDev Studio</strong>.</p>
+  <main class="container">
+    <section class="hero">
+      <h1>We Build Digital Success Stories</h1>
+      <p>From modern websites to SEO and marketing strategies, AdDev Studio helps your business grow online with measurable results.</p>
+      <a href="/contact.html" class="btn">Let’s Start</a>
     </section>
 
-    <section>
-      <h2>Our Services</h2>
-      <ul>
-        <li>Custom Web Design & Development</li>
-        <li>SEO Optimization & Keyword Strategy</li>
-        <li>Social Media Branding</li>
-        <li>Digital Advertising & Growth Marketing</li>
-      </ul>
+    <section class="grid-3">
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>Fast, responsive, and conversion-focused websites that reflect your brand and goals.</p>
+        <a href="/services-web-design.html" class="btn">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>SEO Optimization</h3>
+        <p>Rank higher on Google with our proven technical, on-page, and content SEO strategies.</p>
+        <a href="/services-seo.html" class="btn">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Digital Marketing</h3>
+        <p>Targeted campaigns that drive traffic, leads, and conversions across all major platforms.</p>
+        <a href="/services-marketing.html" class="btn">Learn More</a>
+      </div>
     </section>
-        <!-- Ezoic - incontent_5 - incontent_5 -->
-<div id="ezoic-pub-ad-placeholder-115"></div>
-<!-- End Ezoic - incontent_5 - incontent_5 -->  
 
-    <section>
-      <h2>Let’s Grow Together</h2>
-      <p>Ready to elevate your online presence? <a href="contact.html" style="color:#0b57d0; text-decoration:none; font-weight:bold;">Contact us today</a> and start building your digital future.</p>
+    <section class="cta">
+      <h2>Let’s grow your brand together</h2>
+      <a href="/contact.html" class="btn">Get a Free Consultation</a>
     </section>
   </main>
 
   <footer>
-    © 2025 AdDev Studio — All rights reserved.
+    <div class="container">
+      <p>© 2025 AdDev Studio · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+    </div>
   </footer>
 </body>
-</html>
+</html> 
