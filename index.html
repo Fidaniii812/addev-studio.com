@@ -1,180 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 🔹 Ezoic Privacy Scripts -->
-<script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
-<script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
-  <meta charset="utf-8" />
-  <!-- 🔹 Ezoic Header Script -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdDev Studio | Play Free Games, Discover Tools & Learn</title>
+  <meta name="description" content="Play free online games, explore digital tools and read the latest tech articles — all in one place with AdDev Studio.">
+  <link rel="canonical" href="https://addev-studio.com/">
   
+  <!-- 🔹 Ezoic Ads Script -->
   <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
   <script>
     window.ezstandalone = window.ezstandalone || {};
     ezstandalone.cmd = ezstandalone.cmd || [];
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>AdDev Studio | Web Design, SEO & Digital Marketing</title>
-  <meta name="description" content="AdDev Studio helps small and medium-sized businesses grow online through web design, SEO, and digital marketing solutions." />
-  <link rel="canonical" href="https://addev-studio.com/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="AdDev Studio | Web Design, SEO & Digital Marketing" />
-  <meta property="og:description" content="Grow your business online with AdDev Studio – web design, SEO, and marketing solutions that deliver results." />
-  <meta property="og:url" content="https://addev-studio.com/" />
-  <meta property="og:image" content="https://addev-studio.com/assets/img/og-image.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AdDev Studio | Web Design, SEO & Digital Marketing" />
-  <meta name="twitter:description" content="Grow your business online with AdDev Studio – web design, SEO, and marketing solutions that deliver results." />
-  <meta name="twitter:image" content="https://addev-studio.com/assets/img/og-image.jpg" />
-
-  <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "AdDev Studio",
-    "url": "https://addev-studio.com",
-    "logo": "https://addev-studio.com/assets/img/og-image.jpg",
-    "sameAs": [
-      "https://www.facebook.com/addevstudio",
-      "https://www.instagram.com/addevstudio",
-      "https://www.linkedin.com/company/addevstudio"
-    ]
-  }
-  </script>
-
-  <!-- 🔹 Ezoic Integration Script -->
-  <!-- Paste your main Ezoic script here (with ezoicId and ezd.js) -->
-  <!-- Example:
-  <script data-cfasync="false" type="text/javascript">
-    var ezoicId = XXXXX;
-  </script>
-  <script type="text/javascript" src="//g.ezoic.net/ezoic/ezd.js"></script>
-  -->
-
-  <link rel="stylesheet" href="/assets/css/styles.css" />
 
   <style>
-    /* ===== BASIC LAYOUT ===== */
-    body { font-family: Arial, sans-serif; margin: 0; color: #222; background: #fff; }
-    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-    header, footer { background: #fff; border-bottom: 1px solid #eee; text-align: center; padding: 20px 0; }
+    body { margin:0; font-family:Arial, sans-serif; background:#fff; color:#222; }
+    header, footer { background:#f9f9f9; text-align:center; padding:20px; }
+    .logo { font-weight:700; font-size:1.5rem; text-decoration:none; color:#007aff; }
+    nav a { margin:0 10px; text-decoration:none; color:#333; font-weight:500; }
+    nav a:hover { color:#007aff; }
+    .container { width:90%; max-width:1200px; margin:0 auto; padding:20px 0; }
 
-    /* ===== NAVIGATION ===== */
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px; flex-wrap: wrap; }
-    .logo { font-weight: bold; font-size: 1.4rem; text-decoration: none; color: #000; }
-    .menu a { margin: 0 12px; color: #333; text-decoration: none; font-weight: 500; }
-    .menu a:hover { color: #007aff; }
-    .btn { background: #007aff; color: #fff; padding: 8px 16px; border-radius: 6px; text-decoration: none; }
-    .btn:hover { background: #005fcc; }
+    .hero { text-align:center; padding:60px 20px; background:#f0f4ff; border-radius:12px; margin-bottom:40px; }
+    .hero h1 { font-size:2rem; margin-bottom:10px; color:#007aff; }
+    .hero p { color:#555; max-width:600px; margin:0 auto; }
 
-    /* ===== DROPDOWN ===== */
-    .dropdown { position: relative; display: inline-block; }
-    .dropbtn { cursor: pointer; }
-    .dropdown-content { display: none; position: absolute; background: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 8px; z-index: 10; }
-    .dropdown-content a { display: block; padding: 8px 14px; color: #333; text-decoration: none; }
-    .dropdown-content a:hover { background: #f5f5f5; }
-    .dropdown:hover .dropdown-content { display: block; }
+    .grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px; margin:40px 0; }
+    .card { background:#fff; border:1px solid #eee; border-radius:12px; padding:20px; box-shadow:0 2px 5px rgba(0,0,0,0.05); }
+    .card h3 { color:#007aff; text-align:center; }
+    iframe { width:100%; height:500px; border:none; border-radius:8px; }
 
-    /* ===== HERO ===== */
-    .hero { text-align: center; padding: 80px 20px; background: #f9fafb; border-radius: 20px; margin: 40px 0; }
-    .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
-    .hero p { font-size: 1.1rem; color: #555; max-width: 600px; margin: 0 auto 20px; }
+    .cta { background:#007aff; color:#fff; text-align:center; padding:60px 20px; border-radius:16px; margin:60px 0; }
+    .cta h2 { font-size:1.8rem; margin-bottom:16px; }
 
-    /* ===== GRID ===== */
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 24px; margin: 40px 0; }
-    .card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
-    .card h3 { color: #007aff; }
-
-    /* ===== CTA ===== */
-    .cta { background: #007aff; color: white; text-align: center; padding: 60px 20px; border-radius: 16px; margin: 60px 0; }
-    .cta h2 { font-size: 1.8rem; margin-bottom: 16px; }
-    .cta .btn { background: white; color: #007aff; }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 1.8rem; }
-      .cta h2 { font-size: 1.5rem; }
-    }
+    footer p { color:#666; font-size:0.9rem; }
   </style>
 </head>
-
 <body>
-  <header class="container">
-    <nav class="nav">
-      <a href="/" class="logo">AdDev Studio</a>
-      <div class="menu">
-        <a href="/about.html">About</a>
-        <div class="dropdown">
-          <a href="#" class="dropbtn">Services ▾</a>
-          <div class="dropdown-content">
-            <a href="/services-web-design.html">Web Design</a>
-            <a href="/services-seo.html">SEO Services</a>
-            <a href="/services-marketing.html">Digital Marketing</a>
-          </div>
-        </div>
-        <a href="/blog.html">Blog</a>
-        <a href="/contact.html" class="btn">Get a Quote</a>
-      </div>
+
+  <header>
+    <a href="/" class="logo">🎮 AdDev Studio</a>
+    <nav>
+      <a href="/games.html">Games</a>
+      <a href="/affiliate.html">Affiliate</a>
+      <a href="/blog.html">Blog</a>
     </nav>
   </header>
 
   <main class="container">
+
     <section class="hero">
-      <h1>We Build Digital Success Stories</h1>
-      <p>From modern websites to SEO and marketing strategies, AdDev Studio helps your business grow online with measurable results.</p>
-      <a href="/contact.html" class="btn">Let’s Start</a>
+      <h1>Play Free Games, Earn & Learn</h1>
+      <p>AdDev Studio brings you fun browser games, useful online tools, and smart blog insights — all in one platform.</p>
     </section>
-<!-- 🔹 Ezoic Ad Placeholder -->
-<div id="ezoic-pub-ad-placeholder-115"></div>
-<script src="/assets/js/ezoic-ads.js"></script>
-    
-    
+
+    <!-- 🔹 Ezoic Ad Placeholder -->
+    <div id="ezoic-pub-ad-placeholder-115"></div>
+    <script src="/assets/js/ezoic-ads.js"></script>
 
     <section class="grid-3">
       <div class="card">
-        <h3>Web Design</h3>
-        <p>Fast, responsive, and conversion-focused websites that reflect your brand and goals.</p>
-        <a href="/services-web-design.html" class="btn">Learn More</a>
+        <h3>🐍 Snake Classic</h3>
+        <iframe src="https://htmlgames.com/game/Snake/index.html"></iframe>
       </div>
-
       <div class="card">
-        <h3>SEO Optimization</h3>
-        <p>Rank higher on Google with our proven technical, on-page, and content SEO strategies.</p>
-        <a href="/services-seo.html" class="btn">Learn More</a>
+        <h3>🎯 Tic Tac Toe</h3>
+        <iframe src="https://htmlgames.com/game/TicTacToe/index.html"></iframe>
       </div>
-
       <div class="card">
-        <h3>Digital Marketing</h3>
-        <p>Targeted campaigns that drive traffic, leads, and conversions across all major platforms.</p>
-        <a href="/services-marketing.html" class="btn">Learn More</a>
+        <h3>🚀 Flappy Bird</h3>
+        <iframe src="https://htmlgames.com/game/FlappyBird/index.html"></iframe>
       </div>
     </section>
 
     <section class="cta">
-      <h2>Let’s grow your brand together</h2>
-      <a href="/contact.html" class="btn">Get a Free Consultation</a>
+      <h2>Want to discover our top tools?</h2>
+      <a href="/affiliate.html" style="color:#007aff; background:#fff; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:600;">Check Affiliate Tools</a>
     </section>
+
+    <div style="text-align:center; margin:40px 0;">
+      <h3>📰 Read our latest blog posts</h3>
+      <p><a href="/blog.html" style="color:#007aff; font-weight:600;">Visit the Blog →</a></p>
+    </div>
+
   </main>
 
-<div class="affiliate-section" style="text-align:center; padding:30px 0;">
-  <a href="affiliate.html" style="
-    font-size:18px;
-    color:#2563eb;
-    text-decoration:none;
-    font-weight:600;
-  ">
-    🔗 Our recommended tools for the best online resources
-  </a>
-</div>
+  <footer>
+    <p>© 2025 AdDev Studio • All rights reserved</p>
+  </footer>
 
-<footer>
-  <div class="container">
-    <p>© 2025 AdDev Studio • <a href="/privacy.html">Privacy Policy</a></p>
-  </div>
-</footer>
 </body>
 </html>
