@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Free Games | AdDev Studio</title>
+  <meta name="description" content="Play fun and free web games created by AdDev Studio. Enjoy simple, fast-loading browser games while supporting our creative projects." />
+  <link rel="canonical" href="https://addev-studio.com/games.html" />
+
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9fafb; color: #222; }
+    header, footer { background: #fff; text-align: center; padding: 20px; border-bottom: 1px solid #eee; }
+    .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px 0; }
+
+    h1 { text-align: center; color: #007aff; margin-bottom: 30px; }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .game-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .game-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .game-card h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #007aff;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .btn:hover {
+      background: #005fcc;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid #eee;
+      color: #555;
+    }
+
+    .ad-space {
+      margin: 40px 0;
+      text-align: center;
+      background: #fff;
+      border: 1px dashed #ddd;
+      border-radius: 8px;
+      padding: 30px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2><a href="/" style="text-decoration:none; color:#007aff;">🎮 AdDev Games</a></h2>
+  </header>
+
+  <main class="container">
+    <h1>Play Our Games</h1>
+
+    <!-- Ezoic Ad Placeholder -->
+    <div id="ezoic-pub-ad-placeholder-200" class="ad-space">
+      Ad Space — will load here automatically
+    </div>
+
+    <div class="games-grid">
+
+      <!-- Game 1 -->
+      <div class="game-card">
+        <img src="/images/snake-thumb.jpg" alt="Snake Game">
+        <h3>Snake Classic</h3>
+        <p>Eat apples, grow longer, and don’t hit the wall!</p>
+        <a href="/games/snake/index.html" class="btn">Play Now</a>
+      </div>
+
+      <!-- Game 2–10 placeholders -->
+      <div class="game-card">
+        <img src="/images/coming-soon.jpg" alt="Coming soon">
+        <h3>Coming Soon</h3>
+        <p>New game under development.</p>
+        <a href="#" class="btn" style="background:#aaa; pointer-events:none;">Locked</a>
+      </div>
+
+      <div class="game-card">
+        <img src="/images/coming-soon.jpg" alt="Coming soon">
+        <h3>Coming Soon</h3>
+        <p>New game under development.</p>
+        <a href="#" class="btn" style="background:#aaa; pointer-events:none;">Locked</a>
+      </div>
+
+      <div class="game-card">
+        <img src="/images/coming-soon.jpg" alt="Coming soon">
+        <h3>Coming Soon</h3>
+        <p>Stay tuned for updates!</p>
+        <a href="#" class="btn" style="background:#aaa; pointer-events:none;">Locked</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 AdDev Studio | <a href="/privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
