@@ -1,154 +1,124 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdDev Studio Blog | Digital Growth, SEO & Marketing Insights 2025</title>
-  <meta name="description" content="Explore the AdDev Studio Blog — your source for SEO, web design, digital marketing, and business growth insights for 2025.">
-  <meta name="keywords" content="AdDev Studio blog, SEO tips, digital marketing, online business, web design, growth strategies">
-  <meta name="author" content="AdDev Studio">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Explore the AdDev Studio Blog — your source for SEO, web design, digital marketing, and online growth strategies.">
+  <title>AdDev Studio Blog | SEO & Digital Growth Insights 2025</title>
   <link rel="canonical" href="https://addev-studio.com/blog.html">
+  <link rel="stylesheet" href="assets/style.css">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://addev-studio.com/assets/favicon.png">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AdDev Studio Blog | Digital Growth & Marketing Insights">
-  <meta property="og:description" content="Learn the latest SEO, design, and marketing strategies from AdDev Studio.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="AdDev Studio Blog | SEO & Digital Growth Insights">
+  <meta property="og:description" content="Learn the latest SEO, web design, and marketing strategies from AdDev Studio.">
   <meta property="og:image" content="https://addev-studio.com/assets/preview.jpg">
   <meta property="og:url" content="https://addev-studio.com/blog.html">
-  <meta property="og:site_name" content="AdDev Studio Blog">
+  <meta property="og:type" content="website">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AdDev Studio Blog | Digital Growth & Marketing Insights">
-  <meta name="twitter:description" content="Stay updated with SEO and online growth strategies by AdDev Studio.">
+  <meta name="twitter:title" content="AdDev Studio Blog | SEO & Digital Growth Insights">
+  <meta name="twitter:description" content="Stay updated with SEO, AI tools, and online business strategies from AdDev Studio.">
   <meta name="twitter:image" content="https://addev-studio.com/assets/preview.jpg">
-
-  <!-- Structured Data (JSON-LD for Blog) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "AdDev Studio Blog",
-    "url": "https://addev-studio.com/blog.html",
-    "description": "Insights, guides, and strategies for web design, SEO, and online business growth in 2025.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "AdDev Studio",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://addev-studio.com/assets/logo.png"
-      }
-    }
-  }
-  </script>
 
   <style>
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: "Poppins", sans-serif;
       background: #f9fafc;
       color: #333;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
     }
 
     header {
-      background: #0b57d0;
+      background: #2563eb;
       color: white;
       text-align: center;
-      padding: 30px 15px;
+      padding: 25px 10px;
     }
 
     header h1 {
-      margin: 0;
       font-size: 2rem;
-    }
-
-    header p {
-      font-size: 1rem;
-      margin: 5px 0 15px;
+      margin: 0;
     }
 
     nav a {
       color: white;
-      margin: 0 12px;
       text-decoration: none;
+      margin: 0 12px;
       font-weight: 500;
-      transition: 0.2s ease;
     }
 
-    nav a:hover,
-    nav a.active {
+    nav a:hover, nav a.active {
       text-decoration: underline;
     }
 
     main {
-      max-width: 950px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
     }
 
     article {
       background: white;
-      margin-bottom: 25px;
-      padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.25s ease;
     }
 
     article:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     article h2 {
+      color: #2563eb;
+      font-size: 1.2rem;
       margin-top: 0;
-      color: #0b57d0;
-      font-size: 1.4rem;
+    }
+
+    article p {
+      font-size: 0.95rem;
+      color: #555;
     }
 
     .meta {
       color: #777;
-      font-size: 0.9em;
-      margin-bottom: 10px;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
     }
 
-    .cta {
+    .btn {
       display: inline-block;
-      background: #0b57d0;
+      background: #2563eb;
       color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
       text-decoration: none;
-      font-size: 0.9em;
-      transition: 0.2s ease;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
     }
 
-    .cta:hover {
-      background: #0947a8;
+    .btn:hover {
+      background: #1e4fd3;
     }
 
     footer {
       text-align: center;
       background: #0b57d0;
       color: white;
-      padding: 20px;
-      font-size: 0.9em;
-      margin-top: 40px;
+      padding: 25px 10px;
+      font-size: 0.9rem;
+      margin-top: 60px;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.6rem;
-      }
-
-      article {
-        padding: 18px;
       }
     }
   </style>
@@ -157,11 +127,12 @@
 <body>
   <header>
     <h1>AdDev Studio Blog</h1>
-    <p>Latest insights & strategies for web design, SEO, and digital marketing.</p>
+    <p>Insights & strategies for SEO, web design, and digital marketing.</p>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="blog.html" class="active">Blog</a>
+      <a href="affiliate.html">Tools</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -170,47 +141,48 @@
     <article>
       <h2><a href="article8.html">3 Easy Ways to Make Money Online in 2025</a></h2>
       <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Discover beginner-friendly methods to earn money online in 2025, including freelancing and content creation.</p>
-      <a href="article8.html" class="cta">Read More</a>
+      <p>Discover beginner-friendly methods to earn money online in 2025, including freelancing, affiliate marketing, and content creation.</p>
+      <a href="article8.html" class="btn">Read More</a>
     </article>
+
     <article>
-  <h2><a href="article9.html">How to Build a Future-Proof Website in 2025</a></h2>
-  <p class="meta">Published: October 2025 • by AdDev Studio</p>
-  <p>Learn how to build a website that stays modern, fast, and secure — optimized for SEO, AI, and user experience.</p>
-  <a href="article9.html" class="cta">Read More</a>
-</article>
+      <h2><a href="article9.html">How to Build a Future-Proof Website in 2025</a></h2>
+      <p class="meta">Published: October 2025 • by AdDev Studio</p>
+      <p>Learn how to build a modern, secure website optimized for SEO, AI, and user experience.</p>
+      <a href="article9.html" class="btn">Read More</a>
+    </article>
+
     <article>
-  <h2><a href="article10.html">How AI and Humans Can Build the Future Together</a></h2>
-  <p class="meta">Published: October 2025 • by AdDev Studio</p>
-  <p>Discover how human creativity and AI innovation can unite to shape a sustainable and smarter digital future.</p>
-  <a href="article10.html" class="cta">Read More</a>
-</article>
-    <a href="article11.html">Article 11: [Titulli i artikullit të ri]</a><br>
+      <h2><a href="article10.html">How AI and Humans Can Build the Future Together</a></h2>
+      <p class="meta">Published: October 2025 • by AdDev Studio</p>
+      <p>Explore how human creativity and AI technology combine to drive business innovation.</p>
+      <a href="article10.html" class="btn">Read More</a>
+    </article>
 
     <article>
       <h2><a href="article1.html">How to Grow Your Business Online in 2025</a></h2>
       <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Learn proven strategies to grow your online business using SEO, branding, and digital ads.</p>
-      <a href="article1.html" class="cta">Read More</a>
+      <p>Learn proven strategies to grow your business using SEO, branding, and smart marketing.</p>
+      <a href="article1.html" class="btn">Read More</a>
     </article>
 
     <article>
       <h2><a href="article2.html">How to Build a Strong Online Presence</a></h2>
       <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Understand how to strengthen your online presence with effective design, marketing, and communication.</p>
-      <a href="article2.html" class="cta">Read More</a>
+      <p>Discover techniques to enhance your visibility through effective SEO and communication.</p>
+      <a href="article2.html" class="btn">Read More</a>
     </article>
 
     <article>
       <h2><a href="article7.html">Simple Ways to Grow Your Website Traffic Organically</a></h2>
       <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>5 powerful methods to attract organic visitors and boost your website’s visibility in Google search.</p>
-      <a href="article7.html" class="cta">Read More</a>
+      <p>Boost your organic traffic using on-page SEO, valuable content, and analytics insights.</p>
+      <a href="article7.html" class="btn">Read More</a>
     </article>
   </main>
 
   <footer>
-    <p>&copy; <script>document.write(new Date().getFullYear());</script> AdDev Studio. All Rights Reserved.</p>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> AdDev Studio. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
