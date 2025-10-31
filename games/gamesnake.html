@@ -54,20 +54,24 @@
     }
 
     .controls {
-      margin-top: 15px;
+      margin-top: 20px;
       display: grid;
       grid-template-columns: 80px 80px 80px;
+      grid-template-rows: 80px 80px;
       gap: 10px;
       justify-content: center;
+      align-items: center;
     }
 
     .controls button {
       padding: 15px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
+      border-radius: 8px;
     }
 
-    @media (min-width: 600px) {
+    /* Show controls always on mobile, hide only for large screens */
+    @media (min-width: 800px) {
       .controls { display: none; }
     }
   </style>
