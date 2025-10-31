@@ -1,125 +1,119 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the AdDev Studio Blog — your source for SEO, web design, digital marketing, and online growth strategies.">
-  <title>AdDev Studio Blog | SEO & Digital Growth Insights 2025</title>
-  <link rel="canonical" href="https://addev-studio.com/blog.html">
-  <link rel="stylesheet" href="assets/style.css">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="AdDev Studio Blog | SEO & Digital Growth Insights">
-  <meta property="og:description" content="Learn the latest SEO, web design, and marketing strategies from AdDev Studio.">
-  <meta property="og:image" content="https://addev-studio.com/assets/preview.jpg">
-  <meta property="og:url" content="https://addev-studio.com/blog.html">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AdDev Studio Blog | SEO & Digital Growth Insights">
-  <meta name="twitter:description" content="Stay updated with SEO, AI tools, and online business strategies from AdDev Studio.">
-  <meta name="twitter:image" content="https://addev-studio.com/assets/preview.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdDev Studio Blog | Insights on SEO, AI & Marketing</title>
+  <meta name="description" content="Read the latest insights on SEO, AI tools, and digital marketing from AdDev Studio. Learn how to grow your business online." />
+  <link rel="canonical" href="https://addev-studio.com/blog.html" />
 
   <style>
     body {
-      font-family: "Poppins", sans-serif;
-      background: #f9fafc;
-      color: #333;
+      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      background: #f9fafc;
+      color: #222;
     }
 
     header {
-      background: #2563eb;
+      background: linear-gradient(90deg, #0044cc, #ffd700);
       color: white;
       text-align: center;
-      padding: 25px 10px;
+      padding: 60px 20px;
     }
 
     header h1 {
-      font-size: 2rem;
-      margin: 0;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 500;
-    }
-
-    nav a:hover, nav a.active {
-      text-decoration: underline;
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
     main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+      width: 90%;
+      max-width: 1100px;
+      margin: 50px auto;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
 
-    article {
+    .card {
       background: white;
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.25s ease;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    article:hover {
+    .card:hover {
       transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     }
 
-    article h2 {
-      color: #2563eb;
-      font-size: 1.2rem;
-      margin-top: 0;
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
 
-    article p {
-      font-size: 0.95rem;
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #0044cc;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .card-content p {
       color: #555;
-    }
-
-    .meta {
-      color: #777;
-      font-size: 0.85rem;
-      margin-bottom: 8px;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .btn {
       display: inline-block;
-      background: #2563eb;
-      color: white;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: #ffd700;
+      color: #0044cc;
+      font-weight: 600;
       text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      transition: background 0.2s;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
-      background: #1e4fd3;
+      background: #0044cc;
+      color: #fff;
     }
 
     footer {
       text-align: center;
-      background: #0b57d0;
-      color: white;
-      padding: 25px 10px;
+      padding: 20px;
+      background: #fff;
+      border-top: 1px solid #eee;
+      color: #666;
       font-size: 0.9rem;
       margin-top: 60px;
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.6rem;
-      }
+    footer a {
+      color: #0044cc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -127,62 +121,44 @@
 <body>
   <header>
     <h1>AdDev Studio Blog</h1>
-    <p>Insights & strategies for SEO, web design, and digital marketing.</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog.html" class="active">Blog</a>
-      <a href="affiliate.html">Tools</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <p>Learn. Build. Grow. Your hub for SEO, AI & digital insights.</p>
   </header>
 
   <main>
-    <article>
-      <h2><a href="article8.html">3 Easy Ways to Make Money Online in 2025</a></h2>
-      <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Discover beginner-friendly methods to earn money online in 2025, including freelancing, affiliate marketing, and content creation.</p>
-      <a href="article8.html" class="btn">Read More</a>
-    </article>
+    <div class="grid">
 
-    <article>
-      <h2><a href="article9.html">How to Build a Future-Proof Website in 2025</a></h2>
-      <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Learn how to build a modern, secure website optimized for SEO, AI, and user experience.</p>
-      <a href="article9.html" class="btn">Read More</a>
-    </article>
+      <div class="card">
+        <img src="https://addev-studio.com/assets/img/ai-tools.jpg" alt="AI Tools">
+        <div class="card-content">
+          <h3>Top AI Tools for 2025</h3>
+          <p>Explore the most powerful AI tools for marketers, writers, and entrepreneurs to boost productivity and creativity.</p>
+          <a href="blog-ai-tools.html" class="btn">Read More</a>
+        </div>
+      </div>
 
-    <article>
-      <h2><a href="article10.html">How AI and Humans Can Build the Future Together</a></h2>
-      <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Explore how human creativity and AI technology combine to drive business innovation.</p>
-      <a href="article10.html" class="btn">Read More</a>
-    </article>
+      <div class="card">
+        <img src="https://addev-studio.com/assets/img/seo-beginners.jpg" alt="SEO Beginner Guide">
+        <div class="card-content">
+          <h3>SEO for Small Businesses</h3>
+          <p>Learn step-by-step how to optimize your website and get found by your customers on Google.</p>
+          <a href="blog-seo-beginners.html" class="btn">Read More</a>
+        </div>
+      </div>
 
-    <article>
-      <h2><a href="article1.html">How to Grow Your Business Online in 2025</a></h2>
-      <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Learn proven strategies to grow your business using SEO, branding, and smart marketing.</p>
-      <a href="article1.html" class="btn">Read More</a>
-    </article>
+      <div class="card">
+        <img src="https://addev-studio.com/assets/img/web-conversion.jpg" alt="Web Design Conversion">
+        <div class="card-content">
+          <h3>How to Build a Website That Converts</h3>
+          <p>Design principles that help turn visitors into customers — from layout to call-to-action strategy.</p>
+          <a href="blog-website-conversions.html" class="btn">Read More</a>
+        </div>
+      </div>
 
-    <article>
-      <h2><a href="article2.html">How to Build a Strong Online Presence</a></h2>
-      <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Discover techniques to enhance your visibility through effective SEO and communication.</p>
-      <a href="article2.html" class="btn">Read More</a>
-    </article>
-
-    <article>
-      <h2><a href="article7.html">Simple Ways to Grow Your Website Traffic Organically</a></h2>
-      <p class="meta">Published: October 2025 • by AdDev Studio</p>
-      <p>Boost your organic traffic using on-page SEO, valuable content, and analytics insights.</p>
-      <a href="article7.html" class="btn">Read More</a>
-    </article>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; <script>document.write(new Date().getFullYear())</script> AdDev Studio. All Rights Reserved.</p>
+    © 2025 AdDev Studio • <a href="/affiliate.html">Affiliate Tools</a> • <a href="/index.html">Home</a>
   </footer>
 </body>
 </html>
