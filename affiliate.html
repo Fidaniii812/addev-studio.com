@@ -1,128 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Our top recommended tools and platforms for building websites, improving SEO, and growing your business online. Handpicked by AdDev Studio.">
-  <meta name="keywords" content="affiliate marketing, business tools, web hosting, seo, ai writing, design tools, addev studio, digital marketing">
-  <title>Recommended Tools | AdDev Studio</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Recommended Tools | AdDev Studio</title>
+  <meta name="description" content="AdDev Studio's curated list of trusted tools for hosting, SEO, AI writing, and design — perfect for growing your online business.">
+  <link rel="canonical" href="https://addev-studio.com/affiliate.html" />
+
   <style>
+    :root {
+      --bg: #0d1117;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --brand: #3b82f6;
+      --accent: #8b5cf6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
       margin: 0;
-      padding: 0;
     }
+
     header {
-      background: #2563eb;
-      color: white;
-      padding: 1rem 0;
       text-align: center;
-    }
-    header nav a {
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, var(--brand), var(--accent));
       color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
     }
-    header nav a:hover {
-      text-decoration: underline;
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
+
+    header p {
+      color: #f3f4f6;
+      font-size: 1.1rem;
+    }
+
     main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
     }
-    h1 {
-      text-align: center;
-      color: #2563eb;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
-    .affiliate-card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      margin-bottom: 1.5rem;
-      padding: 1.5rem;
+
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .affiliate-card h2 {
-      color: #2563eb;
-      margin-bottom: 0.5rem;
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
     }
-    .affiliate-card p {
-      color: #444;
+
+    .card img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      background: #fff;
+      padding: 6px;
     }
-    .affiliate-btn {
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--brand);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      min-height: 70px;
+    }
+
+    .btn {
       display: inline-block;
-      background: #2563eb;
+      padding: 10px 16px;
+      background: var(--brand);
       color: white;
-      padding: 0.7rem 1.2rem;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: 500;
-      margin-top: 1rem;
-      transition: background 0.3s;
+      font-weight: 600;
+      transition: background 0.2s ease;
     }
-    .affiliate-btn:hover {
-      background: #1e4fd1;
+
+    .btn:hover {
+      background: var(--accent);
     }
-    footer {
-      background: #0f172a;
-      color: #bbb;
+
+    .why {
+      margin: 60px 0;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
     }
+
+    .why h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: var(--brand);
+    }
+
+    .why p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #1f2937;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
     footer a {
-      color: #60a5fa;
+      color: var(--brand);
       text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h2>AdDev Studio</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services-seo.html">SEO</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1>Top Recommended Tools</h1>
+    <p>Our favorite tools for hosting, SEO, AI writing, and design — tested and trusted by AdDev Studio.</p>
   </header>
 
   <main>
-    <h1>Our Recommended Tools</h1>
-    <p style="text-align:center;">We’ve personally tested and use these tools to build websites, improve SEO, and boost productivity for small and medium businesses.</p>
+    <section class="grid">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hostinger_logo.png" alt="Hostinger Logo">
+        <h3>Hostinger — Web Hosting</h3>
+        <p>Fast, reliable, and affordable web hosting with one-click WordPress installation and free SSL.</p>
+        <a href="https://www.hostinger.com/" target="_blank" class="btn">Visit Hostinger</a>
+      </div>
 
-    <div class="affiliate-card">
-      <h2>🌐 Hostinger – Web Hosting & Domains</h2>
-      <p>A fast, reliable, and affordable hosting platform for modern websites.</p>
-      <a href="https://www.hostg.xyz/aff_c?offer_id=6&aff_id=12345" target="_blank" class="affiliate-btn">Visit Hostinger</a>
-    </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Semrush-logo.svg" alt="Semrush Logo">
+        <h3>Semrush — SEO & Marketing</h3>
+        <p>All-in-one marketing toolkit for SEO, PPC, and content. Analyze competitors and grow traffic faster.</p>
+        <a href="https://www.semrush.com/" target="_blank" class="btn">Try Semrush</a>
+      </div>
 
-    <div class="affiliate-card">
-      <h2>🧠 Jasper AI – AI Content Writing</h2>
-      <p>The best tool for creating high-quality articles and marketing content faster using artificial intelligence.</p>
-      <a href="https://jasper.ai/free-trial?utm_source=affiliate" target="_blank" class="affiliate-btn">Try Jasper AI</a>
-    </div>
+      <div class="card">
+        <img src="https://seeklogo.com/images/J/jasper-ai-logo-07C548E8B0-seeklogo.com.png" alt="Jasper Logo">
+        <h3>Jasper AI — AI Writing Assistant</h3>
+        <p>Boost productivity with AI-powered content creation. Perfect for blogs, ads, and marketing copy.</p>
+        <a href="https://www.jasper.ai/" target="_blank" class="btn">Try Jasper</a>
+      </div>
 
-    <div class="affiliate-card">
-      <h2>📊 Semrush – SEO & Marketing Tools</h2>
-      <p>Professional SEO analytics, keyword research, and competitor tracking for smarter marketing decisions.</p>
-      <a href="https://semrush.sjv.io/addevstudio" target="_blank" class="affiliate-btn">Explore Semrush</a>
-    </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Canva_logo.svg" alt="Canva Logo">
+        <h3>Canva Pro — Design Made Easy</h3>
+        <p>Design stunning visuals, presentations, and social media posts effortlessly with Canva Pro templates.</p>
+        <a href="https://www.canva.com/" target="_blank" class="btn">Get Canva Pro</a>
+      </div>
 
-    <div class="affiliate-card">
-      <h2>🎨 Canva Pro – Design Anything</h2>
-      <p>Create professional designs, social media posts, and marketing materials easily with Canva Pro.</p>
-      <a href="https://partner.canva.com/addevstudio" target="_blank" class="affiliate-btn">Get Canva Pro</a>
-    </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Namecheap_Logo.svg" alt="Namecheap Logo">
+        <h3>Namecheap — Domains & Email</h3>
+        <p>Find your perfect domain name and manage it easily with free privacy protection and DNS tools.</p>
+        <a href="https://www.namecheap.com/" target="_blank" class="btn">Find Domain</a>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Cloudways_logo.svg" alt="Cloudways Logo">
+        <h3>Cloudways — Managed Cloud Hosting</h3>
+        <p>High-performance cloud hosting on AWS, Google Cloud, or DigitalOcean. Fully managed for speed and security.</p>
+        <a href="https://www.cloudways.com/" target="_blank" class="btn">Explore Cloudways</a>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/SurferSEO_logo.svg" alt="SurferSEO Logo">
+        <h3>SurferSEO — AI SEO Optimization</h3>
+        <p>Use AI to write and optimize articles that rank on Google. Get content scores, keywords, and SERP insights.</p>
+        <a href="https://surferseo.com/" target="_blank" class="btn">Try SurferSEO</a>
+      </div>
+    </section>
+
+    <section class="why">
+      <h2>Why We Recommend These Tools</h2>
+      <p>We use and test these tools ourselves before recommending them. They’re beginner-friendly, affordable, and effective for growing any online business — from solo creators to startups.</p>
+    </section>
+
+    <section class="why">
+      <h2>Become a Partner</h2>
+      <p>Are you a brand offering digital tools or software? Join our partner program and reach a global creative audience.</p>
+      <p style="margin-top:14px;"><a href="/contact.html" class="btn">Join as a Partner</a></p>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 AdDev Studio • <a href="index.html">Back to Home</a></p>
+    <p>© 2025 AdDev Studio • <a href="/privacy.html">Privacy Policy</a></p>
   </footer>
 </body>
 </html>
