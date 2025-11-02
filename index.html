@@ -4,148 +4,130 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AdDev Studio | Affiliate & Blog Platform</title>
-  <meta name="description" content="AdDev Studio helps creators and businesses discover the best tools for AI, SEO, design, and productivity — all in one place." />
+  <meta name="description" content="AdDev Studio helps creators and marketers grow online with affiliate tools, SEO insights, and digital resources that convert." />
   <link rel="canonical" href="https://addev-studio.com/" />
 
-  <!-- Open Graph -->
+  <!-- 🔹 SEO & Social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AdDev Studio | Affiliate & Blog Platform" />
-  <meta property="og:description" content="Grow your online business with our recommended tools and tutorials for AI, SEO, and digital marketing." />
+  <meta property="og:description" content="Join AdDev Studio — explore affiliate tools, AI resources, and blog articles for creators and marketers." />
   <meta property="og:image" content="https://addev-studio.com/assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AdDev Studio | Affiliate & Blog Platform" />
+  <meta name="twitter:description" content="Explore affiliate marketing and SEO insights with AdDev Studio." />
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 
   <style>
     body {
-      font-family: 'Inter', Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #fafafa;
+      background-color: #f9fafb;
       color: #222;
     }
 
     header {
-      background: #fff;
-      border-bottom: 1px solid #eee;
+      background-color: #fff;
+      border-bottom: 1px solid #e5e7eb;
       padding: 20px 0;
-      text-align: center;
     }
 
-    header a.logo {
-      text-decoration: none;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #000;
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     nav {
-      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    nav a {
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #1e3a8a;
       text-decoration: none;
-      margin: 0 15px;
-      color: #333;
+    }
+
+    .menu a {
+      margin: 0 12px;
+      color: #374151;
+      text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: #007aff;
+    .menu a:hover {
+      color: #2563eb;
     }
 
     .hero {
       text-align: center;
       padding: 80px 20px;
-      background: #007aff;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
       color: white;
     }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 1.1rem;
-      color: #f1f1f1;
-      max-width: 600px;
-      margin: 0 auto 20px;
+      color: #e5e7eb;
     }
 
     .btn {
-      display: inline-block;
-      background: white;
-      color: #007aff;
-      padding: 10px 18px;
+      background: #fff;
+      color: #1e3a8a;
+      padding: 10px 20px;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
     }
 
-    /* ===== AFFILIATE SECTION ===== */
-    .tools {
+    .btn:hover {
+      background: #f3f4f6;
+    }
+
+    .grid-3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
+      margin: 40px 0;
     }
 
     .card {
-      background: #fff;
-      border: 1px solid #eee;
+      background: white;
       border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       padding: 24px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-bottom: 12px;
     }
 
     .card h3 {
-      margin: 10px 0;
-      color: #007aff;
+      color: #2563eb;
+      margin-bottom: 10px;
     }
 
     .card p {
-      font-size: 0.95rem;
       color: #555;
-      margin-bottom: 16px;
-    }
-
-    .card a {
-      display: inline-block;
-      background: #007aff;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .card a:hover {
-      background: #005fcc;
     }
 
     footer {
-      background: #fff;
-      border-top: 1px solid #eee;
+      background: #111827;
+      color: #d1d5db;
+      padding: 30px 0;
       text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
+      margin-top: 60px;
     }
 
     footer a {
-      color: #007aff;
+      color: #93c5fd;
       text-decoration: none;
     }
 
@@ -157,62 +139,51 @@
 
 <body>
   <header>
-    <a href="/" class="logo">AdDev Studio</a>
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/affiliate.html">Affiliate Tools</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
+    <div class="container">
+      <nav>
+        <a href="/" class="logo">AdDev Studio</a>
+        <div class="menu">
+          <a href="/affiliate.html">Affiliate</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Discover the Best Digital Tools</h1>
-    <p>We test, review, and recommend the top tools for creators, marketers, and businesses — saving you time and boosting your success.</p>
-    <a href="/affiliate.html" class="btn">Explore Tools</a>
-  </section>
+  <main>
+    <section class="hero">
+      <h1>Build, Learn & Earn with AdDev Studio</h1>
+      <p>Your go-to platform for affiliate marketing, SEO growth, and creative digital tools.</p>
+      <a href="/affiliate.html" class="btn">Explore Affiliate Tools</a>
+    </section>
 
-  <main class="tools">
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Hostinger_logo.png" alt="Hostinger" />
-      <h3>Hostinger</h3>
-      <p>Fast and affordable web hosting for any project — perfect for websites, blogs, and online stores.</p>
-      <a href="#">Visit Hostinger</a>
-    </div>
+    <div class="container">
+      <section class="grid-3">
+        <div class="card">
+          <h3>Affiliate Programs</h3>
+          <p>Discover trusted tools and services to boost your revenue. We test, you earn.</p>
+          <a href="/affiliate.html" class="btn">View Programs</a>
+        </div>
 
-    <div class="card">
-      <img src="https://seeklogo.com/images/J/jasper-ai-logo-67D5F2E9E7-seeklogo.com.png" alt="Jasper AI" />
-      <h3>Jasper AI</h3>
-      <p>Write high-quality content and marketing copy using AI — faster and smarter.</p>
-      <a href="#">Try Jasper</a>
-    </div>
+        <div class="card">
+          <h3>SEO & Marketing Insights</h3>
+          <p>Read guides and tips on SEO, AI tools, and content strategies that actually work.</p>
+          <a href="/blog.html" class="btn">Read Blog</a>
+        </div>
 
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Canva_Logo.png" alt="Canva" />
-      <h3>Canva Pro</h3>
-      <p>Design anything effortlessly. Create visuals, ads, and presentations that impress.</p>
-      <a href="#">Start Designing</a>
-    </div>
+        <div class="card">
+          <h3>Creator Resources</h3>
+          <p>Access premium resources for digital marketers, designers, and creators worldwide.</p>
+          <a href="/resources.html" class="btn">View Resources</a>
+        </div>
+      </section>
 
-    <div class="card">
-      <img src="https://seeklogo.com/images/S/surfer-seo-logo-68F7C5A1B2-seeklogo.com.png" alt="SurferSEO" />
-      <h3>Surfer SEO</h3>
-      <p>Optimize your content with data-driven SEO insights that bring real traffic results.</p>
-      <a href="#">Boost SEO</a>
-    </div>
-
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion AI" />
-      <h3>Notion AI</h3>
-      <p>Plan, write, and organize your work in one smart workspace powered by AI.</p>
-      <a href="#">Try Notion</a>
-    </div>
-
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" alt="Shopify" />
-      <h3>Shopify</h3>
-      <p>Build your online store easily and start selling products worldwide in minutes.</p>
-      <a href="#">Start Selling</a>
+      <section class="hero" style="background: #1e3a8a; color: white;">
+        <h2>Join the AdDev Community</h2>
+        <p>Stay ahead with the latest affiliate trends and AI-powered marketing tools.</p>
+        <a href="/subscribe.html" class="btn">Join Now</a>
+      </section>
     </div>
   </main>
 
