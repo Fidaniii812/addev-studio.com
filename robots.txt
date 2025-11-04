@@ -2,15 +2,12 @@
 # robots.txt for AdDev Studio
 # ================================
 
+
 User-agent: *
 Allow: /
 
-# Block internal or private pages
+# Blloko faqe jo të nevojshme për indeksim (nëse ekzistojnë)
 Disallow: /404.html
-Disallow: /assets/
-Disallow: /drafts/
+Disallow: /private/
 
-# Sitemap
 Sitemap: https://addev-studio.com/sitemap.xml
-
-# End of file
