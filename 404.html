@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
+<script>
+  // Merr URL-n aktuale
+  var path = window.location.pathname.toLowerCase();
+
+  // Lista e artikujve që kanë ndryshuar emër
+  var redirects = {
+    "/how-to-build-a-strong-online-presence-for-your-small-business": "/blog.html",
+    "/how-to-grow-your-business-online-in-2025": "/blog.html",
+    "/3-easy-ways-to-make-money-online-in-2025": "/blog.html"
+  };
+
+  // Nëse ekziston në listë, ridrejto
+  if (redirects[path]) {
+    window.location.replace(redirects[path]);
+  } else {
+    // Nëse jo, ridrejto në faqen kryesore
+    window.location.replace("/");
+  }
+</script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
