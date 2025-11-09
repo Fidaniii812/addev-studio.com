@@ -1,112 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Build, Learn & Earn with AdDev Studio — your hub for affiliate marketing, SEO growth, and digital tools." />
   <title>AdDev Studio</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-<body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="nav">
-      <a href="/" class="logo">AdDev Studio</a>
-      <ul class="menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/affiliate.html">Affiliate</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/resources.html">Resources</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </nav>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">AdDev Studio</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/affiliate.html">Affiliate</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <h1>Build, Learn & Earn with AdDev Studio</h1>
-      <p>Your gateway to affiliate marketing, SEO, and growth tools.</p>
-      <a href="/affiliate.html" class="btn">Explore Affiliate Tools</a>
-    </div>
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container center">
+        <h2>Build, Learn & Earn with AdDev Studio</h2>
+        <p>Your go-to platform for affiliate marketing, SEO growth, and creative digital tools.</p>
+        <div class="buttons">
+          <a href="/affiliate.html" class="btn primary">Explore Affiliate Tools</a>
+          <a href="/blog.html" class="btn secondary">Read Blog</a>
+        </div>
+      </div>
+      <!-- Hero Video Placeholder -->
+      <div class="hero-video">
+        <video autoplay muted loop playsinline style="max-width:100%;border-radius:12px;">
+          <source src="assets/affiliate-intro.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
 
-    <!-- ALIEXPRESS VIDEO REKLAMA -->
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="https://video.aliexpress-media.com/affiliate_promo_video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-
-  <!-- CORE CARDS -->
-  <main class="container">
-    <section class="grid-3">
+    <!-- AFFILIATE PROGRAM CARDS -->
+    <section class="grid-3 container">
       <div class="card reveal">
+        <div class="icon"><img src="images/icon-affiliate.svg" alt="Affiliate" /></div>
         <h3>Affiliate Programs</h3>
         <p>Discover trusted tools and services to boost your revenue. We test, you earn.</p>
         <a class="btn" href="/affiliate.html">View Programs</a>
       </div>
 
       <div class="card reveal">
+        <div class="icon"><img src="images/icon-seo.svg" alt="SEO Insights" /></div>
         <h3>SEO & Marketing Insights</h3>
-        <p>Read guides on SEO, AI tools, and content strategies that actually work.</p>
+        <p>Guides on SEO, AI tools, and content strategies that actually work.</p>
         <a class="btn" href="/blog.html">Read Blog</a>
       </div>
 
       <div class="card reveal">
+        <div class="icon"><img src="images/icon-creator.svg" alt="Creator Resources" /></div>
         <h3>Creator Resources</h3>
-        <p>Premium resources for marketers, designers, and creators worldwide.</p>
+        <p>Premium resources for digital marketers, designers, and creators worldwide.</p>
         <a class="btn" href="/resources.html">View Resources</a>
       </div>
     </section>
 
-    <!-- SPONSORED VIDEOS (ALIEXPRESS) -->
-    <section class="sponsored">
-      <h2>Sponsored Videos</h2>
-      <p>Watch product promotions directly from AliExpress partners.</p>
-      <div class="video-grid">
-        <iframe src="https://ad.aliexpress.com/video/affiliate_ad_1.html" frameborder="0" allowfullscreen></iframe>
-        <iframe src="https://ad.aliexpress.com/video/affiliate_ad_2.html" frameborder="0" allowfullscreen></iframe>
-        <iframe src="https://ad.aliexpress.com/video/affiliate_ad_3.html" frameborder="0" allowfullscreen></iframe>
+    <!-- JOIN COMMUNITY -->
+    <section class="join container center">
+      <h3>Join the AdDev Community</h3>
+      <p>Stay ahead with the latest affiliate trends and AI-powered marketing tools.</p>
+      <a class="btn primary" href="/join.html">Join Now</a>
+    </section>
+
+    <!-- PARTNER PROGRAMS -->
+    <section class="grid-3 container">
+      <div class="card reveal">
+        <h3>AliExpress – Global Shopping Deals</h3>
+        <p>Shop millions of products worldwide through our affiliate partnership.</p>
+        <a class="btn" href="https://ali.ski/your-affiliate-link" target="_blank" rel="nofollow sponsored noopener">Shop on AliExpress</a>
+      </div>
+
+      <div class="card reveal">
+        <h3>Admitad Partners</h3>
+        <p>Discover top affiliate networks and earn from traffic easily.</p>
+        <a class="btn" href="https://admitad.com/en/" target="_blank" rel="nofollow sponsored noopener">Join Admitad</a>
+      </div>
+
+      <div class="card reveal">
+        <h3>Monetag – Direct Affiliate Link</h3>
+        <p>Monetize your traffic easily with Monetag Direct Link. (Safe static link only)</p>
+        <a class="btn" href="https://otieu.com/4/10165598" target="_blank" rel="nofollow sponsored noopener">Open Monetag Offers</a>
       </div>
     </section>
 
-    <!-- AFFILIATE NETWORKS -->
-    <section class="affiliate-section">
-      <h2>Start Earning with Our Affiliate Partners</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>AliExpress – Global Shopping Deals</h3>
-          <p>Shop millions of products worldwide through our affiliate partnership.</p>
-          <a class="btn" href="https://otieu.com/4/10165598" target="_blank">Shop on AliExpress</a>
-        </div>
-
-        <div class="card">
-          <h3>Admitad Partners</h3>
-          <p>Discover top affiliate networks and earn from traffic easily.</p>
-          <a class="btn" href="https://admitad.com/en/" target="_blank">Join Admitad</a>
-        </div>
-
-        <div class="card">
-          <h3>Monetag – Direct Affiliate Link</h3>
-          <p>Monetize your traffic easily with Monetag Direct Link.</p>
-          <a class="btn" href="https://otieu.com/4/10165826" target="_blank">Open Monetag Offers</a>
-        </div>
-      </div>
+    <!-- SPONSORED PLACEHOLDER (safe iframe, no scripts) -->
+    <section class="sponsored container center">
+      <h3>Sponsored Content</h3>
+      <iframe 
+        src="https://example.com/your-safe-banner" 
+        title="Sponsored Banner"
+        width="728"
+        height="90"
+        style="max-width:100%;border:1px solid #223067;border-radius:8px"
+        sandbox="allow-scripts allow-popups allow-same-origin">
+      </iframe>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2025 AdDev Studio • <a href="/privacy.html">Privacy Policy</a></p>
+    <div class="container foot">
+      <span>© 2025 AdDev Studio</span> •
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
   </footer>
 
   <!-- AFFILIATE DISCLOSURE -->
   <div class="disclosure">
-    <strong>Affiliate Disclosure:</strong> Some links on this website are affiliate links. We may earn a small commission — at no extra cost to you.
+    <strong>Affiliate Disclosure:</strong>
+    Some links on this website are affiliate links. If you make a purchase, <b>AdDev Studio</b> may earn a small commission — at no extra cost to you.
   </div>
-
-  <!-- MONETAG GLOBAL SCRIPT -->
-  <script src="https://3nbf4.com/act/files/tag.min.js?z=10165826" data-cfasync="false" async></script>
 
   <!-- SIMPLE REVEAL ANIMATION -->
   <script>
@@ -116,10 +131,9 @@
         entries.forEach(e => {
           if (e.isIntersecting) e.target.classList.add('visible');
         });
-      }, {threshold: 0.1});
+      }, { threshold: 0.1 });
       els.forEach(el => io.observe(el));
     })();
   </script>
-
 </body>
 </html>
