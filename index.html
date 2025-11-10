@@ -5,28 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AdDev Studio</title>
 
-  <!-- verification meta kept if needed (remove if not used) -->
+  <!-- Keep if you need this verification -->
   <meta name="verify-admitad" content="47bcc10bc5" />
-  <!-- NOTE: monetag meta removed intentionally -->
+  <!-- Monetag meta/script intentionally removed for safety -->
 
   <style>
-    /* --- Basic site CSS (kept from existing) --- */
-    body { margin: 0; font-family: Arial, sans-serif; background-color: #f7f9fc; color: #222; }
-    header { background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.05); padding: 20px 0; }
-    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
-    nav { display:flex; justify-content:space-between; align-items:center; }
-    .logo { color:#2563eb; font-weight:bold; text-decoration:none; font-size:20px; }
-    .menu a { color:#333; text-decoration:none; margin-left:20px; font-weight:500; }
-    .hero { text-align:center; padding:80px 20px; background: linear-gradient(120deg,#1e3a8a,#2563eb); color:white; border-radius:0 0 12px 12px; }
-    .btn { background:#2563eb; color:white; padding:10px 20px; text-decoration:none; border-radius:6px; display:inline-block; margin-top:10px; }
-    .grid-3 { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px; margin:60px 0; }
-    .card { background:white; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,.05); padding:24px; text-align:center; }
-    .card h3 { color:#2563eb; margin-bottom:10px; }
-    footer { background:#111827; color:#d1d5db; padding:30px 0; text-align:center; margin-top:60px; }
-    .disclosure { font-size:14px; color:#777; padding:20px; background:#fff; border-top:1px solid #eee; }
-    .media-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:30px 0; }
-    .video-thumb { width:320px; height:180px; background:#000; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; }
-    @media (max-width:600px){ .hero{padding:40px 10px} .video-thumb{width:100%;height:180px} }
+    /* ===== Base styles (kept minimal and stable) ===== */
+    :root{
+      --brand:#2563eb;
+      --brand-dark:#0b3b61;
+      --bg:#f7f9fc;
+      --ink:#222;
+      --muted:#666;
+      --card:#fff;
+      --foot:#111827;
+      --foot-ink:#d1d5db;
+      --shadow:0 2px 6px rgba(0,0,0,.05);
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+    .container{width:90%;max-width:1100px;margin:0 auto}
+    header{background:#fff;box-shadow:var(--shadow);padding:20px 0}
+    nav{display:flex;justify-content:space-between;align-items:center}
+    .logo{color:var(--brand);font-weight:700;text-decoration:none;font-size:20px}
+    .menu a{color:#333;text-decoration:none;margin-left:20px;font-weight:500}
+    .hero{color:#fff;text-align:center;padding:80px 20px;background:linear-gradient(120deg,#1e3a8a,var(--brand));border-radius:0 0 var(--radius) var(--radius)}
+    .btn{display:inline-block;background:var(--brand);color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none}
+    .btn.secondary{background:var(--brand-dark)}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:60px 0}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;text-align:center}
+    .card h3{color:var(--brand);margin:0 0 10px}
+    .muted{color:var(--muted)}
+    footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:30px 0;margin-top:60px}
+    .foot a{color:#93c5fd;text-decoration:none}
+    .disclosure{font-size:14px;color:#777;padding:16px 20px;background:#fff;border-top:1px solid #eee}
+
+    /* ===== Featured videos & ads ===== */
+    .feature-wrap{margin:40px 0}
+    .vid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;align-items:start}
+    .vid{position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+    .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+    /* responsive */
+    @media (max-width:600px){
+      .hero{padding:50px 12px}
+    }
   </style>
 </head>
 <body>
@@ -34,7 +58,7 @@
   <header>
     <div class="container">
       <nav>
-        <a href="/" class="logo">AdDev Studio</a>
+        <a class="logo" href="/">AdDev Studio</a>
         <div class="menu">
           <a href="/affiliate.html">Affiliate</a>
           <a href="/blog.html">Blog</a>
@@ -46,16 +70,18 @@
   </header>
 
   <main>
+    <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="container">
         <h1>Build, Learn & Earn with AdDev Studio</h1>
         <p>Your go-to platform for affiliate marketing, SEO growth, and creative digital tools.</p>
-        <a href="/affiliate.html" class="btn">Explore Affiliate Tools</a>
-        <a href="/blog.html" class="btn" style="background:#0b3b61;margin-left:8px">Read Blog</a>
+        <a class="btn" href="/affiliate.html">Explore Affiliate Tools</a>
+        <a class="btn secondary" href="/blog.html" style="margin-left:8px">Read Blog</a>
       </div>
     </section>
 
     <div class="container">
+      <!-- ===== Three core cards (unchanged structure) ===== -->
       <section class="grid-3">
         <div class="card">
           <h3>Affiliate Programs</h3>
@@ -76,87 +102,104 @@
         </div>
       </section>
 
-      <section>
-        <div style="text-align:center; margin-top:20px;">
-          <h2 style="margin-bottom:8px">Featured Videos & Ads</h2>
-          <p style="color:#666; margin-bottom:20px">Visuals and short videos convert better — place here your featured creatives.</p>
-          <div class="media-row">
-            <div class="video-thumb">Video 1 (replace)</div>
-            <div class="video-thumb">Video 2 (replace)</div>
-            <div class="video-thumb">Video 3 (replace)</div>
+      <!-- ===== Featured Videos & Ads (automatic via YouTube playlist) ===== -->
+      <section class="feature-wrap">
+        <h2 style="text-align:center;margin:0 0 6px">Featured Videos & Ads</h2>
+        <p class="muted" style="text-align:center;margin:0 0 18px">
+          Visuals and short videos convert better — these slots auto-load from your playlist.
+        </p>
+
+        <!--
+          HOW TO CONTROL VIDEOS:
+          - Replace the VIDEO IDs below (the "VIDEO_ID_HERE" bits) with your YouTube video IDs.
+          - Or use the same playlist ID for all three for rotation.
+        -->
+        <div class="vid-grid">
+          <div class="vid">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE_1?rel=0&modestbranding=1"
+              title="Featured Video 1" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="vid">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE_2?rel=0&modestbranding=1"
+              title="Featured Video 2" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="vid">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE_3?rel=0&modestbranding=1"
+              title="Featured Video 3" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" allowfullscreen>
+            </iframe>
           </div>
         </div>
       </section>
 
-      <section style="margin-top:40px">
-        <h2 style="text-align:center">Start Earning with Our Affiliate Programs</h2>
-        <p style="text-align:center; color:#555; margin-bottom:25px">Join trusted global affiliate networks and grow your online income with AdDev Studio.</p>
-
-        <div style="text-align:center; margin-bottom:30px">
-          <a href="/affiliate.html" class="btn" style="background:#ff6b5a">Explore Our Affiliate Programs</a>
+      <!-- ===== CTA above partner cards ===== -->
+      <section style="margin-top:10px">
+        <h2 style="text-align:center;margin:0 0 6px">Start Earning with Our Affiliate Programs</h2>
+        <p class="muted" style="text-align:center;margin:0 0 22px">
+          Join trusted global affiliate networks and grow your online income with AdDev Studio.
+        </p>
+        <div style="text-align:center;margin-bottom:26px">
+          <a class="btn" style="background:#ff6b5a" href="/affiliate.html">Explore Our Affiliate Programs</a>
         </div>
 
+        <!-- ===== Three partner cards (links preserved) ===== -->
         <div class="grid-3">
           <div class="card">
             <h3>AliExpress – Global Shopping Deals</h3>
             <p>Shop millions of products worldwide through our affiliate partnership.</p>
-            <!-- UPDATED FULL AFFILIATE LINK -->
-            <a class="btn"
-               href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fcategory%2F100003109%2Fwomen-clothing.html&subid=https%3A%2F%2Fwww.aliexpress.com%2F"
-               target="_blank"
-               rel="noopener noreferrer">
-               Shop on AliExpress
+            <!-- AliExpress deep link (your exact generated deeplink) -->
+            <a
+              class="btn"
+              target="_blank" rel="noopener"
+              href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fcategory%2F100003109%2Fwomen-clothing.html&subid=https%3A%2F%2Fwww.aliexpress.com%2F">
+              Shop on AliExpress
             </a>
           </div>
 
           <div class="card">
             <h3>Admitad Partners</h3>
             <p>Discover top affiliate networks and earn from traffic easily.</p>
-            <a class="btn" href="https://admitad.com/en/" target="_blank" rel="noopener">Join Admitad</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://admitad.com/en/">Join Admitad</a>
           </div>
 
           <div class="card">
             <h3>Monetag – Direct Affiliate Link</h3>
-            <p>Monetize your traffic easily with Monetag Direct Link. (We removed dynamic Monetag script for safety.)</p>
-            <a class="btn" href="https://otieu.com/4/10165598" target="_blank" rel="noopener">Open Monetag Offers</a>
+            <p>Monetize your traffic safely with the static Monetag Direct Link (no auto-ads on page).</p>
+            <!-- Safe static link only (no dynamic ad script, no gambling shown on your page) -->
+            <a class="btn" target="_blank" rel="noopener" href="https://otieu.com/4/10165598">Open Monetag Offers</a>
           </div>
         </div>
       </section>
 
-      <section style="margin-top:40px; text-align:center">
+      <!-- ===== Optional sponsored banner placeholder (manual partner iframe/banner) ===== -->
+      <section style="margin:40px 0;text-align:center">
         <h3>Sponsored Content</h3>
-        <p style="color:#a8b3cf; margin-bottom:10px">Contextual offers for our visitors.</p>
-        <div style="max-width:720px; margin:0 auto; padding:18px; border-radius:8px; border:1px solid #ddd; background:#fff">
+        <p class="muted" style="margin:0 0 10px">Contextual offers for our visitors.</p>
+        <div style="max-width:720px;margin:0 auto;padding:18px;border-radius:8px;border:1px solid #ddd;background:#fff">
           <strong>Auto Ad Zone (placeholder)</strong>
-          <p style="color:#666">Replace with approved partner iframe/banner when ready.</p>
+          <p class="muted" style="margin:8px 0 0">Replace with an approved partner iframe/banner when ready.</p>
         </div>
       </section>
-
     </div>
   </main>
 
   <footer>
     <div class="container foot">
-      <span>© 2025 AdDev Studio</span> • <a href="/privacy.html" style="color:#93c5fd; text-decoration:none">Privacy Policy</a>
+      <span>© 2025 AdDev Studio</span> • <a href="/privacy.html">Privacy Policy</a>
     </div>
   </footer>
 
   <div class="disclosure">
-    <strong>Affiliate Disclosure:</strong> Some of the links on this website are affiliate links. If you make a purchase, AdDev Studio may earn a small commission — at no extra cost to you. We only recommend tools and platforms we personally trust or use.
+    <strong>Affiliate Disclosure:</strong>
+    Some of the links on this website are affiliate links. If you make a purchase through these links,
+    <b>AdDev Studio</b> may earn a small commission — at no extra cost to you.
+    We only recommend tools and platforms we personally trust or use.
   </div>
 
-  <script>
-    (function(){
-      const els = [...document.querySelectorAll('.reveal, .reveal-2, .reveal-3')];
-      if(!els.length) return;
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting) e.target.classList.add('is-visible');
-        });
-      }, {threshold:.12});
-      els.forEach(el=> io.observe(el));
-    })();
-  </script>
-
+  <!-- No Monetag scripts. No auto-ads. Only static, user-initiated links above. -->
 </body>
 </html>
