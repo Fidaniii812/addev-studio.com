@@ -24,10 +24,8 @@
     .card h3 { color:#2563eb; margin-bottom:10px; }
     footer { background:#111827; color:#d1d5db; padding:30px 0; text-align:center; margin-top:60px; }
     .disclosure { font-size:14px; color:#777; padding:20px; background:#fff; border-top:1px solid #eee; }
-    /* placeholder for video section visuals */
     .media-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:30px 0; }
     .video-thumb { width:320px; height:180px; background:#000; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; }
-    /* responsive tweaks */
     @media (max-width:600px){ .hero{padding:40px 10px} .video-thumb{width:100%;height:180px} }
   </style>
 </head>
@@ -58,7 +56,6 @@
     </section>
 
     <div class="container">
-      <!-- core cards (existing affiliate links kept) -->
       <section class="grid-3">
         <div class="card">
           <h3>Affiliate Programs</h3>
@@ -79,14 +76,11 @@
         </div>
       </section>
 
-      <!-- video / visual section (placeholders) -->
       <section>
         <div style="text-align:center; margin-top:20px;">
           <h2 style="margin-bottom:8px">Featured Videos & Ads</h2>
           <p style="color:#666; margin-bottom:20px">Visuals and short videos convert better — place here your featured creatives.</p>
-
           <div class="media-row">
-            <!-- Replace these placeholders with real video embeds (YouTube, Vimeo or self-hosted) -->
             <div class="video-thumb">Video 1 (replace)</div>
             <div class="video-thumb">Video 2 (replace)</div>
             <div class="video-thumb">Video 3 (replace)</div>
@@ -94,7 +88,6 @@
         </div>
       </section>
 
-      <!-- Core affiliate buttons (preserve links you want kept) -->
       <section style="margin-top:40px">
         <h2 style="text-align:center">Start Earning with Our Affiliate Programs</h2>
         <p style="text-align:center; color:#555; margin-bottom:25px">Join trusted global affiliate networks and grow your online income with AdDev Studio.</p>
@@ -107,39 +100,39 @@
           <div class="card">
             <h3>AliExpress – Global Shopping Deals</h3>
             <p>Shop millions of products worldwide through our affiliate partnership.</p>
-            <!-- KEEP this link (user wanted AliExpress preserved) -->
-            <a class="btn" href="https://rzekl.com/g/1e8d11449447bcc10" target="_blank" rel="noopener">Shop on AliExpress</a>
+            <!-- UPDATED FULL AFFILIATE LINK -->
+            <a class="btn"
+               href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fcategory%2F100003109%2Fwomen-clothing.html&subid=https%3A%2F%2Fwww.aliexpress.com%2F"
+               target="_blank"
+               rel="noopener noreferrer">
+               Shop on AliExpress
+            </a>
           </div>
 
           <div class="card">
             <h3>Admitad Partners</h3>
             <p>Discover top affiliate networks and earn from traffic easily.</p>
-            <!-- KEEP Admitad link (preserve) -->
             <a class="btn" href="https://admitad.com/en/" target="_blank" rel="noopener">Join Admitad</a>
           </div>
 
           <div class="card">
             <h3>Monetag – Direct Affiliate Link</h3>
             <p>Monetize your traffic easily with Monetag Direct Link. (We removed dynamic Monetag script for safety.)</p>
-            <!-- STATIC link only: safe static tracking URL or remove entirely if you prefer -->
             <a class="btn" href="https://otieu.com/4/10165598" target="_blank" rel="noopener">Open Monetag Offers</a>
           </div>
         </div>
       </section>
 
-      <!-- Sponsored / placeholder zone (no external auto-ads scripts) -->
       <section style="margin-top:40px; text-align:center">
         <h3>Sponsored Content</h3>
         <p style="color:#a8b3cf; margin-bottom:10px">Contextual offers for our visitors.</p>
-        <!-- Example banner placeholder (replace with approved partner iframe) -->
         <div style="max-width:720px; margin:0 auto; padding:18px; border-radius:8px; border:1px solid #ddd; background:#fff">
           <strong>Auto Ad Zone (placeholder)</strong>
           <p style="color:#666">Replace with approved partner iframe/banner when ready.</p>
         </div>
       </section>
 
-    </div> <!-- /container -->
-
+    </div>
   </main>
 
   <footer>
@@ -152,9 +145,6 @@
     <strong>Affiliate Disclosure:</strong> Some of the links on this website are affiliate links. If you make a purchase, AdDev Studio may earn a small commission — at no extra cost to you. We only recommend tools and platforms we personally trust or use.
   </div>
 
-  <!-- NOTE: Monetag scripts removed. If you want to reinstate a safe ad provider, we will add only approved iframe/banner code here. -->
-
-  <!-- Simple reveal animation kept (no external libs) -->
   <script>
     (function(){
       const els = [...document.querySelectorAll('.reveal, .reveal-2, .reveal-3')];
