@@ -1,137 +1,225 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AdDev Ads Center</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdDev Studio — Ads & Partners</title>
 
   <style>
-    body { margin:0; font-family:Arial; background:#f7f9fc; color:#222; }
-    header { background:#fff; padding:20px 0; box-shadow:0 2px 6px rgba(0,0,0,.1); }
-    .container { width:90%; max-width:1100px; margin:auto; }
-    nav a { margin-right:20px; color:#2563eb; text-decoration:none; font-weight:600; }
-
-    .hero {
-      text-align:center; padding:60px 20px;
-      background:linear-gradient(120deg,#1e3a8a,#2563eb);
-      color:white; border-radius:0 0 12px 12px;
+    :root {
+      --brand:#2563eb;
+      --dark:#0b3b61;
+      --bg:#f7f9fc;
+      --ink:#222;
+      --card:#fff;
+      --muted:#666;
+      --shadow:0 2px 6px rgba(0,0,0,.08);
+      --radius:14px;
     }
 
-    h2 { margin-top:40px; text-align:center; color:#2563eb; }
-    .grid { 
-      display:grid; 
+    body {
+      margin:0; font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg); color:var(--ink);
+    }
+
+    .container { width:92%; max-width:1150px; margin:0 auto; }
+    header { background:#fff; padding:20px 0; box-shadow:var(--shadow); }
+
+    nav { display:flex; justify-content:space-between; align-items:center; }
+    nav a { text-decoration:none; font-weight:600; color:var(--brand); }
+
+    h1, h2 { text-align:center; }
+
+    /* Video Section */
+    .video-grid {
+      margin:30px 0;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+      gap:20px;
+    }
+    .vid {
+      position:relative; padding-top:56.25%;
+      border-radius:var(--radius);
+      overflow:hidden; background:#000;
+    }
+    .vid iframe {
+      position:absolute; inset:0;
+      width:100%; height:100%; border:0;
+    }
+
+    /* Partner Cards */
+    .grid-partners {
+      display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px; 
-      margin-top:30px;
+      gap:20px; margin:40px 0;
     }
-
     .card {
-      background:white; padding:20px; border-radius:12px;
-      box-shadow:0 2px 6px rgba(0,0,0,.08); text-align:center;
+      background:var(--card); border-radius:var(--radius);
+      padding:24px; text-align:center;
+      box-shadow:var(--shadow);
+    }
+    .card img { width:110px; height:auto; margin-bottom:12px; }
+    .card h3 { color:var(--brand); margin:0 0 10px; }
+    .btn {
+      display:inline-block; margin-top:10px;
+      padding:10px 18px; background:var(--brand);
+      color:#fff; text-decoration:none; border-radius:6px;
     }
 
-    .card img { max-width:120px; margin-bottom:10px; }
-    .btn { 
-      display:inline-block; background:#2563eb; padding:10px 20px; 
-      color:white; border-radius:6px; text-decoration:none; margin-top:10px;
-    }
-
-    .video-box {
-      position:relative; padding-top:56%; background:black; border-radius:12px;
-    }
-    .video-box iframe {
-      position:absolute; inset:0; width:100%; height:100%; border:0;
+    /* Banner Section */
+    .banner {
+      margin:40px 0; padding:18px;
+      background:#fff; border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      text-align:center;
     }
 
     footer {
-      margin-top:60px; padding:20px; text-align:center;
-      background:#111827; color:#d1d5db;
+      background:#111827; color:#ccc;
+      padding:25px 0; text-align:center;
+      margin-top:40px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="container">
     <nav>
-      <a href="/">Home</a>
-      <a href="/affiliate.html">Affiliate</a>
-      <a href="/ads.html">Ads Center</a>
+      <a href="/">AdDev Studio</a>
+      <a href="/index.html">Back to Home</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <h1>AdDev Ads Center</h1>
-  <p>Your central hub for affiliate ads, banners and promotions.</p>
-</section>
 
 <div class="container">
 
-  <!-- ================= BANNERS ================= -->
-  <h2>Top Banners</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/500x300?text=Banner+1">
-      <a class="btn" href="#">Open Ad</a>
+  <h1>Partner Ads & Promotions</h1>
+  <p style="text-align:center; color:var(--muted)">
+    Explore exclusive deals from our trusted partners.
+  </p>
+
+  <!-- VIDEO SECTION -->
+  <h2>Featured Promo Videos</h2>
+
+  <div class="video-grid">
+    <div class="vid">
+      <iframe src="https://www.youtube.com/embed/RlCjNb3T1sY?autoplay=1&mute=1&loop=1&playlist=RlCjNb3T1sY"
+        allow="autoplay; encrypted-media"></iframe>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/500x300?text=Banner+2">
-      <a class="btn" href="#">Open Ad</a>
+    <div class="vid">
+      <iframe src="https://www.youtube.com/embed/RlCjNb3T1sY?autoplay=1&mute=1&loop=1&playlist=RlCjNb3T1sY"
+        allow="autoplay; encrypted-media"></iframe>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/500x300?text=Banner+3">
-      <a class="btn" href="#">Open Ad</a>
+    <div class="vid">
+      <iframe src="https://www.youtube.com/embed/RlCjNb3T1sY?autoplay=1&mute=1&loop=1&playlist=RlCjNb3T1sY"
+        allow="autoplay; encrypted-media"></iframe>
     </div>
   </div>
 
-  <!-- ================= VIDEOS ================= -->
-  <h2>Video Ads</h2>
-  <div class="grid">
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+
+  <!-- PARTNER GRID -->
+  <h2>Our Affiliate Partners</h2>
+
+  <div class="grid-partners">
+
+    <!-- AliExpress -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/AliExpress_logo.svg" alt="AliExpress">
+      <h3>AliExpress</h3>
+      <p>Millions of products. Global deals. Earn through your traffic.</p>
+      <a class="btn" target="_blank"
+         href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/">Shop AliExpress</a>
     </div>
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+
+    <!-- Aurabits -->
+    <div class="card">
+      <img src="https://aurabits.io/logo.png" alt="Aurabits">
+      <h3>Aurabits</h3>
+      <p>AI Tools & Digital Products. Earn per signup.</p>
+      <a class="btn" target="_blank"
+         href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/">Join Aurabits</a>
     </div>
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+
+    <!-- Tatkraft -->
+    <div class="card">
+      <img src="https://tatkraft.com/img/logo.svg" alt="Tatkraft">
+      <h3>Tatkraft</h3>
+      <p>Home products & quality accessories.</p>
+      <a class="btn" target="_blank"
+         href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/">Shop Tatkraft</a>
     </div>
+
+    <!-- Lunapraxy -->
+    <div class="card">
+      <img src="https://lunapraxy.com/logo.png" alt="Lunapraxy">
+      <h3>Lunapraxy</h3>
+      <p>Trending fashion and lifestyle offers.</p>
+      <a class="btn" target="_blank"
+         href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/">Shop Lunapraxy</a>
+    </div>
+
+    <!-- Sotka -->
+    <div class="card">
+      <img src="https://ficca2021.com/images/sotka-logo.png" alt="Sotka">
+      <h3>Sotka Partners</h3>
+      <p>Earn up to 10% commissions promoting Sotka.</p>
+      <a class="btn" target="_blank"
+         href="https://ficca2021.com/g/tvbtu293z547bcc10bc58f43554cb4/?erid=5jtCeReNwxHpfQTFQGiRvQV">
+        Join Sotka
+      </a>
+    </div>
+
+    <!-- Hacoo -->
+    <div class="card">
+      <img src="https://hacoo.com/logo.png" alt="Hacoo">
+      <h3>Hacoo</h3>
+      <p>Fashion & accessories with global delivery.</p>
+      <a class="btn" target="_blank"
+         href="https://dorinebeaumont.com/g/84e1j7pvh147bcc10bc5f271888eea/">Shop Hacoo</a>
+    </div>
+
+    <!-- Tion -->
+    <div class="card">
+      <img src="https://tion.com/logo.svg" alt="Tion">
+      <h3>Tion Smart Devices</h3>
+      <p>Smart home & air technology innovations.</p>
+      <a class="btn" target="_blank"
+         href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/">Explore Tion</a>
+    </div>
+
+    <!-- Aroma-Butik -->
+    <div class="card">
+      <img src="https://aroma-butik.ru/wp-content/uploads/logo.png" alt="Aroma Butik">
+      <h3>Aroma-Butik</h3>
+      <p>Perfume and beauty deals with high payouts.</p>
+      <a class="btn" target="_blank"
+         href="https://aflink.ru/g/18vhi6r5cv47bcc10bc579deb39b46/">Shop Aroma-Butik</a>
+    </div>
+
+    <!-- Monetag -->
+    <div class="card">
+      <img src="https://www.monetag.com/icons/logo.svg" alt="Monetag">
+      <h3>Monetag</h3>
+      <p>Direct affiliate link. Safe static version.</p>
+      <a class="btn" target="_blank"
+         href="https://otieu.com/4/10165598">Open Monetag</a>
+    </div>
+
   </div>
 
-  <!-- ================= AFFILIATE CARDS ================= -->
-  <h2>Affiliate Deals</h2>
-  <div class="grid">
-
-    <!-- PLACEHOLDER CARDS – Nesër i mbushim me linkat real -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120?text=Logo">
-      <h3>Partner 1</h3>
-      <p>Short description of the offer.</p>
-      <a class="btn" href="#">Open</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/120?text=Logo">
-      <h3>Partner 2</h3>
-      <p>Short description of the offer.</p>
-      <a class="btn" href="#">Open</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/120?text=Logo">
-      <h3>Partner 3</h3>
-      <p>Short description of the offer.</p>
-      <a class="btn" href="#">Open</a>
-    </div>
-
+  <!-- Banner -->
+  <div class="banner">
+    <h3>Sponsored Banner</h3>
+    <p style="color:var(--muted)">Add your promotional banner here (GIF / PNG / HTML5).</p>
   </div>
 
 </div>
 
 <footer>
-  © 2025 AdDev Studio – Ads Network
+  © 2025 AdDev Studio — All Rights Reserved
 </footer>
 
 </body>
