@@ -1,252 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ads & Promotions – AdDev Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdDev Studio – Ads Hub</title>
 
-<style>
+  <style>
+    :root {
+      --bg: #0f172a; 
+      --card: #1e293b;
+      --ink: #e2e8f0;
+      --muted: #94a3b8;
+      --brand: #38bdf8;
+      --radius: 14px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.35);
+    }
+
     body {
-        margin: 0;
-        font-family: "Inter", sans-serif;
-        background: #050b19;
-        color: #fff;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
     }
 
     header {
-        background: #0b132b;
-        padding: 18px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    header a {
-        color: #fff;
-        margin-left: 24px;
-        text-decoration: none;
-        font-weight: 500;
-        opacity: 0.8;
-    }
-    header a:hover {
-        opacity: 1;
-    }
-    .active {
-        background: #1a2dff;
-        padding: 8px 14px;
-        border-radius: 10px;
+      background: #020617;
+      padding: 20px 0;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
     }
 
-    .section {
-        max-width: 1150px;
-        margin: auto;
-        padding: 60px 20px;
+    nav {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    .menu a {
+      margin-left: 20px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Title */
     h1 {
-        font-size: 38px;
-        font-weight: 700;
-        background: linear-gradient(90deg, #3fa9ff, #6f7dff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      text-align: center;
+      color: var(--brand);
+      margin-top: 10px;
     }
 
-    .small-tag {
-        display: inline-block;
-        padding: 6px 14px;
-        background: rgba(255,255,255,0.08);
-        border-radius: 30px;
-        font-size: 12px;
-        margin-bottom: 10px;
-        opacity: 0.8;
-        text-transform: uppercase;
+    /* Video Grid */
+    .video-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto 50px;
     }
 
-    .video-row {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-        gap: 25px;
-        margin-top: 30px;
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 22px;
+      margin-top: 20px;
     }
 
-    .video-card {
-        background: #0f1733;
-        padding: 15px;
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.05);
-        text-align: center;
+    .video-box {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 10px;
+      box-shadow: var(--shadow);
     }
 
-    iframe {
-        width: 100%;
-        border: none;
-        border-radius: 15px;
-        height: 185px;
+    .video-box iframe {
+      width: 100%;
+      height: 200px;
+      border: 0;
+      border-radius: var(--radius);
     }
 
-    .promo-grid {
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-        gap: 25px;
+    /* Partner Cards */
+    .partners {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto 60px;
     }
 
-    .promo-card {
-        background: #0f1733;
-        border-radius: 18px;
-        padding: 22px;
-        border: 1px solid rgba(255,255,255,0.06);
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 20px;
     }
 
-    .promo-title {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 6px;
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
     }
 
-    .promo-desc {
-        font-size: 14px;
-        opacity: 0.8;
-        margin-bottom: 14px;
+    .card img {
+      width: 90px;
+      margin-bottom: 12px;
     }
 
     .btn {
-        display: inline-block;
-        padding: 10px 18px;
-        background: #ff7b00;
-        border-radius: 12px;
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-    }
-    .btn:hover {
-        background: #ff9a2d;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: var(--brand);
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
     }
 
     footer {
-        text-align: center;
-        padding: 40px;
-        opacity: 0.5;
-        font-size: 14px;
+      text-align: center;
+      padding: 25px;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 40px;
     }
-</style>
+  </style>
 </head>
 
 <body>
 
 <header>
-    <div style="font-size:22px;font-weight:700;">AdDev Studio</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="ads.html" class="active">Ads</a>
-        <a href="affiliate.html">Affiliate</a>
-        <a href="blog.html">Blog</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <nav>
+    <a class="logo" href="/">AdDev Studio</a>
+    <div class="menu">
+      <a href="/index.html">Home</a>
+      <a href="/affiliate.html">Affiliate</a>
+      <a href="/ads.html">Ads Hub</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </nav>
 </header>
 
-<div class="section">
+<h1>Top Promo Videos & Ads</h1>
 
-    <div class="small-tag">Ad Center</div>
-    <h1>Ads & promotions powered by global brands.</h1>
-    <p style="opacity:0.75; max-width:650px;">
-        Explore live partner ads, video promos, and curated brand placements designed for higher engagement and conversions.
-    </p>
+<!-- ===========================
+         VIDEO SECTION
+=========================== -->
+<div class="video-section">
 
-    <!-- Featured Videos -->
-    <h2 style="margin-top:50px;">Featured Promo Videos</h2>
+  <div class="video-grid">
 
-    <div class="video-row">
-
-        <!-- Video 1 -->
-        <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/y0E_JG3xwMI" allowfullscreen></iframe>
-            <p style="margin-top:8px;opacity:0.8;">Global Shopping & Deals (AliExpress)</p>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/d0L7BzVvcoA" allowfullscreen></iframe>
-            <p style="margin-top:8px;opacity:0.8;">Learn & Grow Online (British Council)</p>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/A0W2wXHdIjQ" allowfullscreen></iframe>
-            <p style="margin-top:8px;opacity:0.8;">Smart Devices & Air Tech (Tion)</p>
-        </div>
-
+    <!-- AliExpress Promo -->
+    <div class="video-box">
+      <iframe 
+        src="https://www.youtube.com/embed/SkE7gD-nxVQ?autoplay=0&rel=0&modestbranding=1"
+        title="AliExpress Promo">
+      </iframe>
     </div>
 
-    <!-- Promo Grid -->
-    <h2 style="margin-top:60px;">Live Ads & Partner Promotions</h2>
-
-    <div class="promo-grid">
-
-        <!-- Alibaba -->
-        <div class="promo-card">
-            <div class="promo-title">Alibaba Wholesale</div>
-            <div class="promo-desc">Wholesale deals, bulk sourcing & factory-direct offers.</div>
-            <a href="YOUR_ALIBABA_LINK" class="btn">Promote Alibaba</a>
-        </div>
-
-        <!-- British Council -->
-        <div class="promo-card">
-            <div class="promo-title">British Council</div>
-            <div class="promo-desc">English learning, certifications, exams & online courses.</div>
-            <a href="YOUR_BC_LINK" class="btn">Promote British Council</a>
-        </div>
-
-        <!-- Italia Rail -->
-        <div class="promo-card">
-            <div class="promo-title">ItaliaRail Tickets</div>
-            <div class="promo-desc">Train tickets across Italy & Europe for blogs and travel websites.</div>
-            <a href="YOUR_ITALIA_LINK" class="btn">Promote ItaliaRail</a>
-        </div>
-
-        <!-- Tion -->
-        <div class="promo-card">
-            <div class="promo-title">Tion Smart Devices</div>
-            <div class="promo-desc">Air purification & home ventilation devices.</div>
-            <a href="YOUR_TION_LINK" class="btn">Promote Tion</a>
-        </div>
-
-        <!-- Global Yo -->
-        <div class="promo-card">
-            <div class="promo-title">Global Yo eSIM</div>
-            <div class="promo-desc">International eSIM plans & global travel data.</div>
-            <a href="YOUR_GLOBALYO_LINK" class="btn">Promote Global Yo</a>
-        </div>
-
-        <!-- PC Sales -->
-        <div class="promo-card">
-            <div class="promo-title">PC & Tech Deals</div>
-            <div class="promo-desc">Tech accessories, gaming peripherals & electronics.</div>
-            <a href="YOUR_PC_LINK" class="btn">Promote PC Sales</a>
-        </div>
-
-        <!-- Luna Proxy -->
-        <div class="promo-card">
-            <div class="promo-title">Luna Proxy</div>
-            <div class="promo-desc">Proxy rotation tools for research, scraping & automation.</div>
-            <a href="YOUR_LUNA_LINK" class="btn">Promote LunaProxy</a>
-        </div>
-
-        <!-- Aurabits -->
-        <div class="promo-card">
-            <div class="promo-title">Aurabits AI</div>
-            <div class="promo-desc">Digital services for creators & automation tools.</div>
-            <a href="YOUR_AURABITS_LINK" class="btn">Promote Aurabits</a>
-        </div>
-
+    <!-- British Council Promo -->
+    <div class="video-box">
+      <iframe
+        src="https://www.youtube.com/embed/UP5vRVp5f6A?autoplay=0&rel=0&modestbranding=1"
+        title="British Council">
+      </iframe>
     </div>
 
+    <!-- TION Smart Home Promo -->
+    <div class="video-box">
+      <iframe
+        src="https://www.youtube.com/embed/ATzB4x7N4fE?autoplay=0&rel=0&modestbranding=1"
+        title="TION Smart Home">
+      </iframe>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===========================
+        PARTNER CARDS
+=========================== -->
+<div class="partners">
+  <h1 style="margin-bottom:20px">Featured Brand Partners</h1>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="https://logodownload.org/wp-content/uploads/2017/11/aliexpress-logo.png">
+      <h3>AliExpress</h3>
+      <p>Global marketplace with millions of products and hot deals.</p>
+      <a class="btn" href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/" target="_blank">Shop Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://yt3.googleusercontent.com/ytc/APkrFKZKRsSKUEyLk7w7FXrM4owXu8m_UTKUaN8DP204=s900-c-k-c0x00ffffff-no-rj">
+      <h3>British Council</h3>
+      <p>Top English learning content, courses and certifications.</p>
+      <a class="btn" href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/" target="_blank">Learn More</a>
+    </div>
+
+    <div class="card">
+      <img src="https://otion-global.com/wp-content/uploads/2021/02/tion-logo.png">
+      <h3>TION</h3>
+      <p>Smart air purification & advanced climate devices.</p>
+      <a class="btn" href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/" target="_blank">View Products</a>
+    </div>
+
+  </div>
 </div>
 
 <footer>
-    © 2025 AdDev Studio — All Rights Reserved
+  © 2025 AdDev Studio – Ads Hub • All rights reserved.
 </footer>
 
 </body>
