@@ -3,95 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AdDev Studio</title>
+  <title>AdDev Studio – Affiliate Marketing & Digital Tools</title>
+
+  <meta name="description" content="AdDev Studio — your trusted hub for affiliate programs, marketing tools, SEO insights, and high-earning partner offers." />
   <meta name="verify-admitad" content="47bcc10bc5" />
 
   <style>
-    :root{
+    :root {
       --brand:#2563eb;
-      --brand-dark:#0b3b61;
+      --brand-dark:#1e3a8a;
       --bg:#f7f9fc;
       --ink:#222;
       --muted:#666;
       --card:#fff;
       --foot:#111827;
       --foot-ink:#d1d5db;
-      --shadow:0 2px 6px rgba(0,0,0,.05);
-      --radius:12px;
+      --radius:14px;
+      --shadow:0 3px 8px rgba(0,0,0,.08);
     }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); font-family:Arial, sans-serif; color:var(--ink); }
+    .container { width:92%; max-width:1150px; margin:0 auto; }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
-    a{text-decoration:none}
-
-    .container{width:90%;max-width:1150px;margin:0 auto}
-
-    /* HEADER */
-    header{background:#fff;box-shadow:var(--shadow);padding:20px 0;position:sticky;top:0;z-index:99}
-    nav{display:flex;justify-content:space-between;align-items:center}
-    .logo{font-size:22px;font-weight:700;color:var(--brand)}
-    .menu a{margin-left:20px;color:#333;font-weight:500}
+    /* Header */
+    header { background:#fff; box-shadow:var(--shadow); padding:22px 0; }
+    nav { display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:22px; font-weight:700; text-decoration:none; color:var(--brand); }
+    .menu a { margin-left:20px; text-decoration:none; color:#333; font-weight:500; }
 
     /* HERO */
-    .hero{
-      background:linear-gradient(120deg,#1e3a8a,#2563eb);
-      color:#fff;
+    .hero {
+      background:linear-gradient(120deg, var(--brand-dark), var(--brand));
+      padding:80px 20px;
       text-align:center;
-      padding:90px 20px;
+      color:#fff;
       border-radius:0 0 var(--radius) var(--radius);
     }
-
-    .hero h1{font-size:38px;margin-bottom:12px}
-    .hero p{font-size:17px;margin-bottom:22px}
-    .btn{
-      background:var(--brand);
-      padding:10px 22px;
-      color:#fff;
-      border-radius:6px;
+    .btn {
       display:inline-block;
-      margin-right:8px;
+      padding:10px 22px;
+      border-radius:6px;
+      text-decoration:none;
+      background:var(--brand);
+      color:#fff;
+      font-weight:600;
     }
-    .btn.secondary{background:var(--brand-dark)}
+    .btn.dark { background:#0b3b61; }
 
-    /* PARTNERS */
-    .partners{padding:60px 0;text-align:center}
-    .partners h2{font-size:30px;margin-bottom:10px}
-    .partners p.muted{color:var(--muted);margin-bottom:30px;font-size:15px}
-
-    .partner-grid{
+    /* Cards */
+    .grid-3 {
       display:grid;
-      gap:25px;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:22px;
+      margin:50px 0;
     }
-    .partner-card{
-      background:#fff;
-      padding:25px;
-      border-radius:12px;
-      box-shadow:0 3px 12px rgba(0,0,0,.08);
-      transition:.25s;
+    .card {
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow);
       text-align:center;
     }
-    .partner-card:hover{transform:translateY(-6px)}
-    .partner-card img{width:120px;height:auto;object-fit:contain;margin-bottom:15px}
-    .partner-card h3{font-size:20px;margin-bottom:6px}
-    .partner-card p{font-size:14px;color:#555;margin-bottom:12px}
-    .partner-card .btn{background:#005eff}
+    .card img { width:100px; height:auto; margin-bottom:14px; }
+    .card h3 { color:var(--brand); margin-top:0; }
 
-    /* FOOTER */
-    footer{
+    footer {
       background:var(--foot);
       color:var(--foot-ink);
       text-align:center;
       padding:30px 0;
-      margin-top:50px;
+      margin-top:60px;
     }
+    .foot a { color:#93c5fd; }
 
-    .disclosure{
-      background:#fff;
+    .disclosure {
+      padding:18px;
       font-size:14px;
-      color:#666;
-      padding:18px 20px;
-      border-top:1px solid #eee;
+      color:#777;
+      background:#fff;
+      border-top:1px solid #ddd;
     }
   </style>
 </head>
@@ -112,101 +102,115 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h1>Build, Promote & Earn with AdDev Studio</h1>
-    <p>Your trusted platform for affiliate marketing, SEO tools, and global brand promotion.</p>
+<main>
 
-    <a class="btn" href="/ads.html">Explore Ads</a>
-    <a class="btn secondary" href="/affiliate.html">Affiliate Programs</a>
-  </div>
-</section>
-
-<!-- PARTNER CARDS (8 total – placed immediately below hero) -->
-<section class="partners">
-  <div class="container">
-    <h2>Top Affiliate Partners</h2>
-    <p class="muted">Boost your earnings with global brands and trusted affiliate networks.</p>
-
-    <div class="partner-grid">
-
-      <!-- 1. AliExpress -->
-      <div class="partner-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/AliExpress_logo.svg">
-        <h3>AliExpress</h3>
-        <p>Millions of trending deals. Global shipping.</p>
-        <a class="btn" target="_blank" href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/">Shop AliExpress</a>
-      </div>
-
-      <!-- 2. Aurabits -->
-      <div class="partner-card">
-        <img src="https://i.imgur.com/vY2F6Ww.png">
-        <h3>Aurabits</h3>
-        <p>AI tools & digital tech. Earn per signup.</p>
-        <a class="btn" target="_blank" href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/">Join Aurabits</a>
-      </div>
-
-      <!-- 3. Tatkraft -->
-      <div class="partner-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/TATKRAFT_Logo.png">
-        <h3>Tatkraft</h3>
-        <p>Home & office accessories with high conversions.</p>
-        <a class="btn" target="_blank" href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/">Shop Tatkraft</a>
-      </div>
-
-      <!-- 4. Lunapraxy -->
-      <div class="partner-card">
-        <img src="https://i.imgur.com/7GQhgY3.png">
-        <h3>Lunapraxy</h3>
-        <p>Fashion, tech, lifestyle deals.</p>
-        <a class="btn" target="_blank" href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/">Shop Lunapraxy</a>
-      </div>
-
-      <!-- 5. Sotka -->
-      <div class="partner-card">
-        <img src="https://i.imgur.com/zO2XbHu.png">
-        <h3>Sotka Partners</h3>
-        <p>Earn up to 10% commissions promoting Sotka.</p>
-        <a class="btn" target="_blank" href="https://ficca2021.com/g/tvbtu293z547bcc10bc58f43554cb4/">Join Sotka</a>
-      </div>
-
-      <!-- 6. Hacoo -->
-      <div class="partner-card">
-        <img src="https://i.imgur.com/HACOO.png">
-        <h3>Hacoo</h3>
-        <p>Fashion & accessories for every season.</p>
-        <a class="btn" target="_blank" href="https://dorinebeaumont.com/g/84e1j7pvh147bcc10bc5f271888eea/">Shop Hacoo</a>
-      </div>
-
-      <!-- 7. Aroma-Butik -->
-      <div class="partner-card">
-        <img src="https://i.imgur.com/AROMA.png">
-        <h3>Aroma-Butik</h3>
-        <p>Perfumes, beauty & cosmetics deals.</p>
-        <a class="btn" target="_blank" href="https://aflink.ru/g/18vhi6r5cv47bcc10bc579deb39b46/">Shop Aroma-Butik</a>
-      </div>
-
-      <!-- 8. Monetag -->
-      <div class="partner-card">
-        <img src="https://i.imgur.com/MONETAG.png">
-        <h3>Monetag</h3>
-        <p>Simple monetization for any website.</p>
-        <a class="btn" target="_blank" href="https://otieu.com/4/10165598">Open Monetag</a>
-      </div>
-
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Build, Learn & Earn with AdDev Studio</h1>
+      <p>Your trusted hub for affiliate programs, deals, SEO tools and earnings.</p>
+      <a class="btn" href="/ads.html">View Ads</a>
+      <a class="btn dark" href="/affiliate.html" style="margin-left:10px;">Affiliate Programs</a>
     </div>
+  </section>
+
+  <div class="container">
+
+    <!-- PARTNER CARDS (Top section) -->
+    <section class="grid-3">
+
+      <!-- Admitad -->
+      <div class="card">
+        <img src="https://cms.admitad.com/img/logo.svg" alt="Admitad">
+        <h3>Admitad – Global Affiliate Network</h3>
+        <p>Promote thousands of brands and earn from every user action.</p>
+        <a class="btn"
+           href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k"
+           target="_blank" rel="noopener">Join Admitad</a>
+      </div>
+
+      <!-- AliExpress -->
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/AliExpress_logo.svg" alt="AliExpress">
+        <h3>AliExpress – Global Shopping Deals</h3>
+        <p>Millions of products with trending offers worldwide.</p>
+        <a class="btn"
+           href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/"
+           target="_blank" rel="noopener">Shop AliExpress</a>
+      </div>
+
+      <!-- Aurabits -->
+      <div class="card">
+        <img src="https://aurabits.com/assets/icons/logo.svg" alt="Aurabits">
+        <h3>Aurabits – AI Tools Marketplace</h3>
+        <p>Earn high commissions by promoting AI & automation tools.</p>
+        <a class="btn"
+           href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/"
+           target="_blank" rel="noopener">Explore Aurabits</a>
+      </div>
+
+      <!-- Luna Proxy -->
+      <div class="card">
+        <img src="https://lunaproxy.com/_nuxt/img/logo.1c0ace1.png" alt="LunaProxy">
+        <h3>LunaProxy – Secure Proxy Solutions</h3>
+        <p>Premium private proxies for SEO and automation.</p>
+        <a class="btn"
+           href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/"
+           target="_blank" rel="noopener">Get LunaProxy</a>
+      </div>
+
+      <!-- Tatkraft -->
+      <div class="card">
+        <img src="https://tatkraftshop.eu/cdn/shop/files/tatkraft_logo.png" alt="Tatkraft">
+        <h3>Tatkraft – Home & Living Essentials</h3>
+        <p>Trusted European brand with quality home products.</p>
+        <a class="btn"
+           href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/"
+           target="_blank" rel="noopener">Shop Tatkraft</a>
+      </div>
+
+      <!-- Zima (Travel/Airlines) -->
+      <div class="card">
+        <img src="https://zima.travel/images/logo.svg" alt="Zima Travel">
+        <h3>Zima Travel – Cheap Flights</h3>
+        <p>Find the best flight prices from trusted booking engines.</p>
+        <a class="btn"
+           href="https://zmgig.com/g/314uz47dzt47bcc10bc58318b7d147/"
+           target="_blank" rel="noopener">Search Flights</a>
+      </div>
+
+    </section>
+
+    <!-- CORE SECTIONS -->
+    <section class="grid-3">
+      <div class="card">
+        <h3>Affiliate Programs</h3>
+        <p>Discover trusted tools and services to boost your revenue.</p>
+        <a class="btn" href="/affiliate.html">View All</a>
+      </div>
+      <div class="card">
+        <h3>SEO & Insights</h3>
+        <p>Guides, strategies and marketing techniques that work.</p>
+        <a class="btn" href="/blog.html">Read Blog</a>
+      </div>
+      <div class="card">
+        <h3>Creator Resources</h3>
+        <p>Premium tools and assets for digital creators worldwide.</p>
+        <a class="btn" href="/resources.html">View Resources</a>
+      </div>
+    </section>
+
   </div>
-</section>
+</main>
 
 <footer>
-  <div class="container">
-    © 2025 AdDev Studio • <a href="/privacy.html" style="color:#93c5fd">Privacy Policy</a>
+  <div class="container foot">
+    © 2025 AdDev Studio • <a href="/privacy.html">Privacy Policy</a>
   </div>
 </footer>
 
 <div class="disclosure">
-  <strong>Affiliate Disclosure:</strong> Some links on this website are affiliate links. Purchases through these links may earn AdDev Studio a commission at no extra cost to you.
+  <strong>Affiliate Disclosure:</strong> Some links may earn us a commission at no extra cost to you.
 </div>
 
 </body>
