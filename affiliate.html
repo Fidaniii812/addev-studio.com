@@ -2,162 +2,843 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Affiliate Programs – AdDev Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Explore top affiliate programs and networks recommended by AdDev Studio. Join trusted brands and start earning from your traffic." />
 
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f7f9fc; color:#222; }
-    header { background:white; padding:18px 0; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
-    .container { width:90%; max-width:1100px; margin:0 auto; }
-    nav { display:flex; justify-content:space-between; align-items:center; }
-    .logo { text-decoration:none; font-size:22px; font-weight:700; color:#2563eb; }
-    nav a { color:#333; text-decoration:none; margin-left:20px; font-weight:500; }
+    :root {
+      --bg-dark: #050816;
+      --bg-card: #0b1020;
+      --bg-card-soft: #111729;
+      --accent: #ff8a3c;
+      --accent-soft: #ffb36e;
+      --primary: #2563eb;
+      --primary-soft: #3b82f6;
+      --border-subtle: #1f2937;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --radius-lg: 14px;
+      --radius-xl: 18px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+      --shadow-chip: 0 10px 30px rgba(15, 23, 42, 0.85);
+      --gradient-hero: radial-gradient(circle at top left,#1d4ed8 0,#020617 55%,#020617 100%);
+    }
 
-    h1 { text-align:center; margin:40px 0 10px; font-size:32px; color:#1e3a8a; }
-    p.subtitle { text-align:center; color:#555; margin-bottom:40px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:22px; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+    }
+
+    /* NAVBAR */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(2, 6, 23, 0.98), rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0));
+      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-size: 17px;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #60a5fa 0, #1d4ed8 40%, #020617 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #eff6ff;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.7);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      padding: 6px 10px;
+      border-radius: 999px;
+      transition: all 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .nav-links a.active {
+      color: #e5e7eb;
+      background: rgba(37, 99, 235, 0.18);
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.45);
+    }
+
+    /* HERO */
+
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      background: var(--gradient-hero);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 34px 16px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 26px;
+      }
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--text-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-chip);
+    }
+
+    .hero-kicker span.badge {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.98);
+      color: #eff6ff;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    .hero-title {
+      font-size: clamp(27px, 4vw, 32px);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+      font-size: 11px;
+    }
+
+    .hero-tag {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.85);
+      color: #e5e7eb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 16px;
+      font-size: 13px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-soft), var(--primary));
+      color: #eff6ff;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 45px rgba(37, 99, 235, 0.7);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(148, 163, 184, 0.7);
+    }
+
+    .hero-panel {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 18px 16px 16px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-panel-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    .hero-panel-main {
+      background: linear-gradient(135deg, #020617, #111827);
+      border-radius: 16px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .hero-panel-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-panel-text {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .hero-panel-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .hero-panel-badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      color: #e5e7eb;
+    }
+
+    /* GRID SECTION */
+
+    .section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 16px 40px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    @media (max-width: 960px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
 
     .card {
-      background:white;
-      border-radius:12px;
-      padding:22px;
-      text-align:center;
-      box-shadow:0 2px 6px rgba(0,0,0,0.07);
+      background: radial-gradient(circle at top left, #111827 0, #020617 55%);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      padding: 16px 14px 14px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
     }
-    .card img { width:140px; height:auto; margin-bottom:12px; }
-    .card h3 { color:#2563eb; margin-bottom:10px; }
-    .card p { color:#555; font-size:14px; min-height:60px; }
 
-    .btn {
-      display:inline-block;
-      background:#2563eb;
-      color:white;
-      padding:10px 20px;
-      border-radius:6px;
-      text-decoration:none;
-      margin-top:10px;
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(96, 165, 250, 0.8);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.95);
     }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .card-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .card-category {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .card-body {
+      font-size: 12px;
+      color: var(--text-muted);
+      min-height: 40px;
+    }
+
+    .card-footer {
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .card-meta strong {
+      color: #e5e7eb;
+    }
+
+    .card-btn {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+      color: #111827;
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 12px 30px rgba(251, 146, 60, 0.6);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(251, 146, 60, 0.75);
+    }
+
+    .card-btn.secondary {
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .card-btn.secondary:hover {
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 1);
+    }
+
+    /* FOOTER */
 
     footer {
-      background:#111827;
-      color:#d1d5db;
-      text-align:center;
-      padding:28px 0;
-      margin-top:50px;
+      border-top: 1px solid rgba(148, 163, 184, 0.16);
+      background: #020617;
     }
-    footer a { color:#93c5fd; text-decoration:none; }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .footer-inner a {
+      color: #93c5fd;
+    }
+
+    .disclosure {
+      font-size: 11px;
+      margin-top: 8px;
+      max-width: 50rem;
+      margin-left: auto;
+      margin-right: auto;
+      color: #6b7280;
+    }
   </style>
 </head>
-
 <body>
+<div class="page">
 
-<header>
-  <div class="container">
-    <nav>
-      <a class="logo" href="/">AdDev Studio</a>
-      <div>
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <div class="brand-mark">A</div>
+        <span>AdDev Studio</span>
+      </a>
+      <nav class="nav-links">
         <a href="/">Home</a>
         <a href="/ads.html">Ads</a>
-        <a href="/affiliate.html">Affiliate</a>
+        <a href="/affiliate.html" class="active">Affiliate</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Resources</a>
         <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-kicker">
+            <span class="badge">Affiliate Hub</span>
+            Curated partner programs for AdDev Studio users
+          </div>
+          <h1 class="hero-title">Scale your revenue with trusted affiliate programs.</h1>
+          <p class="hero-subtitle">
+            Join hand-picked brands across travel, education, tech and SaaS.
+            Copy your links, plug them into your content, and let AdDev Studio
+            help you track and optimize the results.
+          </p>
+          <div class="hero-tags">
+            <span class="hero-tag">High-quality advertisers</span>
+            <span class="hero-tag">Global GEOs</span>
+            <span class="hero-tag">CPS • CPA • RevShare</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#programs" class="btn-primary">Browse affiliate programs</a>
+            <a href="/ads.html" class="btn-ghost">Open Ads Center</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="hero-panel-label">Powered by</div>
+          <div class="hero-panel-main">
+            <div class="hero-panel-title">Admitad Partner Network</div>
+            <p class="hero-panel-text">
+              Access thousands of affiliate programs in one place and manage
+              all your links, reports and payouts from a single dashboard.
+            </p>
+            <div class="hero-panel-badges">
+              <span class="hero-panel-badge">Official partner space</span>
+              <span class="hero-panel-badge">AdDev Studio</span>
+            </div>
+            <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k"
+               class="btn-primary"
+               style="margin-top: 10px; width: fit-content;">
+              Join Admitad Network
+            </a>
+          </div>
+        </aside>
       </div>
-    </nav>
-  </div>
-</header>
+    </section>
 
-<div class="container">
-  <h1>Affiliate Programs</h1>
-  <p class="subtitle">Top global partners carefully selected for AdDev Studio users.</p>
+    <!-- PROGRAM GRID -->
+    <section id="programs" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Affiliate Programs</h2>
+        <p class="section-subtitle">
+          Top global partners carefully selected for AdDev Studio users.
+          Click any card to visit the offer and start promoting.
+        </p>
+      </div>
 
-  <div class="grid">
+      <div class="grid">
+        <!-- 1. Alibaba -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Alibaba_Group_Logo.svg"
+                   alt="Alibaba logo" />
+            </div>
+            <div>
+              <div class="card-title">Alibaba</div>
+              <div class="card-category">Wholesale marketplace</div>
+            </div>
+          </div>
+          <p class="card-body">
+            Global wholesale deals from verified suppliers.
+            Perfect for B2B buyers and resellers sourcing products in bulk.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> B2B • E-commerce
+            </div>
+            <a href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/" class="card-btn">
+              Shop on Alibaba
+            </a>
+          </div>
+        </article>
 
-    <!-- 1. Alibaba -->
-    <div class="card">
-      <img src="https://seeklogo.com/images/A/alibaba-logo-0F77ABF9EC-seeklogo.com.png" alt="Alibaba">
-      <h3>Alibaba</h3>
-      <p>Global wholesale marketplace for millions of products.</p>
-      <a class="btn" target="_blank" href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/">Shop on Alibaba</a>
+        <!-- 2. British Council -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/British_Council_Logo.svg"
+                   alt="British Council logo" />
+            </div>
+            <div>
+              <div class="card-title">British Council</div>
+              <div class="card-category">Education & exams</div>
+            </div>
+          </div>
+          <p class="card-body">
+            English exams, certifications and learning resources trusted by
+            students and professionals worldwide.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> Education
+            </div>
+            <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/" class="card-btn">
+              Learn more
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. ItaliaRail -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/FS_Logotipo.svg"
+                   alt="Italia Rail logo" />
+            </div>
+            <div>
+              <div class="card-title">Italia Rail</div>
+              <div class="card-category">Travel & tickets</div>
+            </div>
+          </div>
+          <p class="card-body">
+            Fast and secure train tickets across Italy &amp; Europe with
+            competitive fares and flexible routes.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> Travel
+            </div>
+            <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/" class="card-btn">
+              Book tickets
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. RetouchMe -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://play-lh.googleusercontent.com/9wKzq_UYeXpERoW-LOGHtPyYA2qOiLio9z97KMEWw0v_W70pgF4pNpwNvWJnOf7d5A"
+                   alt="RetouchMe logo" />
+            </div>
+            <div>
+              <div class="card-title">RetouchMe</div>
+              <div class="card-category">Photo editing service</div>
+            </div>
+          </div>
+          <p class="card-body">
+            On-demand photo retouching by professional editors. Great for
+            influencers, e-commerce sellers and creators.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> Utilities • Creator tools
+            </div>
+            <a href="https://plrvq.com/g/gp8po8i1u747bcc10bc545d8e108c6/" class="card-btn">
+              Try RetouchMe
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. Global Yo -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://globalyo.com/assets/logo.svg"
+                   alt="Global Yo logo" />
+            </div>
+            <div>
+              <div class="card-title">Global Yo</div>
+              <div class="card-category">eSIM & data plans</div>
+            </div>
+          </div>
+          <p class="card-body">
+            Travel eSIMs and global data plans for digital nomads and frequent
+            travellers. Instant activation, no roaming bills.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> Telecom • Travel
+            </div>
+            <a href="https://zmgig.com/g/hphyrzofyp47bcc10bc57801e98dae/" class="card-btn">
+              Get eSIM
+            </a>
+          </div>
+        </article>
+
+        <!-- 6. PC Sales -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                   alt="PC Sales logo" />
+            </div>
+            <div>
+              <div class="card-title">PC Sales</div>
+              <div class="card-category">Tech & electronics</div>
+            </div>
+          </div>
+          <p class="card-body">
+            Computer hardware, peripherals and tech accessories with exclusive
+            online deals for your audience.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> Electronics
+            </div>
+            <a href="https://ewwhk.com/g/fwsqlvbm3047bcc10bc5bec73bd971/" class="card-btn">
+              Shop technology
+            </a>
+          </div>
+        </article>
+
+        <!-- 7. LunaProxy -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://lunaproxy.com/favicon.ico"
+                   alt="LunaProxy logo" />
+            </div>
+            <div>
+              <div class="card-title">LunaProxy</div>
+              <div class="card-category">Proxy & rotation tools</div>
+            </div>
+          </div>
+          <p class="card-body">
+            Secure proxies and rotation tools for data collection, growth
+            marketing, scraping and automation.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> Tools • Data
+            </div>
+            <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/" class="card-btn">
+              Open LunaProxy
+            </a>
+          </div>
+        </article>
+
+        <!-- 8. Aurabits -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://aurabits.ai/favicon.ico"
+                   alt="Aurabits logo" />
+            </div>
+            <div>
+              <div class="card-title">Aurabits</div>
+              <div class="card-category">AI & digital products</div>
+            </div>
+          </div>
+          <p class="card-body">
+            AI tools and digital services designed for creators, marketers and
+            online businesses.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> AI • SaaS
+            </div>
+            <a href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/" class="card-btn">
+              Join Aurabits
+            </a>
+          </div>
+        </article>
+
+        <!-- 9. Tion -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://tion.global/favicon.ico"
+                   alt="Tion logo" />
+            </div>
+            <div>
+              <div class="card-title">Tion Smart Devices</div>
+              <div class="card-category">Smart home & air tech</div>
+            </div>
+          </div>
+          <p class="card-body">
+            Smart air purification, ventilation and climate technology
+            solutions for healthy modern homes.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> Smart home
+            </div>
+            <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN"
+               class="card-btn">
+              Explore Tion
+            </a>
+          </div>
+        </article>
+
+        <!-- 10. Admitad -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="https://www.admitad.com/favicon.ico"
+                   alt="Admitad logo" />
+            </div>
+            <div>
+              <div class="card-title">Admitad</div>
+              <div class="card-category">Affiliate network</div>
+            </div>
+          </div>
+          <p class="card-body">
+            One of the leading global affiliate networks with thousands of
+            programs, advanced tracking and flexible payouts.
+          </p>
+          <div class="card-footer">
+            <div class="card-meta">
+              <strong>Vertical:</strong> Multi-vertical
+            </div>
+            <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k"
+               class="card-btn secondary">
+              Join Admitad Network
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>© 2025 AdDev Studio · All Rights Reserved</div>
+      <div class="disclosure">
+        Affiliate Disclosure: Some links on this page are affiliate links. If you
+        click through and make a purchase or signup, AdDev Studio may earn a
+        commission at no extra cost to you.
+      </div>
     </div>
-
-    <!-- 2. British Council -->
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/British_Council_logo.svg/1200px-British_Council_logo.svg.png" alt="British Council">
-      <h3>British Council</h3>
-      <p>Professional English learning resources and certifications.</p>
-      <a class="btn" target="_blank" href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/">Learn More</a>
-    </div>
-
-    <!-- 3. Italia Rail -->
-    <div class="card">
-      <img src="https://www.italiarail.com/sites/all/themes/italiarail/images/ir-logo.svg" alt="ItaliaRail">
-      <h3>Italia Rail</h3>
-      <p>Fast and secure train tickets across Italy & Europe.</p>
-      <a class="btn" target="_blank" href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/">Book Tickets</a>
-    </div>
-
-    <!-- 4. RetouchMe -->
-    <div class="card">
-      <img src="https://retouchme.com/assets/images/common/logo.svg" alt="RetouchMe">
-      <h3>RetouchMe</h3>
-      <p>Photo retouching services with professional editors.</p>
-      <a class="btn" target="_blank" href="https://plrvq.com/g/gp8po8i1u747bcc10bc545d8e108c6/">Try RetouchMe</a>
-    </div>
-
-    <!-- 5. Globale Yo -->
-    <div class="card">
-      <img src="https://globaleyocom.sharepoint.com/sites/brand/SiteAssets/global-yo/logo.svg" alt="Global Yo">
-      <h3>Global Yo</h3>
-      <p>eSIM & global data plans for travelers worldwide.</p>
-      <a class="btn" target="_blank" href="https://zmgig.com/g/hphyrzofyp47bcc10bc57801e98dae/">Get eSIM</a>
-    </div>
-
-    <!-- 6. PC Sales -->
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="PC Sales">
-      <h3>PC Sales</h3>
-      <p>Exclusive tech deals and computer accessories.</p>
-      <a class="btn" target="_blank" href="https://ewwhk.com/g/fwsqlvbm3047bcc10bc5bec73bd971/">Shop Technology</a>
-    </div>
-
-    <!-- 7. Luna Proxy -->
-    <div class="card">
-      <img src="https://lunaproxy.com/logo.png" alt="Luna Proxy">
-      <h3>Luna Proxy</h3>
-      <p>Secure global proxy network for all your needs.</p>
-      <a class="btn" target="_blank" href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/">Get Proxy</a>
-    </div>
-
-    <!-- 8. Aurabits -->
-    <div class="card">
-      <img src="https://aurabits.io/assets/logo.png" alt="Aurabits">
-      <h3>Aurabits</h3>
-      <p>AI tools and digital services for creators and businesses.</p>
-      <a class="btn" target="_blank" href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/">Join Aurabits</a>
-    </div>
-
-    <!-- 9. Tion -->
-    <div class="card">
-      <img src="https://tion.global/local/templates/tion2020/img/logo.svg" alt="Tion">
-      <h3>Tion</h3>
-      <p>Smart air purification & home ventilation technology.</p>
-      <a class="btn" target="_blank" href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN">Shop Tion</a>
-    </div>
-
-    <!-- 10. Admitad -->
-    <div class="card">
-      <img src="https://www.admitad.com/favicon.ico" alt="Admitad">
-      <h3>Admitad</h3>
-      <p>Top affiliate network with thousands of earning programs.</p>
-      <a class="btn" target="_blank" href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k">Join Admitad</a>
-    </div>
-
-  </div>
+  </footer>
 </div>
-
-<footer>
-  © 2025 AdDev Studio • <a href="/privacy.html">Privacy Policy</a>
-</footer>
-
 </body>
 </html>
