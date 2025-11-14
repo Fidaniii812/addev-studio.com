@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AdDev Studio Blog | Insights on SEO, AI & Marketing</title>
-  <meta name="description" content="Read the latest insights on SEO, AI tools, and digital marketing from AdDev Studio. Learn how to grow your business online." />
+  <title>AdDev Studio Blog | SEO, AI, Ads & Affiliate Insights</title>
+  <meta name="description"
+        content="AdDev Studio Blog – in-depth articles about SEO, AI tools, Meta & LinkedIn marketing, affiliate strategies and smart ways to grow your online income." />
   <link rel="canonical" href="https://addev-studio.com/blog.html" />
 
   <style>
@@ -12,103 +13,155 @@
       font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9fafc;
-      color: #222;
+      background: #f3f4f6;
+      color: #111827;
     }
 
     header {
-      background: linear-gradient(90deg, #0044cc, #ffd700);
+      background: linear-gradient(120deg, #020617 0%, #1d4ed8 45%, #f97316 100%);
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 60px 20px 52px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.5);
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+      letter-spacing: 0.04em;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       opacity: 0.9;
+      max-width: 720px;
+      margin: 0 auto 12px;
+    }
+
+    .header-tags {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .header-tag {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(226, 232, 240, 0.5);
+      background: rgba(15, 23, 42, 0.55);
     }
 
     main {
       width: 90%;
-      max-width: 1100px;
-      margin: 50px auto;
+      max-width: 1120px;
+      margin: 40px auto 60px;
+    }
+
+    .section-intro {
+      max-width: 720px;
+      margin: 0 auto 22px;
+      text-align: center;
+      color: #4b5563;
+      font-size: 0.95rem;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
     }
 
     .card {
       background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-radius: 18px;
+      box-shadow: 0 8px 26px rgba(15, 23, 42, 0.08);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(226, 232, 240, 0.9);
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
     }
 
     .card img {
       width: 100%;
-      height: 180px;
+      height: 170px;
       object-fit: cover;
+      display: block;
     }
 
     .card-content {
-      padding: 20px;
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    .card-kicker {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #6b7280;
     }
 
     .card-content h3 {
-      color: #0044cc;
-      margin-bottom: 10px;
-      font-size: 1.3rem;
+      color: #111827;
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.3;
     }
 
     .card-content p {
-      color: #555;
-      font-size: 1rem;
+      color: #4b5563;
+      font-size: 0.92rem;
       line-height: 1.5;
+      margin: 0;
+    }
+
+    .meta-line {
+      font-size: 0.8rem;
+      color: #9ca3af;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      border-radius: 8px;
-      background: #ffd700;
-      color: #0044cc;
+      margin-top: 12px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: #f97316;
+      color: #111827;
       font-weight: 600;
+      font-size: 0.9rem;
       text-decoration: none;
-      transition: 0.3s ease;
+      align-self: flex-start;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
     }
 
     .btn:hover {
-      background: #0044cc;
-      color: #fff;
+      background: #1d4ed8;
+      color: #f9fafb;
+      transform: translateY(-1px);
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #fff;
-      border-top: 1px solid #eee;
-      color: #666;
-      font-size: 0.9rem;
-      margin-top: 60px;
+      background: #020617;
+      border-top: 1px solid #111827;
+      color: #9ca3af;
+      font-size: 0.85rem;
     }
 
     footer a {
-      color: #0044cc;
+      color: #60a5fa;
       text-decoration: none;
     }
 
@@ -121,79 +174,205 @@
 <body>
   <header>
     <h1>AdDev Studio Blog</h1>
-    <p>Learn. Build. Grow. Your hub for SEO, AI & digital insights.</p>
+    <p>
+      Learn how to grow traffic, build smarter funnels and earn more with SEO, AI,
+      Meta & LinkedIn marketing and affiliate programs.
+    </p>
+    <div class="header-tags">
+      <span class="header-tag">SEO 2025</span>
+      <span class="header-tag">AI Automation</span>
+      <span class="header-tag">Affiliate Marketing</span>
+      <span class="header-tag">Meta & LinkedIn Growth</span>
+    </div>
   </header>
 
   <main>
+    <div class="section-intro">
+      These articles are designed to help AdDev Studio visitors understand how to
+      drive more traffic, convert better and monetize with affiliate partners like
+      AliExpress, Alibaba, Tion, Global Yo and others.
+    </div>
+
     <div class="grid">
 
+      <!-- 1. SEO Roadmap -->
       <div class="card">
-        <img src="https://addev-studio.com/assets/img/ai-tools.jpg" alt="AI Tools">
+        <img src="https://cdn.pixabay.com/photo/2018/02/02/22/19/web-3120321_1280.jpg"
+             alt="SEO roadmap 2025" />
         <div class="card-content">
-          <h3>Top AI Tools for 2025</h3>
-          <p>Explore the most powerful AI tools for marketers, writers, and entrepreneurs to boost productivity and creativity.</p>
-          <a href="blog-ai-tools.html" class="btn">Read More</a>
+          <div class="card-kicker">SEO • 2025</div>
+          <h3>The Ultimate 2025 SEO Roadmap: Rank in 90 Days</h3>
+          <p>
+            A practical, step-by-step roadmap to go from zero visibility to first-page
+            rankings in three months – including keyword research, on-page structure,
+            internal links and content strategy that actually works in 2025.
+          </p>
+          <div class="meta-line">Reading time: ~11 min</div>
+          <a href="blog-seo-roadmap-2025.html" class="btn">Read article</a>
         </div>
       </div>
 
+      <!-- 2. AI Automation Systems -->
       <div class="card">
-        <img src="https://addev-studio.com/assets/img/seo-beginners.jpg" alt="SEO Beginner Guide">
+        <img src="https://cdn.pixabay.com/photo/2023/05/15/09/15/artificial-intelligence-7994700_1280.jpg"
+             alt="AI automation workflows" />
         <div class="card-content">
-          <h3>SEO for Small Businesses</h3>
-          <p>Learn step-by-step how to optimize your website and get found by your customers on Google.</p>
-          <a href="blog-seo-beginners.html" class="btn">Read More</a>
+          <div class="card-kicker">AI • Automation</div>
+          <h3>12 AI Automation Workflows That Save 20+ Hours Weekly</h3>
+          <p>
+            Learn how to combine AI tools, simple scripts and no-code systems to automate
+            content, reporting and outreach – and free up your time to focus on strategy
+            and revenue instead of repetitive tasks.
+          </p>
+          <div class="meta-line">Reading time: ~12 min</div>
+          <a href="blog-ai-automation-systems.html" class="btn">Read article</a>
         </div>
       </div>
 
+      <!-- 3. Proxy Rotation / LunaProxy -->
       <div class="card">
-        <img src="https://addev-studio.com/assets/img/web-conversion.jpg" alt="Web Design Conversion">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg"
+             alt="Proxy rotation and data" />
         <div class="card-content">
-          <h3>How to Build a Website That Converts</h3>
-          <p>Design principles that help turn visitors into customers — from layout to call-to-action strategy.</p>
-          <a href="blog-website-conversions.html" class="btn">Read More</a>
+          <div class="card-kicker">Tools • Data</div>
+          <h3>Proxy Rotation 101: How LunaProxy Powers Safe Data Collection</h3>
+          <p>
+            A complete beginner-friendly guide to rotating proxies, how they work, and
+            why tools like LunaProxy are essential for SEO auditing, market research and
+            large-scale data collection.
+          </p>
+          <div class="meta-line">Reading time: ~10 min</div>
+          <a href="blog-proxy-rotation-lunaproxy.html" class="btn">Read article</a>
         </div>
       </div>
-      <!-- 🚀 New Card: Meta & LinkedIn Marketing -->
-<div class="card">
-  <img src="https://cdn.pixabay.com/photo/2018/01/18/07/55/social-media-3084967_1280.jpg" alt="Meta and LinkedIn Marketing">
-  <div class="card-content">
-    <h3>Grow Your Business with Meta & LinkedIn</h3>
-    <p>Learn how to use Meta Business and LinkedIn to scale your brand in 2025.</p>
-    <a href="blog-meta-linkedin.html" class="btn">Read More</a>
-  </div>
-</div>
-      <!-- New Card: Meta & AI Automation -->
-<div class="card">
-  <img src="https://cdn.pixabay.com/photo/2024/02/01/10/22/ai-marketing-8549321_1280.jpg" alt="Meta AI Automation">
-  <div class="card-content">
-    <h3>Grow Faster in 2025 with Meta & AI Automation</h3>
-    <p>Discover how Meta tools and automation systems can streamline your marketing, save time, and help your brand scale smarter in 2025.</p>
-    <a href="blog-meta-automation.html" class="btn">Read More</a>
-  </div>
-</div>
-      
-  </div>
-</div>
-      <!-- 💡 New Card: Affiliate Marketing 2025 -->
-<div class="card">
-  <img src="https://cdn.pixabay.com/photo/2019/11/08/11/44/marketing-4610699_1280.jpg" alt="Affiliate Marketing 2025">
-  <div class="card-content">
-    <h3>Affiliate Marketing 2025: Build Smart Income Streams</h3>
-    <p>
-      Discover how <strong>AdDev Studio</strong> builds affiliate partnerships with leading brands like 
-      <a href="https://s.click.aliexpress.com/e/_DE5uK5x" target="_blank" rel="noopener noreferrer">AliExpress</a>, 
-      <a href="https://www.admitad.com/en/webmaster/programs/31519/surfshark-ww/?ref=kaw95ey05k" target="_blank" rel="noopener noreferrer">Surfshark</a> 
-      and others to help creators and marketers grow digital revenue streams in 2025.
-    </p>
-    <a href="blog-affiliate-marketing.html" class="btn">Read More</a>
-  </div>
-</div>
+
+      <!-- 4. Landing Page Conversions -->
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/04/17/analysis-1865815_1280.jpg"
+             alt="Landing page conversions" />
+        <div class="card-content">
+          <div class="card-kicker">CRO • Design</div>
+          <h3>15 Landing Page Rules That Consistently Boost Conversions</h3>
+          <p>
+            From hero sections to call-to-action buttons, discover the layout patterns,
+            copy elements and trust signals that turn visitors into leads and sales –
+            with examples you can copy to your own projects.
+          </p>
+          <div class="meta-line">Reading time: ~13 min</div>
+          <a href="blog-landing-page-conversions.html" class="btn">Read article</a>
+        </div>
+      </div>
+
+      <!-- 5. Start Affiliate Marketing 2025 -->
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/01/29/09/49/startup-2011343_1280.jpg"
+             alt="Affiliate marketing 2025" />
+        <div class="card-content">
+          <div class="card-kicker">Affiliate • Beginner</div>
+          <h3>How to Start Affiliate Marketing in 2025 with Zero Budget</h3>
+          <p>
+            A full beginner blueprint: niche selection, content ideas, traffic sources
+            and how to use programs like AliExpress, Alibaba and Admitad to create
+            multiple income streams without paid ads.
+          </p>
+          <div class="meta-line">Reading time: ~14 min</div>
+          <a href="blog-start-affiliate-marketing-2025.html" class="btn">Read article</a>
+        </div>
+      </div>
+
+      <!-- 6. Meta Ads Strategy -->
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/06/27/09/06/facebook-2445401_1280.jpg"
+             alt="Meta ads strategy" />
+        <div class="card-content">
+          <div class="card-kicker">Paid Ads • Meta</div>
+          <h3>Meta Ads 2025: New Strategies After the Latest Updates</h3>
+          <p>
+            Learn how to structure campaigns, ad sets and creatives on Meta in 2025,
+            including retargeting, broad targeting and creative testing for e-commerce,
+            lead gen and affiliate funnels.
+          </p>
+          <div class="meta-line">Reading time: ~12 min</div>
+          <a href="blog-meta-ads-strategy-2025.html" class="btn">Read article</a>
+        </div>
+      </div>
+
+      <!-- 7. LinkedIn Growth -->
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2015/01/31/12/36/office-618226_1280.jpg"
+             alt="LinkedIn growth" />
+        <div class="card-content">
+          <div class="card-kicker">Brand • LinkedIn</div>
+          <h3>LinkedIn Growth 2025: Build Authority in 90 Days</h3>
+          <p>
+            A practical content and outreach system to grow your LinkedIn profile,
+            generate inbound leads and become visible to the right clients or
+            employers – even if you're starting from scratch.
+          </p>
+          <div class="meta-line">Reading time: ~11 min</div>
+          <a href="blog-linkedin-growth-2025.html" class="btn">Read article</a>
+        </div>
+      </div>
+
+      <!-- 8. eSIM Travel / Global Yo -->
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/23/14/45/map-1854183_1280.jpg"
+             alt="eSIM travel guide" />
+        <div class="card-content">
+          <div class="card-kicker">Travel • eSIM</div>
+          <h3>The Beginner’s Guide to eSIM Travel Tech (Global Yo)</h3>
+          <p>
+            What eSIMs are, how they work, and how services like Global Yo can save
+            money and headaches for digital nomads, tourists and remote workers in
+            2025 and beyond.
+          </p>
+          <div class="meta-line">Reading time: ~9 min</div>
+          <a href="blog-esim-travel-globalyo.html" class="btn">Read article</a>
+        </div>
+      </div>
+
+      <!-- 9. Smart Home / Tion -->
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2018/03/12/11/34/smart-home-3219210_1280.jpg"
+             alt="Smart home Tion" />
+        <div class="card-content">
+          <div class="card-kicker">Smart Home • Tion</div>
+          <h3>Smart Home Air Tech 2025: Why Tion Devices Stand Out</h3>
+          <p>
+            A deep-dive into modern air purification, ventilation and smart
+            climate systems – and how Tion devices fit into the 2025 smart home
+            ecosystem.
+          </p>
+          <div class="meta-line">Reading time: ~10 min</div>
+          <a href="blog-smart-home-tion-2025.html" class="btn">Read article</a>
+        </div>
+      </div>
+
+      <!-- 10. AI Tools = whole marketing team -->
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2023/06/27/09/39/ai-8092873_1280.jpg"
+             alt="AI marketing tools" />
+        <div class="card-content">
+          <div class="card-kicker">AI • Marketing</div>
+          <h3>10 AI Tools That Can Replace an Entire Marketing Team</h3>
+          <p>
+            From copy and creatives to analytics and automation – discover the AI tool
+            stack that can handle 80% of your marketing workload while you focus on
+            strategy, partnerships and growth.
+          </p>
+          <div class="meta-line">Reading time: ~13 min</div>
+          <a href="blog-ai-tools-marketing-team-2025.html" class="btn">Read article</a>
+        </div>
+      </div>
 
     </div>
   </main>
 
   <footer>
-    © 2025 AdDev Studio • <a href="/affiliate.html">Affiliate Tools</a> • <a href="/index.html">Home</a>
+    © 2025 AdDev Studio •
+    <a href="/affiliate.html">Affiliate Hub</a> •
+    <a href="/ads.html">Ads Center</a> •
+    <a href="/index.html">Home</a>
   </footer>
 </body>
 </html>
