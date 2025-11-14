@@ -1,29 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Redirecting...</title>
-<script>
-  // Merr URL-n aktuale
-  var path = window.location.pathname.toLowerCase();
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found – AdDev Studio</title>
 
-  // Lista e artikujve që kanë ndryshuar emër
-  var redirects = {
-    "/how-to-build-a-strong-online-presence-for-your-small-business": "/blog.html",
-    "/how-to-grow-your-business-online-in-2025": "/blog.html",
-    "/3-easy-ways-to-make-money-online-in-2025": "/blog.html"
-  };
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #071a36, #0d2345);
+            color: #fff;
+            text-align: center;
+        }
 
-  // Nëse ekziston në listë, ridrejto
-  if (redirects[path]) {
-    window.location.replace(redirects[path]);
-  } else {
-    // Nëse jo, ridrejto në faqen kryesore
-    window.location.replace("/");
-  }
-</script>
+        /* HEADER */
+        header {
+            width: 100%;
+            padding: 15px 0;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(6px);
+        }
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            align-items: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover { opacity: 0.7; }
+
+        /* MAIN BOX */
+        .box {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        h1 {
+            font-size: 56px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #ff8a2b;
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .btn:hover {
+            background: #ff7c10;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+            padding: 25px 0;
+            color: #ccc;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 40px; }
+            .box { margin: 50px 20px; }
+        }
+    </style>
 </head>
+
 <body>
-  <p>Redirecting...</p>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">AdDev Studio</div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="ads.html">Ads</a>
+                <a href="affiliate.html">Affiliate</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="box">
+        <h1>404</h1>
+        <p>The page you're looking for doesn't exist or may have been moved.</p>
+        <a class="btn" href="index.html">Return to Home</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 AdDev Studio – All Rights Reserved
+    </footer>
+
 </body>
 </html>
