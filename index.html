@@ -3,108 +3,210 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- NEW TITLE WITH BRAND -->
-  <title>DealMatrix Hub – Global Deals & Affiliate Opportunities</title>
-
-  <!-- SEO -->
-  <meta name="description" content="DealMatrix Hub – Your home for global deals, affiliate marketing tools, product promos, guides, ads, and earning opportunities. Updated daily." />
-  <meta name="keywords" content="dealmatrix, deals, affiliate marketing, global offers, promo deals, earn online, best discounts, affiliate hub" />
-
-  <meta property="og:title" content="DealMatrix Hub – Global Deals & Affiliate Opportunities" />
-  <meta property="og:description" content="Explore global affiliate deals, exclusive offers, tools, guides and monetization opportunities." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://addev-studio.com/" />
-
-  <!-- KEEP EXISTING VERIFY META -->
+  <title>AdDev Studio</title>
   <meta name="verify-admitad" content="47bcc10bc5" />
 
   <style>
-    body { margin:0; font-family:Arial, sans-serif; background:#f7f9fc; color:#222; }
-    header { background:#fff; padding:20px 0; box-shadow:0 2px 6px rgba(0,0,0,.05); }
-    nav { display:flex; justify-content:space-between; align-items:center; width:90%; max-width:1100px; margin:auto; }
-    .logo { font-size:22px; font-weight:700; color:#2563eb; text-decoration:none; }
+    :root{
+      --brand:#2563eb;
+      --brand-dark:#0b3b61;
+      --bg:#f7f9fc;
+      --ink:#222;
+      --muted:#666;
+      --card:#fff;
+      --foot:#111827;
+      --foot-ink:#d1d5db;
+      --shadow:0 2px 6px rgba(0,0,0,.05);
+      --radius:12px;
+    }
 
-    .menu a { margin-left:20px; text-decoration:none; color:#333; font-weight:500; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+    a{text-decoration:none}
 
-    .hero { text-align:center; padding:80px 15px; background:linear-gradient(120deg,#1e3a8a,#2563eb); color:white; border-radius:0 0 12px 12px; }
+    .container{width:90%;max-width:1150px;margin:0 auto}
 
-    .btn { background:#2563eb; color:white; padding:10px 22px; border-radius:6px; text-decoration:none; display:inline-block; }
-    .btn.secondary { background:#0b3b61; }
+    /* HEADER */
+    header{background:#fff;box-shadow:var(--shadow);padding:20px 0;position:sticky;top:0;z-index:99}
+    nav{display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:22px;font-weight:700;color:var(--brand)}
+    .menu a{margin-left:20px;color:#333;font-weight:500}
 
-    .container { width:90%; max-width:1100px; margin:auto; }
-    .grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin:50px 0; }
+    /* HERO */
+    .hero{
+      background:linear-gradient(120deg,#1e3a8a,#2563eb);
+      color:#fff;
+      text-align:center;
+      padding:90px 20px;
+      border-radius:0 0 var(--radius) var(--radius);
+    }
 
-    .card { background:white; padding:24px; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,.05); text-align:center; }
-    .card h3 { margin:0 0 10px; color:#2563eb; }
+    .hero h1{font-size:38px;margin-bottom:12px}
+    .hero p{font-size:17px;margin-bottom:22px}
+    .btn{
+      background:var(--brand);
+      padding:10px 22px;
+      color:#fff;
+      border-radius:6px;
+      display:inline-block;
+      margin-right:8px;
+    }
+    .btn.secondary{background:var(--brand-dark)}
 
-    footer { background:#111827; color:#d1d5db; text-align:center; padding:30px 0; margin-top:50px; }
-    footer a { color:#93c5fd; text-decoration:none; }
+    /* PARTNERS */
+    .partners{padding:60px 0;text-align:center}
+    .partners h2{font-size:30px;margin-bottom:10px}
+    .partners p.muted{color:var(--muted);margin-bottom:30px;font-size:15px}
 
-    .disclosure { background:white; border-top:1px solid #eee; padding:16px; font-size:14px; color:#777; }
+    .partner-grid{
+      display:grid;
+      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    }
+    .partner-card{
+      background:#fff;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 3px 12px rgba(0,0,0,.08);
+      transition:.25s;
+      text-align:center;
+    }
+    .partner-card:hover{transform:translateY(-6px)}
+    .partner-card img{width:120px;height:auto;object-fit:contain;margin-bottom:15px}
+    .partner-card h3{font-size:20px;margin-bottom:6px}
+    .partner-card p{font-size:14px;color:#555;margin-bottom:12px}
+    .partner-card .btn{background:#005eff}
+
+    /* FOOTER */
+    footer{
+      background:var(--foot);
+      color:var(--foot-ink);
+      text-align:center;
+      padding:30px 0;
+      margin-top:50px;
+    }
+
+    .disclosure{
+      background:#fff;
+      font-size:14px;
+      color:#666;
+      padding:18px 20px;
+      border-top:1px solid #eee;
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <a class="logo" href="/">DealMatrix Hub</a>
-    <div class="menu">
-      <a href="/affiliate.html">Affiliate</a>
-      <a href="/ads.html">Ads</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/resources.html">Resources</a>
-      <a href="/contact.html">Contact</a>
-    </div>
-  </nav>
+  <div class="container">
+    <nav>
+      <a class="logo" href="/">AdDev Studio</a>
+      <div class="menu">
+        <a href="/ads.html">Ads</a>
+        <a href="/affiliate.html">Affiliate</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
 </header>
 
-<!-- HERO SECTION – ONLY BRAND NAME CHANGED -->
+<!-- HERO -->
 <section class="hero">
-  <h1>Discover Deals & Earn with DealMatrix Hub</h1>
-  <p>Your ultimate destination for global deals, affiliate tools, guides, and monetization tips.</p>
+  <div class="container">
+    <h1>Build, Promote & Earn with AdDev Studio</h1>
+    <p>Your trusted platform for affiliate marketing, SEO tools, and global brand promotion.</p>
 
-  <a href="/affiliate.html" class="btn">Explore Affiliate Tools</a>
-  <a href="/ads.html" class="btn secondary" style="margin-left:8px;">Open Ads Hub</a>
+    <a class="btn" href="/ads.html">Explore Ads</a>
+    <a class="btn secondary" href="/affiliate.html">Affiliate Programs</a>
+  </div>
 </section>
 
-<div class="container">
+<!-- PARTNER CARDS (8 total – placed immediately below hero) -->
+<section class="partners">
+  <div class="container">
+    <h2>Top Affiliate Partners</h2>
+    <p class="muted">Boost your earnings with global brands and trusted affiliate networks.</p>
 
-  <!-- ALL EXISTING CARDS KEPT 100% EXACTLY -->
-  <section class="grid-3">
+    <div class="partner-grid">
 
-    <!-- CARD 1 -->
-    <div class="card">
-      <h3>Affiliate Programs</h3>
-      <p>Discover trusted tools and services to boost your revenue.</p>
-      <a class="btn" href="/affiliate.html">View Programs</a>
+      <!-- 1. AliExpress -->
+      <div class="partner-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/AliExpress_logo.svg">
+        <h3>AliExpress</h3>
+        <p>Millions of trending deals. Global shipping.</p>
+        <a class="btn" target="_blank" href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/">Shop AliExpress</a>
+      </div>
+
+      <!-- 2. Aurabits -->
+      <div class="partner-card">
+        <img src="https://i.imgur.com/vY2F6Ww.png">
+        <h3>Aurabits</h3>
+        <p>AI tools & digital tech. Earn per signup.</p>
+        <a class="btn" target="_blank" href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/">Join Aurabits</a>
+      </div>
+
+      <!-- 3. Tatkraft -->
+      <div class="partner-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/TATKRAFT_Logo.png">
+        <h3>Tatkraft</h3>
+        <p>Home & office accessories with high conversions.</p>
+        <a class="btn" target="_blank" href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/">Shop Tatkraft</a>
+      </div>
+
+      <!-- 4. Lunapraxy -->
+      <div class="partner-card">
+        <img src="https://i.imgur.com/7GQhgY3.png">
+        <h3>Lunapraxy</h3>
+        <p>Fashion, tech, lifestyle deals.</p>
+        <a class="btn" target="_blank" href="https://xyowz.com/g/0tgjwvcyxl47bcc10bc5cadd1b4d81/">Shop Lunapraxy</a>
+      </div>
+
+      <!-- 5. Sotka -->
+      <div class="partner-card">
+        <img src="https://i.imgur.com/zO2XbHu.png">
+        <h3>Sotka Partners</h3>
+        <p>Earn up to 10% commissions promoting Sotka.</p>
+        <a class="btn" target="_blank" href="https://ficca2021.com/g/tvbtu293z547bcc10bc58f43554cb4/">Join Sotka</a>
+      </div>
+
+      <!-- 6. Hacoo -->
+      <div class="partner-card">
+        <img src="https://i.imgur.com/HACOO.png">
+        <h3>Hacoo</h3>
+        <p>Fashion & accessories for every season.</p>
+        <a class="btn" target="_blank" href="https://dorinebeaumont.com/g/84e1j7pvh147bcc10bc5f271888eea/">Shop Hacoo</a>
+      </div>
+
+      <!-- 7. Aroma-Butik -->
+      <div class="partner-card">
+        <img src="https://i.imgur.com/AROMA.png">
+        <h3>Aroma-Butik</h3>
+        <p>Perfumes, beauty & cosmetics deals.</p>
+        <a class="btn" target="_blank" href="https://aflink.ru/g/18vhi6r5cv47bcc10bc579deb39b46/">Shop Aroma-Butik</a>
+      </div>
+
+      <!-- 8. Monetag -->
+      <div class="partner-card">
+        <img src="https://i.imgur.com/MONETAG.png">
+        <h3>Monetag</h3>
+        <p>Simple monetization for any website.</p>
+        <a class="btn" target="_blank" href="https://otieu.com/4/10165598">Open Monetag</a>
+      </div>
+
     </div>
-
-    <!-- CARD 2 -->
-    <div class="card">
-      <h3>SEO & Marketing Insights</h3>
-      <p>Guides on SEO, AI tools, and content strategies that actually work.</p>
-      <a class="btn" href="/blog.html">Read Blog</a>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="card">
-      <h3>Creator Resources</h3>
-      <p>Premium resources for digital marketers and creators.</p>
-      <a class="btn" href="/resources.html">View Resources</a>
-    </div>
-
-  </section>
-
-</div>
+  </div>
+</section>
 
 <footer>
-  <span>© 2025 DealMatrix Hub</span> • <a href="/privacy.html">Privacy Policy</a>
+  <div class="container">
+    © 2025 AdDev Studio • <a href="/privacy.html" style="color:#93c5fd">Privacy Policy</a>
+  </div>
 </footer>
 
 <div class="disclosure">
-  <strong>Affiliate Disclosure:</strong> Some links may earn us a commission. We only recommend trusted partners.
+  <strong>Affiliate Disclosure:</strong> Some links on this website are affiliate links. Purchases through these links may earn AdDev Studio a commission at no extra cost to you.
 </div>
 
 </body>
