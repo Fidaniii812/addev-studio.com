@@ -1,201 +1,839 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AdDev Studio – Top Ads & Affiliate Promotions</title>
-
+  <title>Ads & Promotions | AdDev Studio</title>
+  <meta name="description" content="Browse high-converting ads, promo videos and live partner offers from AdDev Studio’s global affiliate brands." />
+  <link rel="stylesheet" href="styles.css" />
   <style>
+    :root {
+      --bg: #020617;
+      --bg-soft: #02091d;
+      --bg-card: #020618;
+      --accent: #f97316;
+      --accent-soft: rgba(249, 115, 22, 0.1);
+      --accent-strong: #fb923c;
+      --primary: #0f172a;
+      --primary-deep: #020617;
+      --primary-soft: rgba(15, 23, 42, 0.9);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.2);
+      --pill-bg: rgba(15, 23, 42, 0.85);
+      --pill-border: rgba(148, 163, 184, 0.35);
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #222;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top left, #0b1120 0, #020617 55%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
+
+    /* Layout */
+
     header {
-      background: white;
-      padding: 20px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+          to bottom,
+          rgba(15, 23, 42, 0.96),
+          rgba(15, 23, 42, 0.96),
+          rgba(15, 23, 42, 0.9),
+          transparent
+        );
+      border-bottom: 1px solid rgba(30, 64, 175, 0.55);
     }
-    .container {
-      width: 90%;
-      max-width: 1100px;
+
+    .nav-shell {
+      max-width: 1120px;
       margin: 0 auto;
-    }
-    nav {
+      padding: 14px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #2563eb;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #e5e7eb;
       text-decoration: none;
     }
-    .menu a {
-      margin-left: 20px;
-      color: #333;
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #38bdf8 0, #1d4ed8 40%, #020617 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.85),
+        0 14px 30px rgba(15, 23, 42, 0.9);
+    }
+
+    .brand-mark span {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+    }
+
+    nav a {
       text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.18s ease;
+    }
+
+    nav a:hover {
+      color: #e5e7eb;
+      background: rgba(30, 64, 175, 0.35);
+    }
+
+    nav a.active {
+      color: #e5e7eb;
+      background: radial-gradient(circle at top, #1d4ed8, #0f172a);
+      box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.5),
+        0 0 30px rgba(37, 99, 235, 0.55);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    @media (min-width: 1024px) {
+      main {
+        padding-top: 40px;
+      }
+    }
+
+    /* Hero */
+
+    .hero-ads {
+      border-radius: 28px;
+      padding: 26px 22px 26px;
+      background: radial-gradient(circle at top left, #1d4ed8 0, #020617 48%);
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(191, 219, 254, 0.5);
+      background: rgba(15, 23, 42, 0.75);
+      font-size: 0.78rem;
+      color: #bfdbfe;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      margin-bottom: 14px;
+    }
+
+    .hero-pill span {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      background: radial-gradient(circle at 25% 0, #f97316, #facc15);
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+        align-items: stretch;
+        gap: 26px;
+      }
+    }
+
+    .hero-main h1 {
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 768px) {
+      .hero-main h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .hero-main p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 38rem;
+      font-size: 0.98rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 0;
+    }
+
+    .hero-tags span {
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: #e5e7eb;
+    }
+
+    .hero-side {
+      border-radius: 22px;
+      padding: 16px 16px 18px;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), #020617);
+      border: 1px solid rgba(94, 234, 212, 0.3);
+      box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.8);
+    }
+
+    .hero-side-title {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 8px;
+    }
+
+    .hero-side h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+    }
+
+    .hero-side p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-side-footer {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    .hero-side-footer span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* Section wrappers */
+
+    .section {
+      margin-top: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 18px;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 36rem;
+    }
+
+    /* Video grid */
+
+    .video-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 900px) {
+      .video-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .video-card {
+      border-radius: 18px;
+      background: radial-gradient(circle at top, #020617, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+    }
+
+    .video-frame {
+      position: relative;
+      padding-top: 56.25%;
+      background: #020617;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 18px 18px 0 0;
+    }
+
+    .video-body {
+      padding: 12px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .video-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: #9ca3af;
+    }
+
+    .video-title {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .video-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* Partner cards */
+
+    .partner-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 900px) {
+      .partner-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .partner-card {
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, #020617, #020617 55%);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+      padding: 16px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .partner-pill {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+    }
+
+    .partner-name {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .partner-meta {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .partner-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .partner-goal {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+
+    .partner-goal span {
+      color: #e5e7eb;
       font-weight: 500;
     }
 
-    .hero {
-      background: linear-gradient(120deg,#1e3a8a,#2563eb);
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-      border-radius: 0 0 12px 12px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 20px;
-      margin: 40px 0;
-    }
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,.05);
-    }
-    .card img {
-      width: 100px;
-      margin-bottom: 12px;
-    }
-    .btn {
-      background: #2563eb;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      display: inline-block;
-      text-decoration: none;
+    .btn-row {
       margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    p.center {
-      text-align: center;
-      color: #666;
-      margin-bottom: 20px;
+    .btn-pill {
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.16s ease;
+      white-space: nowrap;
     }
 
-    /* Video section */
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-      gap: 20px;
+    .btn-primary {
+      background: linear-gradient(to right, #f97316, #fbbf24);
+      color: #111827;
+      font-weight: 600;
+      box-shadow: 0 12px 30px rgba(248, 181, 0, 0.4);
     }
-    .video-box {
-      background: black;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      padding-top: 56.25%;
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(248, 181, 0, 0.55);
     }
-    .video-box iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+    }
+
+    .btn-ghost:hover {
+      border-color: #e5e7eb;
+    }
+
+    .custom-banner {
+      margin-top: 26px;
+      border-radius: 18px;
+      padding: 14px 16px 16px;
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), #020617);
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .custom-banner strong {
+      color: #e5e7eb;
+    }
+
+    .custom-banner code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      font-size: 0.8rem;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
     }
 
     footer {
-      background: #111827;
-      color: #d1d5db;
-      text-align: center;
-      padding: 25px 0;
-      margin-top: 50px;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      background: #020617;
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding: 16px 20px 26px;
+    }
+
+    footer .foot-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
-
 <body>
+  <header>
+    <div class="nav-shell">
+      <a href="/" class="brand">
+        <div class="brand-mark"><span>A</span></div>
+        <span>AdDev Studio</span>
+      </a>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/ads.html" class="active">Ads</a>
+        <a href="/affiliate.html">Affiliate</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <div class="container">
-    <nav>
-      <a class="logo" href="/">AdDev Studio</a>
-      <div class="menu">
-        <a href="/">Home</a>
-        <a href="/affiliate.html">Affiliates</a>
-        <a href="/ads.html">Ads</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero-ads" aria-labelledby="ads-hero-title">
+      <div class="hero-pill">
+        <span>AD</span> Ad Center · Banners & Promo Campaigns
       </div>
-    </nav>
-  </div>
-</header>
 
-<section class="hero">
-  <h1>Top Ads & Promotional Campaigns</h1>
-  <p>Your trusted hub for high-conversion affiliate promotions.</p>
-</section>
+      <div class="hero-grid">
+        <div class="hero-main">
+          <h1 id="ads-hero-title">Ads & promotions powered by global brands.</h1>
+          <p>
+            See how AdDev Studio uses high-intent traffic, video creatives, and curated
+            partner offers to drive more clicks and conversions from every visitor.
+          </p>
+          <div class="hero-tags">
+            <span>Dynamic creatives</span>
+            <span>Affiliate ads</span>
+            <span>Brand-safe placements</span>
+            <span>SEO-friendly pages</span>
+          </div>
+        </div>
 
-<div class="container">
+        <aside class="hero-side" aria-label="Ad strategy">
+          <div class="hero-side-title">Ad strategy</div>
+          <h3>Visual-first performance marketing</h3>
+          <p>
+            Combine video promos with live partner offers. Use this page as a hub
+            to send traffic to AliExpress, Alibaba, British Council, Tion and
+            other brands through your affiliate links.
+          </p>
+          <div class="hero-side-footer">
+            <span>CTR-focused layouts</span>
+            <span>Multi-vertical offers</span>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-  <!-- Videos Section -->
-  <h2>Featured Promotional Videos</h2>
-  <p class="center">High-engagement visuals that showcase our top partner brands.</p>
+    <!-- FEATURED VIDEOS -->
+    <section class="section" aria-labelledby="video-section-title">
+      <div class="section-header">
+        <div class="section-label">Featured promo videos</div>
+        <h2 class="section-title" id="video-section-title">
+          Showcase partner offers with high-engagement video.
+        </h2>
+        <p class="section-sub">
+          Swap these YouTube IDs for your own creatives or brand videos at any time.
+        </p>
+      </div>
 
-  <div class="video-grid">
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/RlCjNb3T1sY"
-              title="Promo Video 1" allowfullscreen></iframe>
+      <div class="video-grid">
+        <!-- Video 1 -->
+        <article class="video-card">
+          <div class="video-frame">
+            <!-- Replace VIDEO_ID_1 with your AliExpress / Alibaba promo video ID -->
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_1"
+              title="Global shopping & deals promo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-body">
+            <div class="video-label">AliExpress / Alibaba</div>
+            <p class="video-title">Global shopping & bulk deals</p>
+            <p class="video-text">
+              Use this slot for product haul videos, seasonal campaigns or general
+              marketplace promos.
+            </p>
+          </div>
+        </article>
+
+        <!-- Video 2 -->
+        <article class="video-card">
+          <div class="video-frame">
+            <!-- Replace VIDEO_ID_2 with your British Council / education video ID -->
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_2"
+              title="Learn & grow online promo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-body">
+            <div class="video-label">British Council</div>
+            <p class="video-title">Learn & grow online</p>
+            <p class="video-text">
+              Perfect for English exams, online lessons and career-growth learning paths.
+            </p>
+          </div>
+        </article>
+
+        <!-- Video 3 -->
+        <article class="video-card">
+          <div class="video-frame">
+            <!-- Replace VIDEO_ID_3 with your Tion / smart devices video ID -->
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_3"
+              title="Smart devices & air tech promo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-body">
+            <div class="video-label">Tion & smart tech</div>
+            <p class="video-title">Smart devices & air technology</p>
+            <p class="video-text">
+              Ideal for clean-air devices, IoT, home innovation and energy-efficient tech.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LIVE ADS & PARTNER PROMOTIONS -->
+    <section class="section" aria-labelledby="live-ads-title">
+      <div class="section-header">
+        <div class="section-label">Live ads & partner promotions</div>
+        <h2 class="section-title" id="live-ads-title">
+          Send traffic directly into high-converting affiliate offers.
+        </h2>
+        <p class="section-sub">
+          Each card below links to a live campaign. Use anchor text and button labels
+          that match user intent for stronger click-through rates.
+        </p>
+      </div>
+
+      <div class="partner-grid">
+        <!-- Alibaba -->
+        <article class="partner-card">
+          <div class="partner-pill">Alibaba · Wholesale & B2B marketplace</div>
+          <div class="partner-name">Alibaba Wholesale</div>
+          <div class="partner-meta">Vertical: B2B marketplace · Global sourcing</div>
+          <p class="partner-text">
+            Promote bulk orders and factory-direct deals for global buyers and resellers.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>Lead & order generation for wholesale buyers.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Promote Alibaba
+            </a>
+          </div>
+        </article>
+
+        <!-- British Council -->
+        <article class="partner-card">
+          <div class="partner-pill">British Council · Education & exams</div>
+          <div class="partner-name">British Council</div>
+          <div class="partner-meta">Vertical: Education · English learning</div>
+          <p class="partner-text">
+            Great for blogs about study abroad, English tests, online learning and
+            professional development.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>Course sign-ups and exam registrations.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Promote British Council
+            </a>
+          </div>
+        </article>
+
+        <!-- ItaliaRail -->
+        <article class="partner-card">
+          <div class="partner-pill">ItaliaRail · Rail & travel</div>
+          <div class="partner-name">ItaliaRail Tickets</div>
+          <div class="partner-meta">Vertical: Travel · EU train tickets</div>
+          <p class="partner-text">
+            Ideal for itineraries, city guides and travel blogs focused on Italy and Europe.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>Ticket bookings and multi-city rail passes.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Promote ItaliaRail
+            </a>
+          </div>
+        </article>
+
+        <!-- Global Yo eSIM -->
+        <article class="partner-card">
+          <div class="partner-pill">Global Yo · eSIM & data</div>
+          <div class="partner-name">Global Yo eSIM</div>
+          <div class="partner-meta">Vertical: Telecom · Travel data plans</div>
+          <p class="partner-text">
+            Great add-on for any travel content: city breaks, remote work, digital nomad
+            guides and more.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>eSIM purchases and top-ups.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://zmgig.com/g/hphyrzofyp47bcc10bc57801e98dae/" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Promote Global Yo
+            </a>
+          </div>
+        </article>
+
+        <!-- PC Sales -->
+        <article class="partner-card">
+          <div class="partner-pill">PC & Tech Deals · Electronics</div>
+          <div class="partner-name">PC & Tech Deals</div>
+          <div class="partner-meta">Vertical: Electronics · Gaming & peripherals</div>
+          <p class="partner-text">
+            Use with hardware reviews, streaming setups and productivity gear round-ups.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>Device and accessory sales.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://ewwhk.com/g/fwsqlvbm3047bcc10bc5bec73bd971/" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Promote PC Sales
+            </a>
+          </div>
+        </article>
+
+        <!-- LunaProxy -->
+        <article class="partner-card">
+          <div class="partner-pill">LunaProxy · Proxy rotation tools</div>
+          <div class="partner-name">LunaProxy</div>
+          <div class="partner-meta">Vertical: Tools · Data & scraping</div>
+          <p class="partner-text">
+            Connect with growth hackers, scrapers and analytics users who need reliable
+            rotation proxies.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>Subscription sign-ups and API usage.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Promote LunaProxy
+            </a>
+          </div>
+        </article>
+
+        <!-- Aurabits AI -->
+        <article class="partner-card">
+          <div class="partner-pill">Aurabits · AI & SaaS</div>
+          <div class="partner-name">Aurabits AI</div>
+          <div class="partner-meta">Vertical: AI tools · SaaS</div>
+          <p class="partner-text">
+            Pair with content about automation, AI tools, creator workflows and digital
+            products.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>Tool sign-ups and paid plan upgrades.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Promote Aurabits
+            </a>
+          </div>
+        </article>
+
+        <!-- Tion Smart Devices -->
+        <article class="partner-card">
+          <div class="partner-pill">Tion · Smart home & air tech</div>
+          <div class="partner-name">Tion Smart Devices</div>
+          <div class="partner-meta">Vertical: Smart home · Ventilation</div>
+          <p class="partner-text">
+            Works well with health, home improvement, sustainability and IoT content.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>Device sales and bundle upgrades.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Promote Tion
+            </a>
+          </div>
+        </article>
+
+        <!-- Admitad network -->
+        <article class="partner-card">
+          <div class="partner-pill">Admitad · Affiliate network</div>
+          <div class="partner-name">Admitad Partner Network</div>
+          <div class="partner-meta">Vertical: Multi-vertical · Global offers</div>
+          <p class="partner-text">
+            One of the leading affiliate networks with thousands of programs, deep
+            tracking and flexible payouts.
+          </p>
+          <p class="partner-goal">
+            Goal: <span>New publishers joining via AdDev Studio.</span>
+          </p>
+          <div class="btn-row">
+            <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k" class="btn-pill btn-primary" target="_blank" rel="noopener noreferrer">
+              Join Admitad Network
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="custom-banner">
+        <strong>Custom banner zone.</strong>
+        Embed additional ad codes here – for example a fixed
+        <code>728x90</code> banner, a
+        <code>300x250</code> box, or a Monetag / network iframe you want to show
+        at the bottom of the page.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <div>© 2025 AdDev Studio — All rights reserved.</div>
+      <div>
+        Affiliate disclosure: Some links on this page are affiliate links. Clicks or
+        purchases made through these links may earn AdDev Studio a commission at no
+        extra cost to you.
+      </div>
     </div>
-
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"
-              title="Promo Video 2" allowfullscreen></iframe>
-    </div>
-
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3"
-              title="Promo Video 3" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <!-- Affiliate Ads Section -->
-  <h2 style="margin-top:40px;">Partner Ads & Deals</h2>
-  <p class="center">Exclusive offers from our global affiliate partners.</p>
-
-  <div class="grid-3">
-
-    <!-- AliExpress -->
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/AliExpress_logo.svg" alt="">
-      <h3>AliExpress – Global Deals</h3>
-      <p>Shop millions of discounted products worldwide.</p>
-      <a class="btn" href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/" target="_blank">Shop Now</a>
-    </div>
-
-    <!-- LunaPrax -->
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Placeholder_no_text.svg" alt="">
-      <h3>Luna Pryx</h3>
-      <p>Trending fashion, accessories and premium lifestyle items.</p>
-      <a class="btn" href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/" target="_blank">Visit Store</a>
-    </div>
-
-    <!-- AuraBits -->
-    <div class="card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Placeholder_no_text.svg" alt="">
-      <h3>AuraBits</h3>
-      <p>AI tools and digital solutions for creators & marketers.</p>
-      <a class="btn" href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/" target="_blank">Try AuraBits</a>
-    </div>
-
-  </div>
-
-</div>
-
-<footer>
-  © 2025 AdDev Studio — All Rights Reserved
-</footer>
-
+  </footer>
 </body>
 </html>
