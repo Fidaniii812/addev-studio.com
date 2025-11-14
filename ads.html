@@ -1,984 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ads & Promotions – AdDev Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="Discover AdDev Studio ads, banners, and promo placements powered by top affiliate programs and partners." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ads & Promotions – AdDev Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg-dark: #050816;
-      --bg-card: #0b1020;
-      --bg-card-soft: #111729;
-      --accent: #ff8a3c;
-      --accent-soft: #ffb36e;
-      --primary: #2563eb;
-      --primary-soft: #3b82f6;
-      --border-subtle: #1f2937;
-      --text-main: #f9fafb;
-      --text-muted: #9ca3af;
-      --radius-lg: 14px;
-      --radius-xl: 18px;
-      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
-      --shadow-chip: 0 10px 30px rgba(15, 23, 42, 0.85);
-      --gradient-hero: radial-gradient(circle at top left,#1d4ed8 0,#020617 55%,#020617 100%);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+<style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #020617;
-      color: var(--text-main);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #050b19;
+        color: #fff;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
-    }
-
-    /* NAVBAR */
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(2, 6, 23, 0.98), rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0));
-      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+        background: #0b132b;
+        padding: 18px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    header a {
+        color: #fff;
+        margin-left: 24px;
+        text-decoration: none;
+        font-weight: 500;
+        opacity: 0.8;
+    }
+    header a:hover {
+        opacity: 1;
+    }
+    .active {
+        background: #1a2dff;
+        padding: 8px 14px;
+        border-radius: 10px;
     }
 
-    .nav-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      font-size: 17px;
-    }
-
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0, #60a5fa 0, #1d4ed8 40%, #020617 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #eff6ff;
-      font-weight: 700;
-      font-size: 18px;
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.7);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 14px;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      padding: 6px 10px;
-      border-radius: 999px;
-      transition: all 0.18s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
-      background: rgba(15, 23, 42, 0.8);
-    }
-
-    .nav-links a.active {
-      color: #e5e7eb;
-      background: rgba(37, 99, 235, 0.18);
-      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.45);
-    }
-
-    /* HERO */
-
-    main {
-      flex: 1;
-    }
-
-    .hero {
-      background: var(--gradient-hero);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-    }
-
-    .hero-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 34px 16px 40px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: center;
-    }
-
-    @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
-        padding-top: 26px;
-      }
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px 4px 4px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.75);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      color: var(--text-muted);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 14px;
-      box-shadow: var(--shadow-chip);
-    }
-
-    .hero-kicker span.badge {
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.98);
-      color: #eff6ff;
-      font-weight: 600;
-      font-size: 11px;
-    }
-
-    .hero-title {
-      font-size: clamp(27px, 4vw, 32px);
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      margin-bottom: 10px;
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      max-width: 36rem;
-      margin-bottom: 18px;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
-      font-size: 11px;
-    }
-
-    .hero-tag {
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      background: rgba(15, 23, 42, 0.85);
-      color: #e5e7eb;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn-primary,
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 9px 16px;
-      font-size: 13px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary-soft), var(--primary));
-      color: #eff6ff;
-      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.55);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 20px 45px rgba(37, 99, 235, 0.7);
-    }
-
-    .btn-ghost {
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--text-main);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 1);
-      border-color: rgba(148, 163, 184, 0.7);
-    }
-
-    .hero-panel {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 20px;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      padding: 18px 16px 16px;
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .hero-panel-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-muted);
-    }
-
-    .hero-panel-main {
-      background: linear-gradient(135deg, #020617, #111827);
-      border-radius: 16px;
-      padding: 12px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-    }
-
-    .hero-panel-title {
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .hero-panel-text {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-panel-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
-
-    .hero-panel-badge {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.32);
-      color: #e5e7eb;
-    }
-
-    /* SECTIONS */
     .section {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 28px 16px 40px;
+        max-width: 1150px;
+        margin: auto;
+        padding: 60px 20px;
     }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 20px;
+    h1 {
+        font-size: 38px;
+        font-weight: 700;
+        background: linear-gradient(90deg, #3fa9ff, #6f7dff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
-    .section-title {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 6px;
+    .small-tag {
+        display: inline-block;
+        padding: 6px 14px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 30px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        opacity: 0.8;
+        text-transform: uppercase;
     }
 
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
-      max-width: 36rem;
-      margin: 0 auto;
-    }
-
-    /* VIDEO GRID */
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 22px;
-    }
-
-    @media (max-width: 960px) {
-      .video-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .video-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .video-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        gap: 25px;
+        margin-top: 30px;
     }
 
     .video-card {
-      background: radial-gradient(circle at top left, #111827 0, #020617 55%);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(148, 163, 184, 0.2);
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+        background: #0f1733;
+        padding: 15px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.05);
+        text-align: center;
     }
 
-    .video-wrapper {
-      position: relative;
-      padding-top: 56.25%;
-      background: #000;
-      overflow: hidden;
+    iframe {
+        width: 100%;
+        border: none;
+        border-radius: 15px;
+        height: 185px;
     }
 
-    .video-wrapper iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+    .promo-grid {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+        gap: 25px;
     }
 
-    .video-content {
-      padding: 10px 12px 10px;
-      font-size: 12px;
+    .promo-card {
+        background: #0f1733;
+        border-radius: 18px;
+        padding: 22px;
+        border: 1px solid rgba(255,255,255,0.06);
     }
 
-    .video-title {
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 4px;
+    .promo-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 6px;
     }
 
-    .video-brand {
-      font-size: 11px;
-      color: var(--text-muted);
+    .promo-desc {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 14px;
     }
 
-    /* ADS GRID (CARDS) */
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 22px;
+    .btn {
+        display: inline-block;
+        padding: 10px 18px;
+        background: #ff7b00;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
     }
-
-    @media (max-width: 960px) {
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    .btn:hover {
+        background: #ff9a2d;
     }
-
-    @media (max-width: 640px) {
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .card {
-      background: radial-gradient(circle at top left, #111827 0, #020617 55%);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      padding: 16px 14px 14px;
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(96, 165, 250, 0.8);
-      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.95);
-    }
-
-    .card-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .card-logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 10px;
-      background: #020617;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-    }
-
-    .card-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    .card-title {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .card-category {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .card-body {
-      font-size: 12px;
-      color: var(--text-muted);
-      min-height: 40px;
-    }
-
-    .card-footer {
-      margin-top: 6px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .card-meta {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .card-meta strong {
-      color: #e5e7eb;
-    }
-
-    .card-btn {
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent-soft), var(--accent));
-      color: #111827;
-      font-size: 12px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      white-space: nowrap;
-      box-shadow: 0 12px 30px rgba(251, 146, 60, 0.6);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .card-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(251, 146, 60, 0.75);
-    }
-
-    /* SPONSOR BANNER */
-
-    .sponsor-banner {
-      margin-top: 30px;
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      background: radial-gradient(circle at left top, #1f2937 0, #020617 65%);
-      padding: 16px 16px 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .sponsor-text {
-      max-width: 420px;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .sponsor-text strong {
-      color: #e5e7eb;
-    }
-
-    /* FOOTER */
 
     footer {
-      border-top: 1px solid rgba(148, 163, 184, 0.16);
-      background: #020617;
+        text-align: center;
+        padding: 40px;
+        opacity: 0.5;
+        font-size: 14px;
     }
-
-    .footer-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 16px;
-      font-size: 11px;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    .footer-inner a {
-      color: #93c5fd;
-    }
-
-    .disclosure {
-      font-size: 11px;
-      margin-top: 8px;
-      max-width: 50rem;
-      margin-left: auto;
-      margin-right: auto;
-      color: #6b7280;
-    }
-  </style>
+</style>
 </head>
+
 <body>
-<div class="page">
 
-  <!-- NAVBAR -->
-  <header>
-    <div class="nav-inner">
-      <a href="/" class="brand">
-        <div class="brand-mark">A</div>
-        <span>AdDev Studio</span>
-      </a>
-      <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="/ads.html" class="active">Ads</a>
-        <a href="/affiliate.html">Affiliate</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+    <div style="font-size:22px;font-weight:700;">AdDev Studio</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ads.html" class="active">Ads</a>
+        <a href="affiliate.html">Affiliate</a>
+        <a href="blog.html">Blog</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <div class="hero-kicker">
-            <span class="badge">Ads Center</span>
-            Banners, campaigns & promo placements
-          </div>
-          <h1 class="hero-title">Ads & promotions powered by your favorite brands.</h1>
-          <p class="hero-subtitle">
-            This page showcases live ads, banners and promo placements from
-            AdDev Studio’s affiliate partners. Use it as inspiration, or
-            send traffic here to convert visitors through visual creatives.
-          </p>
-          <div class="hero-tags">
-            <span class="hero-tag">Dynamic creatives</span>
-            <span class="hero-tag">Affiliate-ready</span>
-            <span class="hero-tag">Brand-safe placements</span>
-          </div>
-          <div class="hero-actions">
-            <a href="#videos" class="btn-primary">View video promos</a>
-            <a href="/affiliate.html" class="btn-ghost">Open Affiliate Hub</a>
-          </div>
-        </div>
+<div class="section">
 
-        <aside class="hero-panel">
-          <div class="hero-panel-label">Ad strategy</div>
-          <div class="hero-panel-main">
-            <div class="hero-panel-title">Visual-first performance marketing</div>
-            <p class="hero-panel-text">
-              Combine video ads, hero banners and partner cards to generate more
-              clicks and conversions from the same traffic.
-            </p>
-            <div class="hero-panel-badges">
-              <span class="hero-panel-badge">CTR-focused layouts</span>
-              <span class="hero-panel-badge">Multi-vertical offers</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
+    <div class="small-tag">Ad Center</div>
+    <h1>Ads & promotions powered by global brands.</h1>
+    <p style="opacity:0.75; max-width:650px;">
+        Explore live partner ads, video promos, and curated brand placements designed for higher engagement and conversions.
+    </p>
 
-    <!-- VIDEO PROMOS -->
-    <section id="videos" class="section">
-      <div class="section-header">
-        <h2 class="section-title">Featured Video Promos</h2>
-        <p class="section-subtitle">
-          Three different promo-style videos from partner brands.
-          Replace the video IDs with your own creatives whenever you like.
-        </p>
-      </div>
+    <!-- Featured Videos -->
+    <h2 style="margin-top:50px;">Featured Promo Videos</h2>
 
-      <div class="video-grid">
+    <div class="video-row">
+
         <!-- Video 1 -->
-        <article class="video-card">
-          <div class="video-wrapper">
-            <!--
-              Replace VIDEO_ID_HERE_1 with a real YouTube ID, for example
-              from an Alibaba or e-commerce promo video.
-            -->
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_HERE_1?rel=0&modestbranding=1"
-              title="E-commerce Promo Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="video-content">
-            <div class="video-title">Global Shopping & Deals</div>
-            <div class="video-brand">Use this slot for AliExpress / Alibaba promo video.</div>
-          </div>
-        </article>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/y0E_JG3xwMI" allowfullscreen></iframe>
+            <p style="margin-top:8px;opacity:0.8;">Global Shopping & Deals (AliExpress)</p>
+        </div>
 
         <!-- Video 2 -->
-        <article class="video-card">
-          <div class="video-wrapper">
-            <!--
-              Replace VIDEO_ID_HERE_2 with a real YouTube ID for an
-              education / English / British Council style promo.
-            -->
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_HERE_2?rel=0&modestbranding=1"
-              title="Education Promo Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="video-content">
-            <div class="video-title">Learn & Grow Online</div>
-            <div class="video-brand">Great for British Council or online learning campaigns.</div>
-          </div>
-        </article>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/d0L7BzVvcoA" allowfullscreen></iframe>
+            <p style="margin-top:8px;opacity:0.8;">Learn & Grow Online (British Council)</p>
+        </div>
 
         <!-- Video 3 -->
-        <article class="video-card">
-          <div class="video-wrapper">
-            <!--
-              Replace VIDEO_ID_HERE_3 with a real YouTube ID for a
-              smart home / tech / Tion-style promo video.
-            -->
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_HERE_3?rel=0&modestbranding=1"
-              title="Smart Home Tech Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="video-content">
-            <div class="video-title">Smart Devices & Air Tech</div>
-            <div class="video-brand">Perfect for Tion or smart home / IoT offers.</div>
-          </div>
-        </article>
-      </div>
-    </section>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/A0W2wXHdIjQ" allowfullscreen></iframe>
+            <p style="margin-top:8px;opacity:0.8;">Smart Devices & Air Tech (Tion)</p>
+        </div>
 
-    <!-- PARTNER ADS GRID -->
-    <section class="section">
-      <div class="section-header">
-        <h2 class="section-title">Live Ads & Partner Promotions</h2>
-        <p class="section-subtitle">
-          These cards represent real affiliate offers you can send traffic to.
-          Each ad block is clickable and opens the partner’s landing page.
-        </p>
-      </div>
+    </div>
 
-      <div class="grid">
-        <!-- AliExpress -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/AliExpress_logo.svg"
-                   alt="AliExpress logo" />
-            </div>
-            <div>
-              <div class="card-title">AliExpress Ads</div>
-              <div class="card-category">Global shopping • CPS</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Use rotating banners, flash deals and seasonal campaigns to promote
-            millions of products to a global audience.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> Sales & orders
-            </div>
-            <a href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/"
-               class="card-btn" target="_blank" rel="noopener">
-              Open AliExpress offer
-            </a>
-          </div>
-        </article>
+    <!-- Promo Grid -->
+    <h2 style="margin-top:60px;">Live Ads & Partner Promotions</h2>
+
+    <div class="promo-grid">
 
         <!-- Alibaba -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Alibaba_Group_Logo.svg"
-                   alt="Alibaba logo" />
-            </div>
-            <div>
-              <div class="card-title">Alibaba Wholesale</div>
-              <div class="card-category">B2B marketplace</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Showcase wholesale deals, OEM products and factory-direct offers
-            for buyers and resellers.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> Bulk orders & sourcing
-            </div>
-            <a href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/"
-               class="card-btn" target="_blank" rel="noopener">
-              Promote Alibaba
-            </a>
-          </div>
-        </article>
-
-        <!-- Italia Rail -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/FS_Logotipo.svg"
-                   alt="Rail logo" />
-            </div>
-            <div>
-              <div class="card-title">Italia Rail Tickets</div>
-              <div class="card-category">Travel • CPS</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Place train ticket banners for Italy & EU routes, ideal for travel
-            blogs and destination landing pages.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> Ticket bookings
-            </div>
-            <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/"
-               class="card-btn" target="_blank" rel="noopener">
-              Promote ItaliaRail
-            </a>
-          </div>
-        </article>
+        <div class="promo-card">
+            <div class="promo-title">Alibaba Wholesale</div>
+            <div class="promo-desc">Wholesale deals, bulk sourcing & factory-direct offers.</div>
+            <a href="YOUR_ALIBABA_LINK" class="btn">Promote Alibaba</a>
+        </div>
 
         <!-- British Council -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/British_Council_Logo.svg"
-                   alt="British Council logo" />
-            </div>
-            <div>
-              <div class="card-title">British Council</div>
-              <div class="card-category">Education & exams</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Perfect for educational blogs, language learning sites and career
-            content that drives signups.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> Course & exam signups
-            </div>
-            <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/"
-               class="card-btn" target="_blank" rel="noopener">
-              Promote British Council
-            </a>
-          </div>
-        </article>
+        <div class="promo-card">
+            <div class="promo-title">British Council</div>
+            <div class="promo-desc">English learning, certifications, exams & online courses.</div>
+            <a href="YOUR_BC_LINK" class="btn">Promote British Council</a>
+        </div>
 
-        <!-- Global Yo -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://globalyo.com/assets/logo.svg"
-                   alt="Global Yo logo" />
-            </div>
-            <div>
-              <div class="card-title">Global Yo eSIM</div>
-              <div class="card-category">Telecom • Travel</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Feature travel eSIM widgets, roaming-free data packs and landing
-            pages tailored to digital nomads.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> eSIM purchases
-            </div>
-            <a href="https://zmgig.com/g/hphyrzofyp47bcc10bc57801e98dae/"
-               class="card-btn" target="_blank" rel="noopener">
-              Promote Global Yo
-            </a>
-          </div>
-        </article>
-
-        <!-- PC Sales -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-                   alt="PC logo" />
-            </div>
-            <div>
-              <div class="card-title">PC & Tech Deals</div>
-              <div class="card-category">Electronics</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Ideal for tech blogs, gaming communities and productivity guides
-            that push computer hardware and accessories.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> Device sales
-            </div>
-            <a href="https://ewwhk.com/g/fwsqlvbm3047bcc10bc5bec73bd971/"
-               class="card-btn" target="_blank" rel="noopener">
-              Promote PC Sales
-            </a>
-          </div>
-        </article>
-
-        <!-- LunaProxy -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://lunaproxy.com/favicon.ico"
-                   alt="LunaProxy logo" />
-            </div>
-            <div>
-              <div class="card-title">LunaProxy</div>
-              <div class="card-category">Proxy & rotation</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Ads for growth hackers, scrapers and agencies who need reliable IP
-            rotation and geo-targeting.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> Subscription signups
-            </div>
-            <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/"
-               class="card-btn" target="_blank" rel="noopener">
-              Promote LunaProxy
-            </a>
-          </div>
-        </article>
-
-        <!-- Aurabits -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://aurabits.ai/favicon.ico"
-                   alt="Aurabits logo" />
-            </div>
-            <div>
-              <div class="card-title">Aurabits AI</div>
-              <div class="card-category">AI & SaaS</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Use SaaS-style banners and hero visuals to promote AI tools and
-            digital products for creators.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> Tool signups
-            </div>
-            <a href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/"
-               class="card-btn" target="_blank" rel="noopener">
-              Promote Aurabits
-            </a>
-          </div>
-        </article>
+        <!-- Italia Rail -->
+        <div class="promo-card">
+            <div class="promo-title">ItaliaRail Tickets</div>
+            <div class="promo-desc">Train tickets across Italy & Europe for blogs and travel websites.</div>
+            <a href="YOUR_ITALIA_LINK" class="btn">Promote ItaliaRail</a>
+        </div>
 
         <!-- Tion -->
-        <article class="card">
-          <div class="card-header">
-            <div class="card-logo">
-              <img src="https://tion.global/favicon.ico"
-                   alt="Tion logo" />
-            </div>
-            <div>
-              <div class="card-title">Tion Smart Devices</div>
-              <div class="card-category">Smart home & air</div>
-            </div>
-          </div>
-          <p class="card-body">
-            Show air purification and smart ventilation banners on health,
-            home improvement and tech websites.
-          </p>
-          <div class="card-footer">
-            <div class="card-meta">
-              <strong>Goal:</strong> Device sales
-            </div>
-            <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN"
-               class="card-btn" target="_blank" rel="noopener">
-              Promote Tion
-            </a>
-          </div>
-        </article>
-      </div>
-
-      <!-- Sponsor / general banner area -->
-      <div class="sponsor-banner">
-        <div class="sponsor-text">
-          <strong>Custom banner zone.</strong>  
-          Embed additional ad codes here – for example, fixed 728×90,
-          300×250, or an approved Monetag / network iframe that you want
-          to show at the bottom of the page.
+        <div class="promo-card">
+            <div class="promo-title">Tion Smart Devices</div>
+            <div class="promo-desc">Air purification & home ventilation devices.</div>
+            <a href="YOUR_TION_LINK" class="btn">Promote Tion</a>
         </div>
-        <a href="/contact.html" class="btn-primary">
-          Contact for ad placements
-        </a>
-      </div>
-    </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div>© 2025 AdDev Studio · All Rights Reserved</div>
-      <div class="disclosure">
-        Affiliate Disclosure: Some ads and links on this page are affiliate links.
-        If you click and make a purchase or signup, AdDev Studio may earn a
-        commission at no extra cost to you.
-      </div>
+        <!-- Global Yo -->
+        <div class="promo-card">
+            <div class="promo-title">Global Yo eSIM</div>
+            <div class="promo-desc">International eSIM plans & global travel data.</div>
+            <a href="YOUR_GLOBALYO_LINK" class="btn">Promote Global Yo</a>
+        </div>
+
+        <!-- PC Sales -->
+        <div class="promo-card">
+            <div class="promo-title">PC & Tech Deals</div>
+            <div class="promo-desc">Tech accessories, gaming peripherals & electronics.</div>
+            <a href="YOUR_PC_LINK" class="btn">Promote PC Sales</a>
+        </div>
+
+        <!-- Luna Proxy -->
+        <div class="promo-card">
+            <div class="promo-title">Luna Proxy</div>
+            <div class="promo-desc">Proxy rotation tools for research, scraping & automation.</div>
+            <a href="YOUR_LUNA_LINK" class="btn">Promote LunaProxy</a>
+        </div>
+
+        <!-- Aurabits -->
+        <div class="promo-card">
+            <div class="promo-title">Aurabits AI</div>
+            <div class="promo-desc">Digital services for creators & automation tools.</div>
+            <a href="YOUR_AURABITS_LINK" class="btn">Promote Aurabits</a>
+        </div>
+
     </div>
-  </footer>
+
 </div>
+
+<footer>
+    © 2025 AdDev Studio — All Rights Reserved
+</footer>
+
 </body>
 </html>
