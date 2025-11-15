@@ -46,6 +46,8 @@
       text-decoration: underline;
     }
 
+    /* NAVBAR */
+
     header {
       position: sticky;
       top: 0;
@@ -121,6 +123,21 @@
       box-shadow: 0 12px 28px rgba(249, 115, 22, 0.5);
     }
 
+    @media (max-width: 720px) {
+      .nav-inner {
+        padding-inline: 12px;
+      }
+      .nav-links {
+        gap: 6px;
+        font-size: 12px;
+      }
+      .nav-links a {
+        padding-inline: 8px;
+      }
+    }
+
+    /* PAGE WRAPPER */
+
     main {
       background: radial-gradient(circle at top, #0f172a 0, #020617 55%);
       min-height: 100vh;
@@ -132,6 +149,14 @@
       padding: 20px 16px 64px;
     }
 
+    @media (min-width: 900px) {
+      .page {
+        padding-top: 26px;
+      }
+    }
+
+    /* BREADCRUMB & HERO */
+
     .breadcrumb {
       font-size: 11px;
       color: var(--text-muted);
@@ -140,6 +165,10 @@
 
     .breadcrumb a {
       color: #9ca3af;
+    }
+
+    .breadcrumb span {
+      margin: 0 4px;
     }
 
     .hero-article {
@@ -209,6 +238,8 @@
       object-fit: cover;
     }
 
+    /* ARTICLE LAYOUT */
+
     .layout {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 1.3fr);
@@ -218,7 +249,7 @@
 
     @media (max-width: 900px) {
       .layout {
-        grid-template-columns: minwidth(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
@@ -255,6 +286,10 @@
       margin: 8px 0 12px;
     }
 
+    article li {
+      margin-bottom: 5px;
+    }
+
     .note {
       margin: 14px 0;
       padding: 10px 12px;
@@ -277,6 +312,8 @@
     .highlight-box strong {
       color: #facc15;
     }
+
+    /* SIDEBAR */
 
     .sidebar {
       display: flex;
@@ -303,11 +340,75 @@
       margin-bottom: 8px;
     }
 
+    .read-time {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .pill-list span {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 11px;
+      color: #e5e7eb;
+    }
+
     .related-list {
       list-style: none;
       padding-left: 0;
       margin: 6px 0 0;
     }
+
+    .related-list li {
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .related-list a {
+      color: #bfdbfe;
+    }
+
+    .related-list small {
+      color: #6b7280;
+      margin-left: 4px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: none;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      background: linear-gradient(135deg, #f97316, #fbbf24);
+      color: #111827;
+      box-shadow: 0 16px 36px rgba(249, 115, 22, 0.7);
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .cta-btn span:last-child {
+      font-size: 14px;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    /* FOOTER */
 
     footer {
       border-top: 1px solid rgba(15, 23, 42, 0.9);
@@ -324,6 +425,17 @@
       text-align: center;
     }
 
+    .footer-inner a {
+      color: #93c5fd;
+    }
+
+    .disclosure {
+      margin-top: 6px;
+      color: #6b7280;
+      max-width: 46rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 <body>
@@ -348,12 +460,14 @@
 <main>
   <div class="page">
 
+    <!-- Breadcrumb -->
     <div class="breadcrumb">
       <a href="/blog.html">Blog</a>
       <span>›</span>
       <span>Smart Home Air Tech 2025</span>
     </div>
 
+    <!-- HERO -->
     <section class="hero-article">
       <div class="hero-kicker">
         <span class="badge">Smart Home • Tion</span>
@@ -376,7 +490,9 @@
       />
     </section>
 
+    <!-- LAYOUT -->
     <section class="layout">
+      <!-- MAIN ARTICLE -->
       <article>
         <h2>Why AirTech Is Becoming Essential in 2025</h2>
         <p>
@@ -506,6 +622,7 @@
         </p>
       </article>
 
+      <!-- SIDEBAR -->
       <aside class="sidebar">
         <div class="side-card">
           <div class="side-title">Smart home overview</div>
