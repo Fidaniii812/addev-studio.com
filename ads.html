@@ -2,26 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ad Center – Affiliate Banners & Campaigns | AdDev Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="AdDev Studio Ad Center – visual hub for affiliate banners and campaigns from AliExpress, Alibaba, Tion, British Council, ItaliaRail, LunaProxy, Aurabits, AirAdvisor and more." />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Ads Center – Live AliExpress Feed | AdDev Studio</title>
+  <meta
+    name="description"
+    content="AdDev Studio Ads Center – live AliExpress product feed via Admitad. Browse hot products and send visitors through your affiliate links."
+  />
+  <link rel="canonical" href="https://addev-studio.com/ads.html" />
 
   <style>
     :root {
-      --bg: #020617;
-      --bg-elevated: #02081f;
-      --border-subtle: rgba(148, 163, 184, 0.35);
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
+      --bg-main: #020617;
+      --bg-elevated: #020819;
+      --bg-soft: #020a1f;
       --accent: #f97316;
       --accent-soft: #fed7aa;
       --primary: #2563eb;
       --primary-soft: #60a5fa;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.35);
       --radius-lg: 18px;
       --radius-xl: 26px;
       --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
-      --shadow-chip: 0 10px 25px rgba(15, 23, 42, 0.8);
+      --shadow-chip: 0 10px 25px rgba(15, 23, 42, 0.75);
     }
 
     * {
@@ -32,7 +39,7 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
-      background: radial-gradient(circle at top, #0b1120 0, #020617 55%);
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%);
       color: var(--text-main);
     }
 
@@ -45,7 +52,7 @@
       text-decoration: underline;
     }
 
-    /* HEADER / NAV */
+    /* Header / nav (dark, si index.html) */
 
     header {
       position: sticky;
@@ -116,26 +123,11 @@
     }
 
     .nav-links a.active {
-      background: var(--accent);
+      background: #f97316;
       color: #111827;
       font-weight: 600;
       box-shadow: 0 12px 28px rgba(249, 115, 22, 0.5);
     }
-
-    @media (max-width: 720px) {
-      .nav-inner {
-        padding-inline: 12px;
-      }
-      .nav-links {
-        gap: 6px;
-        font-size: 12px;
-      }
-      .nav-links a {
-        padding-inline: 8px;
-      }
-    }
-
-    /* PAGE WRAPPER */
 
     main {
       min-height: 100vh;
@@ -144,288 +136,372 @@
     .page {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 24px 16px 64px;
+      padding: 20px 16px 56px;
     }
 
-    @media (min-width: 900px) {
-      .page {
-        padding-top: 30px;
-      }
-    }
+    /* Hero */
 
-    /* HERO */
-
-    .hero-ads {
+    .hero {
       border-radius: var(--radius-xl);
-      padding: 22px 20px 22px;
-      background: radial-gradient(circle at top left, #1d4ed8 0, #020617 55%);
-      border: 1px solid rgba(56, 189, 248, 0.45);
+      padding: 22px 20px 18px;
+      background: radial-gradient(circle at top left, #1e3a8a 0, #020617 55%);
+      border: 1px solid rgba(191, 219, 254, 0.3);
       box-shadow: var(--shadow-soft);
-      margin-bottom: 28px;
-    }
-
-    .hero-grid {
+      margin-bottom: 22px;
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-      gap: 22px;
-      align-items: center;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+      gap: 18px;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .hero-pill {
+    .hero-kicker {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 4px 10px 4px 4px;
       border-radius: 999px;
-      border: 1px solid rgba(191, 219, 254, 0.6);
       background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.5);
       font-size: 11px;
-      color: #bfdbfe;
+      color: #cbd5f5;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    .hero-pill span.badge {
-      padding: 4px 8px;
+    .hero-kicker span.badge {
+      padding: 4px 7px;
       border-radius: 999px;
-      background: rgba(37, 99, 235, 0.98);
-      color: #eff6ff;
-      font-weight: 600;
-      font-size: 11px;
-    }
-
-    .hero-main h1 {
-      font-size: clamp(24px, 4vw, 30px);
-      margin: 0 0 8px;
-    }
-
-    .hero-main p {
-      font-size: 14px;
+      background: rgba(248, 250, 252, 0.16);
       color: #e5e7eb;
-      max-width: 34rem;
-      margin: 0 0 14px;
+      font-weight: 600;
     }
 
-    .hero-tags {
+    .hero-title {
+      font-size: clamp(22px, 3.6vw, 28px);
+      margin: 0 0 6px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-sub {
+      font-size: 13px;
+      color: #cbd5f5;
+      max-width: 40rem;
+      margin: 0 0 10px;
+    }
+
+    .hero-meta-chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
       font-size: 11px;
+      margin-top: 4px;
     }
 
-    .hero-tags span {
-      padding: 4px 9px;
+    .chip {
+      padding: 4px 8px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
       color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.7);
     }
 
     .hero-side {
+      align-self: center;
+      justify-self: flex-end;
+      text-align: left;
+      font-size: 12px;
+      color: #cbd5f5;
+    }
+
+    .hero-side-box {
+      border-radius: 16px;
+      padding: 10px 12px;
       background: rgba(15, 23, 42, 0.9);
-      border-radius: 18px;
-      padding: 14px 14px 12px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
+      border: 1px solid rgba(148, 163, 184, 0.8);
       box-shadow: var(--shadow-soft);
-      font-size: 13px;
+      margin-bottom: 8px;
     }
 
     .hero-side-title {
       font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #9ca3af;
-      margin-bottom: 6px;
+      font-weight: 600;
+      margin-bottom: 4px;
     }
 
-    .hero-side h3 {
-      font-size: 16px;
-      margin: 0 0 6px;
+    .hero-helper {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
     }
 
-    .hero-side p {
-      margin: 0 0 10px;
-      color: #cbd5f5;
-      font-size: 13px;
+    /* Controls */
+
+    .controls {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .hero-side-footer {
+    .controls-left,
+    .controls-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .control-label {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .control-input,
+    .control-select {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      padding: 7px 11px;
+      font-size: 12px;
+      color: var(--text-main);
+      outline: none;
+      min-width: 140px;
+    }
+
+    .control-input::placeholder {
+      color: #6b7280;
+    }
+
+    .control-input:focus,
+    .control-select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.8);
+    }
+
+    .pill-filters {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       font-size: 11px;
     }
 
-    .hero-side-footer span {
-      padding: 3px 8px;
+    .pill {
+      padding: 4px 9px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.9);
+      color: #cbd5f5;
+      cursor: pointer;
+      transition: all 0.15s ease;
     }
 
-    /* SECTION WRAPPERS */
-
-    .section {
-      margin-top: 30px;
+    .pill.active {
+      border-color: var(--accent);
+      background: rgba(249, 115, 22, 0.16);
+      color: #fed7aa;
     }
 
-    .section-header {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-bottom: 18px;
-    }
+    /* Grid */
 
-    .section-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #9ca3af;
-    }
-
-    .section-title {
-      font-size: 1.2rem;
-      margin: 0;
-    }
-
-    .section-sub {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 36rem;
-    }
-
-    /* AD GRID */
-
-    .ad-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-    }
-
-    .ad-card {
+    .feed-panel {
+      margin-top: 6px;
       border-radius: var(--radius-lg);
       background: radial-gradient(circle at top, #02081f, #020617);
       border: 1px solid var(--border-subtle);
+      padding: 14px 14px 18px;
       box-shadow: var(--shadow-soft);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      min-height: 260px;
     }
 
-    .ad-media {
+    .feed-header-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .feed-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .feed-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+    }
+
+    .product-card {
+      background: linear-gradient(145deg, #020617, #020b1f);
+      border-radius: 16px;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 10px 10px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.85);
       position: relative;
-      padding-top: 52%;
-      background: #020617;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at top right,
+        rgba(96, 165, 250, 0.12),
+        transparent 60%
+      );
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .product-thumb-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      background: radial-gradient(circle at center, #111827, #020617);
+      max-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-thumb {
+      width: 100%;
+      height: 100%;
+      max-height: 150px;
+      object-fit: cover;
       display: block;
     }
 
-    .ad-media img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-    }
-
-    .ad-body {
-      padding: 14px 14px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      flex: 1;
-    }
-
-    .ad-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
+    .product-brand {
       font-size: 11px;
-      color: #e5e7eb;
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .ad-title {
-      font-size: 15px;
-      font-weight: 600;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
       margin-top: 4px;
     }
 
-    .ad-text {
+    .product-title {
       font-size: 13px;
-      color: #cbd5f5;
-      margin: 0;
+      font-weight: 600;
+      margin: 2px 0 0;
+      color: #e5e7eb;
     }
 
-    .ad-footer {
+    .product-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .product-price {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-soft);
+    }
+
+    .product-price span.currency {
+      font-size: 11px;
+      opacity: 0.9;
+      margin-left: 2px;
+    }
+
+    .product-tagline {
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: right;
+    }
+
+    .product-category {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-top: 3px;
+    }
+
+    .product-actions {
       margin-top: 8px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    .btn-pill {
-      display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 7px 13px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px 11px;
       border-radius: 999px;
       border: none;
       font-size: 12px;
+      font-weight: 600;
       cursor: pointer;
-      background: linear-gradient(135deg, var(--accent), #fbbf24);
+      background: radial-gradient(circle at 30% 0, #fb923c, #f97316);
       color: #111827;
-      box-shadow: 0 14px 32px rgba(248, 181, 0, 0.55);
+      box-shadow: 0 14px 28px rgba(249, 115, 22, 0.7);
       text-decoration: none;
       white-space: nowrap;
     }
 
-    .btn-pill.secondary {
-      background: linear-gradient(135deg, var(--primary-soft), var(--primary));
-      color: #eff6ff;
-      box-shadow: 0 14px 32px rgba(37, 99, 235, 0.5);
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-0.5px);
     }
 
-    .btn-pill:hover {
-      transform: translateY(-1px);
-    }
-
-    /* CUSTOM WIDGET ZONE */
-
-    .custom-note {
-      margin-top: 24px;
-      border-radius: 16px;
-      padding: 14px 16px 16px;
+    .btn-ghost {
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 11px;
       border: 1px dashed rgba(148, 163, 184, 0.7);
       background: rgba(15, 23, 42, 0.9);
-      font-size: 0.84rem;
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .status-line {
+      margin-top: 10px;
+      font-size: 11px;
       color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: baseline;
+      flex-wrap: wrap;
     }
 
-    .custom-note code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-      font-size: 0.8rem;
-      background: rgba(15, 23, 42, 0.95);
-      padding: 2px 6px;
-      border-radius: 6px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
+    .load-more-wrap {
+      margin-top: 14px;
+      text-align: center;
     }
 
-    /* FOOTER */
+    .btn-more {
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .btn-more:hover {
+      border-color: var(--accent);
+      color: var(--accent-soft);
+    }
 
     footer {
       border-top: 1px solid rgba(15, 23, 42, 0.9);
@@ -442,12 +518,25 @@
       text-align: center;
     }
 
-    .disclosure {
-      margin-top: 6px;
-      color: #6b7280;
-      max-width: 46rem;
-      margin-left: auto;
-      margin-right: auto;
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-side {
+        justify-self: stretch;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        padding-inline: 12px;
+      }
+      .hero {
+        padding-inline: 14px;
+      }
+      .feed-panel {
+        padding-inline: 10px;
+      }
     }
   </style>
 </head>
@@ -471,258 +560,95 @@
 
 <main>
   <div class="page">
-    <!-- HERO -->
-    <section class="hero-ads" aria-labelledby="ads-hero-title">
-      <div class="hero-pill">
-        <span class="badge">Ad Center</span>
-        Visual hub for affiliate campaigns
-      </div>
-
-      <div class="hero-grid">
-        <div class="hero-main">
-          <h1 id="ads-hero-title">Ads & promotions powered by global brands.</h1>
-          <p>
-            This page is your central hub for visual campaigns from AliExpress, Alibaba,
-            Tion, British Council, ItaliaRail, LunaProxy, Aurabits, AirAdvisor and more –
-            all connected through your Admitad affiliate links.
-          </p>
-          <div class="hero-tags">
-            <span>Affiliate banners</span>
-            <span>High-intent clicks</span>
-            <span>Brand-safe layouts</span>
-            <span>SEO-friendly page</span>
-          </div>
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">
+          <span class="badge">Ads Center</span>
+          Live Admitad product feed
         </div>
-
-        <aside class="hero-side" aria-label="Ad strategy">
-          <div class="hero-side-title">Ad strategy</div>
-          <h3>Visual-first performance marketing</h3>
-          <p>
-            Use this page as a flexible canvas: update banners as campaigns change,
-            rotate seasonal offers and send traffic here from social profiles, blogs
-            or email newsletters.
-          </p>
-          <div class="hero-side-footer">
-            <span>Easy banner rotation</span>
-            <span>Multi-vertical offers</span>
-          </div>
-        </aside>
+        <h1 class="hero-title">Ads & promo campaigns powered by AliExpress feed</h1>
+        <p class="hero-sub">
+          This page connects directly to your AliExpress product feed from Admitad
+          and turns it into a live gallery of offers. Every click goes through
+          your affiliate tracking links.
+        </p>
+        <div class="hero-meta-chips">
+          <span class="chip">AliExpress • WW</span>
+          <span class="chip">Hot products feed</span>
+          <span class="chip">XML → Browser parsing</span>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-side-box">
+          <div class="hero-side-title">How this page works</div>
+          <ul style="margin: 4px 0 0; padding-left: 16px;">
+            <li>Loads your Admitad XML feed in the browser.</li>
+            <li>Parses products and shows them as cards.</li>
+            <li>Buttons use your affiliate deeplinks.</li>
+          </ul>
+        </div>
+        <div class="hero-helper">
+          If products don’t load and you see CORS errors in DevTools, run this
+          feed URL through a small server-side proxy and keep the front-end
+          logic as is.
+        </div>
       </div>
     </section>
 
-    <!-- BANNERS -->
-    <section class="section" aria-label="Banner ads">
-      <div class="section-header">
-        <div class="section-label">Banner Ads</div>
-        <h2 class="section-title">Featured promotions</h2>
-        <p class="section-sub">
-          These cards use your personal affiliate links. You can replace the images or
-          duplicate cards to highlight new campaigns whenever you want.
-        </p>
+    <!-- Controls -->
+    <section class="controls">
+      <div class="controls-left">
+        <div>
+          <div class="control-label">Search</div>
+          <input
+            id="searchInput"
+            class="control-input"
+            type="search"
+            placeholder="Search products…"
+          />
+        </div>
+        <div>
+          <div class="control-label">Category</div>
+          <select id="categorySelect" class="control-select">
+            <option value="all">All categories</option>
+          </select>
+        </div>
+      </div>
+      <div class="controls-right">
+        <div class="pill-filters" id="pricePills">
+          <span class="pill active" data-price="all">All prices</span>
+          <span class="pill" data-price="under10">Under $10</span>
+          <span class="pill" data-price="10-25">$10 – $25</span>
+          <span class="pill" data-price="25-50">$25 – $50</span>
+          <span class="pill" data-price="50plus">$50+</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feed grid -->
+    <section class="feed-panel">
+      <div class="feed-header-line">
+        <div class="feed-title">AliExpress hot products</div>
+        <div class="feed-meta" id="feedMeta">
+          Loading products from Admitad feed…
+        </div>
       </div>
 
-      <div class="ad-grid">
-        <!-- AliExpress -->
-        <article class="ad-card">
-          <a href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <img src="https://ae01.alicdn.com/kf/Sb9bf1a3b30f84c5fa5e505ccaa32d170W.jpg"
-                 alt="AliExpress deals banner" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">AliExpress · Global shopping</div>
-            <div class="ad-title">AliExpress Deals & Campaigns</div>
-            <p class="ad-text">
-              Flash sales, coupons and global shipping through your affiliate link.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">E-commerce • Worldwide</div>
-              <a href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill">
-                <span>Shop AliExpress</span><span>↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Tion -->
-        <article class="ad-card">
-          <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <img src="https://cdn.pixabay.com/photo/2020/01/17/16/25/smart-home-4779613_1280.jpg"
-                 alt="Tion smart home devices" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">Tion · Smart home air tech</div>
-            <div class="ad-title">Smart AirTech for Modern Homes</div>
-            <p class="ad-text">
-              Promote cleaner indoor air, smart ventilation and climate control systems.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Smart home • AirTech</div>
-              <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill secondary">
-                <span>Explore Tion</span><span>↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Alibaba -->
-        <article class="ad-card">
-          <a href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <img src="https://cdn.pixabay.com/photo/2017/08/06/10/47/shopping-2596086_1280.jpg"
-                 alt="Alibaba wholesale banner" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">Alibaba · B2B marketplace</div>
-            <div class="ad-title">Alibaba Wholesale Offers</div>
-            <p class="ad-text">
-              Drive bulk orders and factory-direct sourcing for global buyers and resellers.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Wholesale • B2B</div>
-              <a href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill">
-                <span>Open Alibaba</span><span>↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- British Council -->
-        <article class="ad-card">
-          <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <img src="https://cdn.pixabay.com/photo/2015/01/08/18/30/learn-593312_1280.jpg"
-                 alt="British Council English & exams" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">British Council · Education</div>
-            <div class="ad-title">English & Exam Programs</div>
-            <p class="ad-text">
-              Ideal for language learners, study abroad content and education blogs.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Education • Global</div>
-              <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill secondary">
-                <span>Promote British Council</span><span>↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ItaliaRail -->
-        <article class="ad-card">
-          <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <img src="https://cdn.pixabay.com/photo/2016/10/13/09/07/railway-1730527_1280.jpg"
-                 alt="ItaliaRail train tickets" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">ItaliaRail · Travel</div>
-            <div class="ad-title">ItaliaRail Train Tickets</div>
-            <p class="ad-text">
-              Great for travel itineraries, city guides and Europe-focused blogs.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Travel • EU</div>
-              <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill">
-                <span>Promote ItaliaRail</span><span>↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- LunaProxy -->
-        <article class="ad-card">
-          <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <img src="https://cdn.pixabay.com/photo/2015/10/18/18/00/office-995148_1280.jpg"
-                 alt="LunaProxy networking & proxy tools" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">LunaProxy · Tools</div>
-            <div class="ad-title">LunaProxy Residential & Datacenter</div>
-            <p class="ad-text">
-              Ideal for growth hackers, scrapers and analytics users who need stable proxies.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Tools • Proxies</div>
-              <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill secondary">
-                <span>Open LunaProxy</span><span>↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Aurabits -->
-        <article class="ad-card">
-          <a href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <img src="https://cdn.pixabay.com/photo/2017/09/07/08/56/artificial-intelligence-2727091_1280.jpg"
-                 alt="Aurabits AI & digital products" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">Aurabits · AI & SaaS</div>
-            <div class="ad-title">Aurabits AI Tools</div>
-            <p class="ad-text">
-              AI tools and digital products built for creators, marketers and online businesses.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">AI • Digital products</div>
-              <a href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill">
-                <span>Promote Aurabits</span><span>↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- AirAdvisor -->
-        <article class="ad-card">
-          <a href="https://zmgig.com/g/314uz47dzt47bcc10bc58318b7d147/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <img src="https://cdn.pixabay.com/photo/2014/09/07/22/34/airport-438508_1280.jpg"
-                 alt="AirAdvisor flight compensation" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">AirAdvisor · Travel</div>
-            <div class="ad-title">Flight Delay Compensation</div>
-            <p class="ad-text">
-              Help travelers claim compensation for delayed or cancelled flights.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Travel • Legal claims</div>
-              <a href="https://zmgig.com/g/314uz47dzt47bcc10bc58318b7d147/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill secondary">
-                <span>Open AirAdvisor</span><span>↗</span>
-              </a>
-            </div>
-          </div>
-        </article>
+      <div class="grid" id="productGrid">
+        <!-- Cards injected by JS -->
       </div>
 
-      <div class="custom-note">
-        <strong>Custom widget & script zone.</strong><br />
-        Here you can paste extra banner or widget code from Admitad or other ad networks.
-        For example, if Admitad gives you a JavaScript or iframe snippet, paste it below:
-        <br /><br />
-        <code>&lt;!-- Paste Admitad script / iframe here --&gt;</code><br /><br />
-        This way, the visual layout stays under your control, while some elements can be
-        updated dynamically from the network side.
+      <div class="status-line">
+        <span id="statusText">Loading…</span>
+        <span>
+          Source: AliExpress Admitad product feed (hot products via XML).
+        </span>
+      </div>
+
+      <div class="load-more-wrap">
+        <button class="btn-more" id="loadMoreBtn" style="display:none;">
+          Load more products
+        </button>
       </div>
     </section>
   </div>
@@ -730,12 +656,280 @@
 
 <footer>
   <div class="footer-inner">
-    <div>© 2025 AdDev Studio — All rights reserved.</div>
+    © 2025 AdDev Studio — All rights reserved.
     <div class="disclosure">
-      Affiliate Disclosure: Some links on this page are affiliate links. If you click through
-      and make a purchase, AdDev Studio may earn a commission at no extra cost to you.
+      Affiliate Disclosure: Some links on this website are affiliate links. If
+      you click through and make a purchase, AdDev Studio may earn a commission
+      at no extra cost to you.
     </div>
   </div>
 </footer>
+
+<script>
+  // === CONFIG ===
+  const FEED_URL =
+    "http://export.admitad.com/en/webmaster/websites/2880974/products/export_adv_products/?user=fidan_beciri1fe11&code=kaw95ey05k&feed_id=15830&format=xml&fcid=6115";
+
+  const PAGE_SIZE = 36; // sa produkte për "faqe"
+
+  const gridEl = document.getElementById("productGrid");
+  const statusEl = document.getElementById("statusText");
+  const metaEl = document.getElementById("feedMeta");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  const searchInput = document.getElementById("searchInput");
+  const categorySelect = document.getElementById("categorySelect");
+  const pricePills = document.getElementById("pricePills");
+
+  let allProducts = [];
+  let filteredProducts = [];
+  let renderedCount = 0;
+  let currentPriceFilter = "all";
+
+  function getChildText(node, selectors) {
+    const list = selectors.split(",");
+    for (const sel of list) {
+      const el = node.querySelector(sel.trim());
+      if (el && el.textContent && el.textContent.trim()) {
+        return el.textContent.trim();
+      }
+    }
+    return "";
+  }
+
+  function parsePrice(str) {
+    if (!str) return null;
+    const match = str.replace(",", ".").match(/[\d.]+/);
+    return match ? parseFloat(match[0]) : null;
+  }
+
+  function createProductObject(node) {
+    const title =
+      getChildText(node, "name, title, product_name") || "AliExpress product";
+
+    const image =
+      getChildText(node, "image, image_url, picture, photo, img") || "";
+
+    const url =
+      getChildText(node, "deeplink, link, url, goto, product_url") || "#";
+
+    const priceRaw =
+      getChildText(node, "price, price_rub, price_uah, price_usd") ||
+      getChildText(node, "price_original, price_with_discount");
+
+    const price = parsePrice(priceRaw);
+    const currency =
+      getChildText(node, "currency, currencyid, currency_id") || "USD";
+
+    const category =
+      getChildText(node, "category, category_name, categoryid") || "Other";
+
+    const description =
+      getChildText(node, "description, desc, short_description") || "";
+
+    return {
+      title,
+      image,
+      url,
+      price,
+      currency,
+      category,
+      description,
+    };
+  }
+
+  async function loadFeed() {
+    try {
+      statusEl.textContent = "Loading products from Admitad…";
+
+      const res = await fetch(FEED_URL);
+      if (!res.ok) {
+        throw new Error("HTTP " + res.status);
+      }
+
+      const text = await res.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, "application/xml");
+
+      const productsNodes = Array.from(
+        xml.querySelectorAll("product, item")
+      );
+
+      if (!productsNodes.length) {
+        throw new Error("No <product> or <item> nodes found in XML.");
+      }
+
+      allProducts = productsNodes.map(createProductObject);
+
+      // Build category list
+      const categories = new Set(
+        allProducts
+          .map((p) => p.category)
+          .filter(Boolean)
+      );
+      for (const cat of Array.from(categories).sort()) {
+        const opt = document.createElement("option");
+        opt.value = cat;
+        opt.textContent = cat;
+        categorySelect.appendChild(opt);
+      }
+
+      metaEl.textContent = `${allProducts.length.toLocaleString()} products in feed (AliExpress hot products).`;
+
+      applyFilters(true);
+    } catch (err) {
+      console.error("Feed load error:", err);
+      statusEl.textContent =
+        "Could not load products. If you see CORS errors in console, route this feed URL through a small proxy on your server.";
+      metaEl.textContent = "Feed error — check DevTools (Console).";
+    }
+  }
+
+  function applyFilters(resetPaging = false) {
+    const term = searchInput.value.trim().toLowerCase();
+    const selectedCat = categorySelect.value;
+
+    filteredProducts = allProducts.filter((p) => {
+      // search filter
+      if (term) {
+        const blob =
+          p.title.toLowerCase() +
+          " " +
+          (p.description || "").toLowerCase() +
+          " " +
+          (p.category || "").toLowerCase();
+        if (!blob.includes(term)) return false;
+      }
+
+      // category filter
+      if (selectedCat !== "all" && p.category !== selectedCat) return false;
+
+      // price filter
+      if (currentPriceFilter !== "all" && p.price != null) {
+        const price = p.price;
+        if (currentPriceFilter === "under10" && !(price < 10)) return false;
+        if (currentPriceFilter === "10-25" && !(price >= 10 && price <= 25))
+          return false;
+        if (currentPriceFilter === "25-50" && !(price > 25 && price <= 50))
+          return false;
+        if (currentPriceFilter === "50plus" && !(price > 50)) return false;
+      }
+
+      return true;
+    });
+
+    if (resetPaging) {
+      renderedCount = 0;
+      gridEl.innerHTML = "";
+    }
+
+    renderNextPage();
+  }
+
+  function renderNextPage() {
+    const remaining = filteredProducts.length - renderedCount;
+    if (remaining <= 0) {
+      if (!renderedCount) {
+        statusEl.textContent = "No products match your filters.";
+      } else {
+        statusEl.textContent = `Showing ${renderedCount} products (end of list).`;
+      }
+      loadMoreBtn.style.display = "none";
+      return;
+    }
+
+    const toRender = filteredProducts.slice(
+      renderedCount,
+      renderedCount + PAGE_SIZE
+    );
+
+    const frag = document.createDocumentFragment();
+
+    for (const p of toRender) {
+      const card = document.createElement("article");
+      card.className = "product-card";
+
+      const brandLine = "AliExpress • Hot deal";
+
+      card.innerHTML = `
+        <div class="product-thumb-wrap">
+          ${
+            p.image
+              ? `<img src="${p.image}" alt="${p.title.replace(
+                  /"/g,
+                  "&quot;"
+                )}" class="product-thumb">`
+              : `<div style="width:100%;height:120px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#6b7280;">No image</div>`
+          }
+        </div>
+        <div class="product-brand">${brandLine}</div>
+        <h2 class="product-title">${p.title}</h2>
+        <div class="product-meta-row">
+          <div class="product-price">
+            ${
+              p.price != null
+                ? `${p.price.toFixed(2)} <span class="currency">${
+                    p.currency || "USD"
+                  }</span>`
+                : "Best price"
+            }
+          </div>
+          <div class="product-tagline">Tracked via Admitad</div>
+        </div>
+        <div class="product-category">${p.category || "Other"}</div>
+        <div class="product-actions">
+          <a href="${
+            p.url
+          }" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            View offer
+            <span>→</span>
+          </a>
+          <span class="btn-ghost">Cookie & click tracked</span>
+        </div>
+      `;
+
+      frag.appendChild(card);
+    }
+
+    gridEl.appendChild(frag);
+    renderedCount += toRender.length;
+
+    if (renderedCount < filteredProducts.length) {
+      loadMoreBtn.style.display = "inline-block";
+      statusEl.textContent = `Showing ${renderedCount} of ${
+        filteredProducts.length
+      } products.`;
+    } else {
+      loadMoreBtn.style.display = "none";
+      statusEl.textContent = `Showing all ${filteredProducts.length} products.`;
+    }
+  }
+
+  // === Event listeners ===
+  loadMoreBtn.addEventListener("click", () => {
+    renderNextPage();
+  });
+
+  searchInput.addEventListener("input", () => {
+    applyFilters(true);
+  });
+
+  categorySelect.addEventListener("change", () => {
+    applyFilters(true);
+  });
+
+  pricePills.addEventListener("click", (e) => {
+    const pill = e.target.closest(".pill");
+    if (!pill) return;
+    pricePills.querySelectorAll(".pill").forEach((el) =>
+      el.classList.remove("active")
+    );
+    pill.classList.add("active");
+    currentPriceFilter = pill.dataset.price || "all";
+    applyFilters(true);
+  });
+
+  // Init
+  loadFeed();
+</script>
 </body>
 </html>
