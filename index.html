@@ -8,6 +8,9 @@
         content="AdDev Studio is your hub for affiliate marketing, global brands, and performance ads. Discover curated offers, tools and guides to grow your online revenue." />
   <link rel="canonical" href="https://addev-studio.com/index.html" />
 
+  <!-- Admitad Affiliate JS Tracker -->
+  <script src="https://cdn.admitad-connect.com/apps/scripts/admitad-direct-logger.min.js" async></script>
+
   <style>
     :root {
       --bg-main: #020617;
@@ -25,11 +28,9 @@
       --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
       --shadow-chip: 0 10px 25px rgba(15, 23, 42, 0.75);
     }
-
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -37,18 +38,13 @@
       background: radial-gradient(circle at top, #0f172a 0, #020617 55%);
       color: var(--text-main);
     }
-
     a {
       color: #93c5fd;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
-    /* NAVBAR */
-
     header {
       position: sticky;
       top: 0;
@@ -62,7 +58,6 @@
       );
       border-bottom: 1px solid rgba(15, 23, 42, 0.9);
     }
-
     .nav-inner {
       max-width: 1120px;
       margin: 0 auto;
@@ -72,7 +67,6 @@
       justify-content: space-between;
       gap: 16px;
     }
-
     .brand {
       display: inline-flex;
       align-items: center;
@@ -82,7 +76,6 @@
       font-size: 15px;
       text-decoration: none;
     }
-
     .brand-mark {
       width: 28px;
       height: 28px;
@@ -96,14 +89,12 @@
       color: #eff6ff;
       box-shadow: var(--shadow-chip);
     }
-
     .nav-links {
       display: flex;
       align-items: center;
       gap: 14px;
       font-size: 13px;
     }
-
     .nav-links a {
       color: #9ca3af;
       padding: 6px 10px;
@@ -111,19 +102,16 @@
       text-decoration: none;
       transition: all 0.18s ease;
     }
-
     .nav-links a:hover {
       color: #e5e7eb;
       background: rgba(15, 23, 42, 0.9);
     }
-
     .nav-links a.active {
       background: #f97316;
       color: #111827;
       font-weight: 600;
       box-shadow: 0 12px 28px rgba(249, 115, 22, 0.5);
     }
-
     @media (max-width: 720px) {
       .nav-inner {
         padding-inline: 12px;
@@ -136,27 +124,19 @@
         padding-inline: 8px;
       }
     }
-
-    /* PAGE WRAPPER */
-
     main {
       min-height: 100vh;
     }
-
     .page {
       max-width: 1120px;
       margin: 0 auto;
       padding: 22px 16px 64px;
     }
-
     @media (min-width: 900px) {
       .page {
         padding-top: 30px;
       }
     }
-
-    /* HERO */
-
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
@@ -168,14 +148,12 @@
       box-shadow: var(--shadow-soft);
       margin-bottom: 32px;
     }
-
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
         padding: 22px 18px 20px;
       }
     }
-
     .hero-kicker {
       display: inline-flex;
       align-items: center;
@@ -191,7 +169,6 @@
       margin-bottom: 12px;
       box-shadow: var(--shadow-chip);
     }
-
     .hero-kicker span.badge {
       padding: 4px 8px;
       border-radius: 999px;
@@ -199,20 +176,17 @@
       color: #e5e7eb;
       font-weight: 600;
     }
-
     .hero-title {
       font-size: clamp(26px, 4vw, 32px);
       margin: 0 0 8px;
       letter-spacing: 0.01em;
     }
-
     .hero-subtitle {
       font-size: 14px;
       color: #e5e7eb;
       max-width: 36rem;
       margin-bottom: 16px;
     }
-
     .hero-tags {
       display: flex;
       flex-wrap: wrap;
@@ -220,7 +194,6 @@
       margin-bottom: 18px;
       font-size: 11px;
     }
-
     .hero-tag {
       padding: 4px 9px;
       border-radius: 999px;
@@ -228,13 +201,11 @@
       background: rgba(15, 23, 42, 0.9);
       color: #e5e7eb;
     }
-
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-
     .btn-primary,
     .btn-secondary {
       display: inline-flex;
@@ -250,29 +221,24 @@
       transition: all 0.2s ease;
       white-space: nowrap;
     }
-
     .btn-primary {
       background: linear-gradient(135deg, var(--primary-soft), var(--primary));
       color: #eff6ff;
       box-shadow: 0 14px 30px rgba(37, 99, 235, 0.55);
     }
-
     .btn-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 20px 45px rgba(37, 99, 235, 0.7);
     }
-
     .btn-secondary {
       background: rgba(15, 23, 42, 0.95);
       color: var(--text-main);
       border: 1px solid rgba(148, 163, 184, 0.5);
     }
-
     .btn-secondary:hover {
       background: rgba(15, 23, 42, 1);
       border-color: rgba(148, 163, 184, 0.8);
     }
-
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
@@ -281,11 +247,9 @@
       color: #cbd5f5;
       margin-top: 14px;
     }
-
     .hero-meta span b {
       color: #e5e7eb;
     }
-
     .hero-side {
       background: rgba(15, 23, 42, 0.9);
       border-radius: 20px;
@@ -297,19 +261,16 @@
       gap: 10px;
       font-size: 13px;
     }
-
     .hero-side-label {
       font-size: 11px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #9ca3af;
     }
-
     .hero-side-title {
       font-weight: 600;
       color: #e5e7eb;
     }
-
     .hero-side-list {
       display: flex;
       flex-wrap: wrap;
@@ -317,58 +278,46 @@
       margin-top: 6px;
       font-size: 11px;
     }
-
     .hero-side-list span {
       padding: 4px 8px;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.6);
       background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
     }
-
-    /* SECTION WRAPPER */
-
     .section {
       margin-top: 34px;
     }
-
     .section-header {
       display: flex;
       flex-direction: column;
       gap: 4px;
       margin-bottom: 18px;
     }
-
     .section-label {
       font-size: 0.78rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #9ca3af;
     }
-
     .section-title {
       font-size: 1.2rem;
       margin: 0;
     }
-
     .section-sub {
       font-size: 0.9rem;
       color: var(--text-muted);
       max-width: 34rem;
     }
-
-    /* PARTNER GRID */
-
     .partners-grid {
       display: grid;
       gap: 18px;
     }
-
     @media (min-width: 900px) {
       .partners-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
-
     .partner-card {
       background: radial-gradient(circle at top, #02081f, #020617);
       border-radius: var(--radius-lg);
@@ -382,7 +331,6 @@
       min-height: 170px;
       font-size: 13px;
     }
-
     .partner-pill {
       font-size: 11px;
       padding: 4px 8px;
@@ -393,35 +341,29 @@
       align-items: center;
       gap: 6px;
     }
-
     .partner-name {
       font-size: 15px;
       font-weight: 600;
       margin-top: 6px;
       margin-bottom: 2px;
     }
-
     .partner-meta {
       font-size: 11px;
       color: #9ca3af;
       margin-bottom: 6px;
     }
-
     .partner-text {
       margin: 0 0 6px;
       color: #e5e7eb;
     }
-
     .partner-goal {
       font-size: 12px;
       margin: 0;
       color: #9ca3af;
     }
-
     .partner-goal span {
       color: #e5e7eb;
     }
-
     .partner-footer {
       display: flex;
       justify-content: space-between;
@@ -429,7 +371,6 @@
       gap: 8px;
       margin-top: 8px;
     }
-
     .btn-chip {
       display: inline-flex;
       align-items: center;
@@ -446,32 +387,25 @@
       transition: transform 0.16s ease, box-shadow 0.16s ease,
         background 0.16s ease;
     }
-
     .btn-chip:hover {
       background: #111827;
       transform: translateY(-1px);
       box-shadow: 0 18px 36px rgba(15, 23, 42, 1);
     }
-
     .btn-chip.alt {
       background: linear-gradient(135deg, #f97316, #fbbf24);
       color: #111827;
       box-shadow: 0 14px 32px rgba(249, 115, 22, 0.7);
     }
-
-    /* HOW IT WORKS */
-
     .how-grid {
       display: grid;
       gap: 16px;
     }
-
     @media (min-width: 900px) {
       .how-grid {
         grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
       }
     }
-
     .how-main {
       background: radial-gradient(circle at top, #02081f, #020617);
       border-radius: var(--radius-lg);
@@ -481,17 +415,14 @@
       font-size: 14px;
       color: #e5e7eb;
     }
-
     .how-main ul {
       padding-left: 18px;
       margin: 8px 0 0;
       font-size: 13px;
     }
-
     .how-main li {
       margin-bottom: 4px;
     }
-
     .how-side {
       background: rgba(15, 23, 42, 0.9);
       border-radius: var(--radius-lg);
@@ -500,24 +431,18 @@
       font-size: 13px;
       color: var(--text-muted);
     }
-
     .how-side strong {
       color: #e5e7eb;
     }
-
-    /* BLOG PREVIEW */
-
     .blog-grid {
       display: grid;
       gap: 18px;
     }
-
     @media (min-width: 900px) {
       .blog-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
-
     .blog-card {
       background: radial-gradient(circle at top, #02081f, #020617);
       border-radius: var(--radius-lg);
@@ -530,29 +455,22 @@
       flex-direction: column;
       gap: 6px;
     }
-
     .blog-tag {
       font-size: 11px;
       color: #9ca3af;
     }
-
     .blog-title {
       font-size: 14px;
       font-weight: 600;
     }
-
     .blog-meta {
       font-size: 11px;
       color: #6b7280;
     }
-
     .blog-card a.btn-chip {
       margin-top: 4px;
       align-self: flex-start;
     }
-
-    /* FOOTER */
-
     footer {
       border-top: 1px solid rgba(15, 23, 42, 0.9);
       background: #020617;
@@ -561,17 +479,14 @@
       font-size: 11px;
       margin-top: 36px;
     }
-
     .footer-inner {
       max-width: 1120px;
       margin: 0 auto;
       text-align: center;
     }
-
     .footer-inner a {
       color: #93c5fd;
     }
-
     .disclosure {
       margin-top: 6px;
       color: #6b7280;
@@ -634,7 +549,7 @@
         <div class="hero-meta">
           <span><b>10+</b> live affiliate partners</span>
           <span><b>Multi-vertical:</b> travel, tech, education, smart home</span>
-          <span><b>Powered by:</b> Admitad Network</span>
+          <span><b>Powered by:</b> <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k" style="color:#93c5fd;">Admitad Network</a></span>
         </div>
       </div>
 
@@ -730,7 +645,7 @@
             </p>
           </div>
           <div class="partner-footer">
-            <span style="font-size:11px;color:#6b7280;">Home · Health</span>
+            <span style="font-size:11px;color:#6b7280;">Home • Health</span>
             <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN"
                target="_blank" rel="noopener noreferrer"
                class="btn-chip">
@@ -754,7 +669,7 @@
             </p>
           </div>
           <div class="partner-footer">
-            <span style="font-size:11px;color:#6b7280;">Education · Global</span>
+            <span style="font-size:11px;color:#6b7280;">Education • Global</span>
             <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/"
                target="_blank" rel="noopener noreferrer"
                class="btn-chip">
@@ -768,7 +683,7 @@
           <div>
             <div class="partner-pill">ItaliaRail · Travel</div>
             <div class="partner-name">ItaliaRail Tickets</div>
-            <div class="partner-meta">Vertical: Travel · EU train tickets</div>
+            <div class="partner-meta">Vertical: Travel · Europe train tickets</div>
             <p class="partner-text">
               Rail passes and train tickets for Italy and Europe. Strong fit for travel blogs,
               Europe itineraries and city guides.
@@ -778,7 +693,7 @@
             </p>
           </div>
           <div class="partner-footer">
-            <span style="font-size:11px;color:#6b7280;">Travel · Europe</span>
+            <span style="font-size:11px;color:#6b7280;">Travel • Europe</span>
             <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/"
                target="_blank" rel="noopener noreferrer"
                class="btn-chip">
@@ -802,7 +717,7 @@
             </p>
           </div>
           <div class="partner-footer">
-            <span style="font-size:11px;color:#6b7280;">Tools · B2B</span>
+            <span style="font-size:11px;color:#6b7280;">Tools • B2B</span>
             <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/"
                target="_blank" rel="noopener noreferrer"
                class="btn-chip secondary">
@@ -810,58 +725,10 @@
             </a>
           </div>
         </article>
-
-        <!-- Italki -->
-        <article class="partner-card">
-          <div>
-            <div class="partner-pill">italki · Language learning</div>
-            <div class="partner-name">italki Tutors</div>
-            <div class="partner-meta">Vertical: Education · Languages</div>
-            <p class="partner-text">
-              1-to-1 lessons with tutors worldwide. Perfect for language blogs, study abroad
-              content and productivity channels.
-            </p>
-            <p class="partner-goal">
-              Goal: <span>New student sign-ups and lesson bookings.</span>
-            </p>
-          </div>
-          <div class="partner-footer">
-            <span style="font-size:11px;color:#6b7280;">Languages · Global</span>
-            <a href="https://flcoz.com/g/9ks8krpbbq47bcc10bc59911c0dd7a/"
-               target="_blank" rel="noopener noreferrer"
-               class="btn-chip">
-              <span>Promote italki</span><span>↗</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Aurabits -->
-        <article class="partner-card">
-          <div>
-            <div class="partner-pill">Aurabits · AI & SaaS</div>
-            <div class="partner-name">Aurabits AI Tools</div>
-            <div class="partner-meta">Vertical: AI · Digital products</div>
-            <p class="partner-text">
-              AI tools and digital products designed for creators and marketers.
-              Great fit for content about automation, workflows and monetization.
-            </p>
-            <p class="partner-goal">
-              Goal: <span>Tool sign-ups and paid plan upgrades.</span>
-            </p>
-          </div>
-          <div class="partner-footer">
-            <span style="font-size:11px;color:#6b7280;">AI · Creators</span>
-            <a href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/"
-               target="_blank" rel="noopener noreferrer"
-               class="btn-chip">
-              <span>Join Aurabits</span><span>↗</span>
-            </a>
-          </div>
-        </article>
       </div>
     </section>
 
-    <!-- HOW ADDEV STUDIO WORKS -->
+    <!-- HOW IT WORKS -->
     <section class="section" aria-label="How AdDev Studio works">
       <div class="section-header">
         <div class="section-label">Workflow</div>
@@ -890,8 +757,7 @@
           <strong>Powered by Admitad Network.</strong>
           <p style="margin-top:6px;">
             Many of the offers you see here run through
-            <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k"
-               target="_blank" rel="noopener noreferrer">Admitad Partner Network</a>,
+            <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k" target="_blank" rel="noopener noreferrer">Admitad Partner Network</a>,
             giving you unified reporting, payouts and tracking.
           </p>
           <p style="margin-top:6px;">
@@ -968,5 +834,14 @@
     </div>
   </div>
 </footer>
+
+<script>
+  window.admitad = window.admitad || {
+    tracking: { enabled: true },
+    analytics: { enabled: true }
+  };
+</script>
+<script src="https://cdn.admitad-connect.com/apps/scripts/admitad-webmaster/track.js" async></script>
+
 </body>
 </html>
