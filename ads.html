@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AdDev Studio | Ads & Live Offers</title>
+  <title>AdDev Studio | Live Ads</title>
 
   <style>
     :root {
       --bg-main: #020617;
       --bg-card: #0b1220;
       --accent: #f97316;
-      --accent-soft: #fed7aa;
       --primary: #2563eb;
       --text-main: #e5e7eb;
       --text-muted: #9ca3af;
@@ -27,6 +26,7 @@
     }
     a { text-decoration: none; color: inherit; }
 
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -92,6 +92,7 @@
       padding: 22px 16px 60px;
     }
 
+    /* HERO */
     .hero {
       margin-top: 18px;
       margin-bottom: 26px;
@@ -124,7 +125,6 @@
       background: rgba(15,23,42,0.2);
       border: 1px solid rgba(248,250,252,0.35);
     }
-
     .hero-actions {
       margin-top: 12px;
       display: flex;
@@ -148,6 +148,7 @@
       color: #f9fafb;
     }
 
+    /* SECTION HEADER & FILTERS */
     .section-header {
       display: flex;
       flex-direction: column;
@@ -176,13 +177,7 @@
       margin-bottom: 18px;
       font-size: 12px;
     }
-    .filters input {
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.5);
-      background: #020617;
-      color: #e5e7eb;
-    }
+    .filters input,
     .filters select {
       padding: 7px 10px;
       border-radius: 999px;
@@ -191,6 +186,7 @@
       color: #e5e7eb;
     }
 
+    /* PRODUCTS GRID */
     .products-grid {
       display: grid;
       gap: 16px;
@@ -223,7 +219,7 @@
     }
     .product-price {
       font-size: 13px;
-      color: var(--accent-soft);
+      color: #fbbf24;
     }
     .product-price span {
       font-weight: 600;
@@ -253,13 +249,16 @@
       border: none;
       cursor: pointer;
     }
-    .share-buttons {
+    .btn-buy:hover {
+      filter: brightness(1.05);
+    }
+    .inline-buttons {
       display: flex;
-      gap: 4px;
+      gap: 6px;
       flex-wrap: wrap;
       font-size: 11px;
     }
-    .share-btn {
+    .inline-btn {
       padding: 5px 9px;
       border-radius: 999px;
       border: 1px solid rgba(148,163,184,0.6);
@@ -272,6 +271,87 @@
       font-size: 12px;
       color: var(--text-muted);
       margin-top: 8px;
+    }
+
+    /* SHARE MODAL */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15,23,42,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 40;
+    }
+    .modal {
+      background: #020617;
+      border-radius: 18px;
+      max-width: 420px;
+      width: 100%;
+      padding: 18px 18px 14px;
+      box-shadow: 0 30px 70px rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.5);
+      font-size: 14px;
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .modal-title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .modal-close {
+      border: none;
+      background: transparent;
+      color: #9ca3af;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .share-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .share-btn-full {
+      width: 100%;
+      text-align: left;
+      border-radius: 999px;
+      padding: 8px 12px;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: #020617;
+      color: #e5e7eb;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .share-label-main {
+      font-weight: 500;
+    }
+    .share-label-sub {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+    .share-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      background: #1e293b;
+      color: #e5e7eb;
     }
   </style>
 </head>
@@ -296,13 +376,13 @@
 
 <main>
 
-  <!-- Admitad hero -->
+  <!-- HERO -->
   <section class="hero">
     <div>
       <h1>Live product ads powered by Admitad.</h1>
       <p>
-        This page loads your Admitad product feed automatically and turns it
-        into shareable cards for TikTok, Instagram and Facebook campaigns.
+        This Ads page automatically loads your Admitad product feed and turns it
+        into shareable cards for TikTok, Instagram, Facebook, LinkedIn and more.
       </p>
       <div class="hero-badges">
         <span>Auto-updated offers</span>
@@ -320,15 +400,14 @@
     </div>
   </section>
 
-  <!-- Section header -->
+  <!-- MAIN SECTION -->
   <section>
     <div class="section-header">
       <div class="section-label">Ads Center</div>
       <h2 class="section-title">Live products from your Admitad feed</h2>
       <p class="section-sub">
-        Filter products, grab the tracking link, and share to TikTok, Instagram
-        or Facebook with one tap. All clicks and sales are tracked in your
-        Admitad dashboard.
+        Filter products, open offers, copy affiliate links or share ready-made
+        posts to Facebook, WhatsApp, Telegram, TikTok, Instagram, LinkedIn and X.
       </p>
     </div>
 
@@ -336,8 +415,10 @@
       <input id="searchInput" type="text" placeholder="Search products…" />
       <select id="priceFilter">
         <option value="all">All prices</option>
-        <option value="low">Cheap first</option>
-        <option value="high">Expensive first</option>
+        <option value="10">&lt; $10</option>
+        <option value="25">$10–$25</option>
+        <option value="50">$25–$50</option>
+        <option value="51">&gt; $50</option>
       </select>
     </div>
 
@@ -347,149 +428,359 @@
 
 </main>
 
+<!-- SHARE MODAL -->
+<div id="shareModalBackdrop" class="modal-backdrop">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="shareModalTitle">Share product</div>
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div style="font-size:12px;color:#9ca3af;" id="shareModalDesc"></div>
+      <div class="share-row">
+        <button class="share-btn-full" data-network="facebook">
+          <span class="share-icon">f</span>
+          <div>
+            <div class="share-label-main">Facebook — Share post</div>
+            <div class="share-label-sub">Open Facebook share dialog with this product link.</div>
+          </div>
+        </button>
+
+        <button class="share-btn-full" data-network="whatsapp">
+          <span class="share-icon">wa</span>
+          <div>
+            <div class="share-label-main">WhatsApp — Send to chat</div>
+            <div class="share-label-sub">Share this deal directly in a chat or group.</div>
+          </div>
+        </button>
+
+        <button class="share-btn-full" data-network="telegram">
+          <span class="share-icon">tg</span>
+          <div>
+            <div class="share-label-main">Telegram — Share in channel</div>
+            <div class="share-label-sub">Open Telegram with a prefilled message.</div>
+          </div>
+        </button>
+
+        <button class="share-btn-full" data-network="twitter">
+          <span class="share-icon">X</span>
+          <div>
+            <div class="share-label-main">X / Twitter — Tweet this</div>
+            <div class="share-label-sub">Create a tweet with title and product link.</div>
+          </div>
+        </button>
+
+        <button class="share-btn-full" data-network="linkedin">
+          <span class="share-icon">in</span>
+          <div>
+            <div class="share-label-main">LinkedIn — Publish post</div>
+            <div class="share-label-sub">Share to your professional network.</div>
+          </div>
+        </button>
+
+        <button class="share-btn-full" data-network="instagram">
+          <span class="share-icon">IG</span>
+          <div>
+            <div class="share-label-main">Instagram — Copy caption</div>
+            <div class="share-label-sub">
+              Caption + link will be copied. Open Instagram and paste it in your post, bio or story.
+            </div>
+          </div>
+        </button>
+
+        <button class="share-btn-full" data-network="tiktok">
+          <span class="share-icon">TT</span>
+          <div>
+            <div class="share-label-main">TikTok — Copy caption</div>
+            <div class="share-label-sub">
+              Caption + link will be copied. Open TikTok and paste it in your post or bio.
+            </div>
+          </div>
+        </button>
+
+        <button class="share-btn-full" data-network="copy">
+          <span class="share-icon">🔗</span>
+          <div>
+            <div class="share-label-main">Copy link & caption</div>
+            <div class="share-label-sub">
+              Use this for any other platform or manual posting.
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-  // NDRYSHOJE NËSE ENDPOINT-I YT ËSHTË TJETËR
-  const API_URL = "https://api.addev-studio.com/admitad-feed";
+  // KTU vendos API-n e proxy-t tënd që kthen XML.
+  // Nese e ke ndërtuar si "proxy" që thjesht pason XML-in e Admitad-it,
+  // mund ta lësh kështu:
+  const FEED_URL = "https://api.addev-studio.com/proxy";
 
   const grid = document.getElementById("productsGrid");
   const statusEl = document.getElementById("status");
   const searchInput = document.getElementById("searchInput");
   const priceFilter = document.getElementById("priceFilter");
 
-  let allProducts = [];
+  const modalBackdrop = document.getElementById("shareModalBackdrop");
+  const modalCloseBtn = document.getElementById("modalCloseBtn");
+  const modalTitle = document.getElementById("shareModalTitle");
+  const modalDesc = document.getElementById("shareModalDesc");
+  const modalButtons = document.querySelectorAll(".share-btn-full");
+
+  let allOffers = [];
+  let currentProduct = null;
 
   async function loadProducts() {
     try {
       statusEl.textContent = "Loading products from Admitad…";
-      const res = await fetch(API_URL);
+
+      const res = await fetch(FEED_URL);
       if (!res.ok) throw new Error("API error");
-      const data = await res.json();
-      allProducts = data.products || [];
-      statusEl.textContent = allProducts.length
-        ? "Products loaded. Tap share buttons to promote on social media."
-        : "No products found in feed.";
+
+      const text = await res.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, "text/xml");
+
+      const offers = xml.getElementsByTagName("offer") || [];
+      allOffers = Array.from(offers);
+
+      if (!allOffers.length) {
+        statusEl.textContent = "No products found in feed.";
+      } else {
+        statusEl.textContent = "Products loaded. Click Share to promote on social media.";
+      }
+
       renderProducts();
     } catch (err) {
       console.error(err);
-      statusEl.textContent = "Could not load products (check API URL).";
+      statusEl.textContent = "Could not load products (check proxy / CORS settings).";
     }
+  }
+
+  function extractOfferData(o) {
+    const getText = (tag) => o.getElementsByTagName(tag)[0]?.textContent || "";
+    const name = getText("name") || "Product";
+    const img = getText("picture");
+    const url = getText("url") || "#";
+    const priceStr = getText("price");
+    const price = parseFloat(priceStr || "0");
+    const curr = getText("currencyId") || "USD";
+    const desc = getText("description");
+    return { name, img, url, price, curr, desc };
   }
 
   function renderProducts() {
     const term = searchInput.value.toLowerCase();
-    let items = [...allProducts];
+    const pf = priceFilter.value;
 
-    if (term) {
-      items = items.filter((p) =>
-        (p.name || "").toLowerCase().includes(term)
-      );
-    }
-
-    if (priceFilter.value !== "all") {
-      items.sort((a, b) => {
-        const pa = parseFloat(a.price || 0);
-        const pb = parseFloat(b.price || 0);
-        return priceFilter.value === "low" ? pa - pb : pb - pa;
-      });
-    }
+    const filtered = allOffers.filter((o) => {
+      const { name, price } = extractOfferData(o);
+      if (term && !name.toLowerCase().includes(term)) return false;
+      if (pf !== "all") {
+        if (pf === "10" && !(price < 10)) return false;
+        if (pf === "25" && !(price >= 10 && price < 25)) return false;
+        if (pf === "50" && !(price >= 25 && price <= 50)) return false;
+        if (pf === "51" && !(price > 50)) return false;
+      }
+      return true;
+    });
 
     grid.innerHTML = "";
+    filtered.forEach((o) => {
+      const { name, img, url, price, curr, desc } = extractOfferData(o);
 
-    items.forEach((p) => {
       const card = document.createElement("article");
       card.className = "product-card";
 
-      const img = document.createElement("img");
-      img.className = "product-image";
-      img.src = p.image || "";
-      img.alt = p.name || "";
-      card.appendChild(img);
+      const imageEl = document.createElement("img");
+      imageEl.className = "product-image";
+      if (img) {
+        imageEl.src = img;
+        imageEl.alt = name;
+      } else {
+        imageEl.alt = "No image";
+      }
+      card.appendChild(imageEl);
 
-      const name = document.createElement("div");
-      name.className = "product-name";
-      name.textContent = p.name || "Product";
-      card.appendChild(name);
+      const nameEl = document.createElement("div");
+      nameEl.className = "product-name";
+      nameEl.textContent = name;
+      card.appendChild(nameEl);
 
-      const price = document.createElement("div");
-      price.className = "product-price";
-      price.innerHTML =
-        "<span>" +
-        (p.price || "?") +
-        "</span> " +
-        (p.currency || "");
-      card.appendChild(price);
+      const priceEl = document.createElement("div");
+      priceEl.className = "product-price";
+      priceEl.innerHTML = `Price: <span>${priceStrOrDash(price)}</span> ${curr}`;
+      card.appendChild(priceEl);
 
-      const desc = document.createElement("div");
-      desc.className = "product-desc";
-      desc.textContent = (p.description || "").replace(/<\/?[^>]+(>|$)/g, "");
-      card.appendChild(desc);
+      const descEl = document.createElement("div");
+      descEl.className = "product-desc";
+      descEl.textContent = stripHtml(desc);
+      card.appendChild(descEl);
 
       const actions = document.createElement("div");
       actions.className = "product-actions";
 
       const buyBtn = document.createElement("a");
       buyBtn.className = "btn-buy";
-      buyBtn.href = p.url || "#";
+      buyBtn.href = url;
       buyBtn.target = "_blank";
       buyBtn.rel = "noopener noreferrer";
       buyBtn.textContent = "Open offer";
       actions.appendChild(buyBtn);
 
-      const shareRow = document.createElement("div");
-      shareRow.className = "share-buttons";
+      const inline = document.createElement("div");
+      inline.className = "inline-buttons";
 
-      ["TikTok","Instagram","Facebook"].forEach((network) => {
-        const sBtn = document.createElement("button");
-        sBtn.className = "share-btn";
-        sBtn.textContent = network;
-        sBtn.addEventListener("click", () => shareProduct(p, network));
-        shareRow.appendChild(sBtn);
-      });
+      const copyBtn = document.createElement("button");
+      copyBtn.className = "inline-btn";
+      copyBtn.textContent = "Copy link";
+      copyBtn.addEventListener("click", () => copyLink(url, name));
+      inline.appendChild(copyBtn);
 
-      actions.appendChild(shareRow);
+      const shareBtn = document.createElement("button");
+      shareBtn.className = "inline-btn";
+      shareBtn.textContent = "Share…";
+      shareBtn.addEventListener("click", () => openShareModal({ name, url }));
+      inline.appendChild(shareBtn);
+
+      actions.appendChild(inline);
       card.appendChild(actions);
 
       grid.appendChild(card);
     });
 
-    if (!items.length) {
+    if (!filtered.length) {
       grid.innerHTML = "<div class='status'>No products match your filters.</div>";
     }
   }
 
-  async function shareProduct(product, network) {
-    const url = product.url || "";
-    const name = product.name || "Product";
+  function priceStrOrDash(price) {
+    if (!price || isNaN(price)) return "-";
+    return price.toFixed(2);
+  }
+
+  function stripHtml(html) {
+    if (!html) return "";
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || "";
+  }
+
+  async function copyLink(url, name) {
     const caption =
-      `${name}\n\nFound via AdDev Studio (${network}).\n` +
-      `👉 Link: ${url}\n\n#affiliate #addevstudio #deals`;
+      `${name}\n\n` +
+      `👉 ${url}\n\n` +
+      `#affiliate #addevstudio #deals`;
 
-    // Në mobile – hap share native (përdoruesi zgjedh app: TikTok, IG, FB…)
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: name, text: caption, url });
-        alert("Share dialog opened – choose the app you want.");
-        return;
-      } catch (e) {
-        console.log("Share cancelled", e);
-      }
-    }
-
-    // Fallback: kopjo tekstin n clipboard që ta ngjitësh në TikTok/IG/FB
     try {
       await navigator.clipboard.writeText(caption);
-      alert(
-        "Caption u kopjua! Hape TikTok/Instagram/Facebook dhe bëj Paste në përshkrim."
-      );
+      alert("Link + caption copied! Paste it in your social post.");
     } catch (e) {
-      alert(
-        "Nuk u arrit të kopjohet automatikisht. Kopjoje vet linkun:\n" + url
-      );
+      console.error(e);
+      alert("Could not copy automatically. Manually copy this link: " + url);
+    }
+  }
+
+  function openShareModal(product) {
+    currentProduct = product;
+    modalTitle.textContent = "Share: " + (product.name || "Product");
+    modalDesc.textContent =
+      "Choose where you want to promote this deal. Some networks open a share dialog, " +
+      "others copy a caption to your clipboard so you can paste it in your post or bio.";
+    modalBackdrop.style.display = "flex";
+  }
+
+  function closeShareModal() {
+    modalBackdrop.style.display = "none";
+    currentProduct = null;
+  }
+
+  function openWindow(url) {
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+
+  async function handleShare(network) {
+    if (!currentProduct) return;
+    const { name, url } = currentProduct;
+    const baseCaption =
+      `${name}\n\n` +
+      `👉 ${url}\n\n` +
+      `#affiliate #addevstudio #deals`;
+
+    switch (network) {
+      case "facebook":
+        openWindow(
+          "https://www.facebook.com/sharer/sharer.php?u=" +
+            encodeURIComponent(url)
+        );
+        break;
+      case "whatsapp":
+        openWindow(
+          "https://wa.me/?text=" +
+            encodeURIComponent(baseCaption)
+        );
+        break;
+      case "telegram":
+        openWindow(
+          "https://t.me/share/url?url=" +
+            encodeURIComponent(url) +
+            "&text=" +
+            encodeURIComponent(baseCaption)
+        );
+        break;
+      case "twitter":
+        openWindow(
+          "https://twitter.com/intent/tweet?url=" +
+            encodeURIComponent(url) +
+            "&text=" +
+            encodeURIComponent(name)
+        );
+        break;
+      case "linkedin":
+        openWindow(
+          "https://www.linkedin.com/sharing/share-offsite/?url=" +
+            encodeURIComponent(url)
+        );
+        break;
+      case "instagram":
+      case "tiktok":
+      case "copy":
+        try {
+          await navigator.clipboard.writeText(baseCaption);
+          alert(
+            "Caption + link copied! Open " +
+              (network === "instagram"
+                ? "Instagram"
+                : network === "tiktok"
+                ? "TikTok"
+                : "your social app") +
+              " and paste it in your post, bio or story."
+          );
+        } catch (e) {
+          alert("Could not copy automatically. Manually copy this link:\n" + url);
+        }
+        break;
+      default:
+        break;
     }
   }
 
   searchInput.addEventListener("input", renderProducts);
   priceFilter.addEventListener("change", renderProducts);
+
+  modalCloseBtn.addEventListener("click", closeShareModal);
+  modalBackdrop.addEventListener("click", (e) => {
+    if (e.target === modalBackdrop) closeShareModal();
+  });
+
+  modalButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const network = btn.getAttribute("data-network");
+      handleShare(network);
+    });
+  });
 
   loadProducts();
 </script>
