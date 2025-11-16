@@ -2,57 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AdDev Studio – Ads Center & Promo Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdDev Studio | Affiliate & Ads Hub</title>
   <meta name="description"
-        content="AdDev Studio Ads Center – curated affiliate banners and promo campaigns for AliExpress, Tion, Alibaba, British Council and more." />
-  <link rel="canonical" href="https://addev-studio.com/ads.html" />
+        content="AdDev Studio is your hub for affiliate marketing, global brands, and performance ads. Discover curated offers, tools and guides to grow your online revenue." />
+  <link rel="canonical" href="https://addev-studio.com/index.html" />
 
   <style>
     :root {
-      --bg: #020617;
-      --bg-soft: #02081f;
-      --bg-hero: radial-gradient(circle at top left, #1d4ed8 0, #020617 55%);
-      --card: #020617;
-      --border-soft: rgba(148, 163, 184, 0.4);
-      --border-dashed: rgba(148, 163, 184, 0.6);
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --accent: #f97316;
-      --accent-soft: #fed7aa;
+      --bg-main: #020617;
+      --bg-section: #02081f;
+      --bg-card: #020617;
       --primary: #2563eb;
       --primary-soft: #60a5fa;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --accent: #f97316;
+      --accent-soft: #fed7aa;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.3);
       --radius-lg: 18px;
       --radius-xl: 26px;
-      --radius-pill: 999px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+      --shadow-chip: 0 10px 25px rgba(15, 23, 42, 0.75);
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      sans-serif;
-      background: #020617;
+        sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%);
       color: var(--text-main);
-      line-height: 1.6;
     }
 
     a {
-      color: inherit;
+      color: #93c5fd;
       text-decoration: none;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
+    a:hover {
+      text-decoration: underline;
     }
 
-    /* HEADER / NAV (aligned with the rest of the site) */
+    /* NAVBAR */
 
     header {
       position: sticky;
@@ -85,20 +80,21 @@
       color: var(--text-main);
       font-weight: 600;
       font-size: 15px;
+      text-decoration: none;
     }
 
     .brand-mark {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border-radius: 999px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
       background: radial-gradient(circle at 30% 0, #60a5fa, #1d4ed8);
       color: #eff6ff;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.8);
+      box-shadow: var(--shadow-chip);
     }
 
     .nav-links {
@@ -112,6 +108,7 @@
       color: #9ca3af;
       padding: 6px 10px;
       border-radius: 999px;
+      text-decoration: none;
       transition: all 0.18s ease;
     }
 
@@ -121,7 +118,7 @@
     }
 
     .nav-links a.active {
-      background: var(--accent);
+      background: #f97316;
       color: #111827;
       font-weight: 600;
       box-shadow: 0 12px 28px rgba(249, 115, 22, 0.5);
@@ -140,139 +137,209 @@
       }
     }
 
-    /* MAIN WRAPPER */
+    /* PAGE WRAPPER */
 
     main {
-      background: radial-gradient(circle at top, #0f172a 0, #020617 60%);
+      min-height: 100vh;
     }
 
     .page {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 24px 16px 64px;
+      padding: 22px 16px 64px;
+    }
+
+    @media (min-width: 900px) {
+      .page {
+        padding-top: 30px;
+      }
     }
 
     /* HERO */
 
-    .hero-ads {
-      border-radius: var(--radius-xl);
-      padding: 22px 20px 22px;
-      background: var(--bg-hero);
-      border: 1px solid rgba(56, 189, 248, 0.45);
-      box-shadow: var(--shadow-soft);
-      margin-bottom: 26px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(191, 219, 254, 0.5);
-      background: rgba(15, 23, 42, 0.75);
-      font-size: 0.78rem;
-      color: #bfdbfe;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      margin-bottom: 12px;
-    }
-
-    .hero-grid {
+    .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
-      gap: 22px;
-      align-items: center;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 28px;
+      border-radius: var(--radius-xl);
+      padding: 26px 22px 24px;
+      background: radial-gradient(circle at top left, #1d4ed8 0, #020617 52%);
+      border: 1px solid rgba(191, 219, 254, 0.35);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 32px;
     }
 
     @media (max-width: 900px) {
-      .hero-grid {
+      .hero {
         grid-template-columns: minmax(0, 1fr);
+        padding: 22px 18px 20px;
       }
     }
 
-    .hero-main h1 {
-      font-size: clamp(24px, 4vw, 30px);
-      margin-bottom: 8px;
-    }
-
-    .hero-main p {
-      font-size: 14px;
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
       color: #cbd5f5;
       margin-bottom: 12px;
+      box-shadow: var(--shadow-chip);
+    }
+
+    .hero-kicker span.badge {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(248, 250, 252, 0.16);
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 4vw, 32px);
+      margin: 0 0 8px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: #e5e7eb;
+      max-width: 36rem;
+      margin-bottom: 16px;
     }
 
     .hero-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 4px;
+      margin-bottom: 18px;
       font-size: 11px;
     }
 
-    .hero-tags span {
+    .hero-tag {
       padding: 4px 9px;
       border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 16px;
+      font-size: 13px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-soft), var(--primary));
+      color: #eff6ff;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 45px rgba(37, 99, 235, 0.7);
+    }
+
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--text-main);
       border: 1px solid rgba(148, 163, 184, 0.5);
-      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(148, 163, 184, 0.8);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11px;
+      color: #cbd5f5;
+      margin-top: 14px;
+    }
+
+    .hero-meta span b {
       color: #e5e7eb;
     }
 
     .hero-side {
       background: rgba(15, 23, 42, 0.9);
-      border-radius: 18px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      padding: 14px 14px 12px;
-      font-size: 13px;
-      color: #cbd5f5;
-    }
-
-    .hero-side-title {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #a5b4fc;
-      margin-bottom: 6px;
-    }
-
-    .hero-side h3 {
-      font-size: 15px;
-      margin-bottom: 6px;
-    }
-
-    .hero-side-footer {
-      margin-top: 8px;
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 16px 16px 14px;
+      box-shadow: var(--shadow-soft);
       display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .hero-side-label {
       font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: #9ca3af;
     }
 
-    .hero-side-footer span {
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: rgba(15, 23, 42, 0.9);
+    .hero-side-title {
+      font-weight: 600;
+      color: #e5e7eb;
     }
 
-    /* SECTION TITLES */
+    .hero-side-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 11px;
+    }
+
+    .hero-side-list span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    /* SECTION WRAPPER */
 
     .section {
-      margin-top: 32px;
+      margin-top: 34px;
     }
 
     .section-header {
       display: flex;
       flex-direction: column;
       gap: 4px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .section-label {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: #9ca3af;
@@ -286,147 +353,202 @@
     .section-sub {
       font-size: 0.9rem;
       color: var(--text-muted);
-      max-width: 36rem;
+      max-width: 34rem;
     }
 
-    /* AD GRID (BANNERS) */
+    /* PARTNER GRID */
 
-    .ad-grid {
+    .partners-grid {
       display: grid;
       gap: 18px;
     }
 
     @media (min-width: 900px) {
-      .ad-grid {
+      .partners-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 640px) {
-      .ad-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .ad-card {
+    .partner-card {
       background: radial-gradient(circle at top, #02081f, #020617);
       border-radius: var(--radius-lg);
       border: 1px solid var(--border-soft);
+      padding: 16px 14px 14px;
       box-shadow: var(--shadow-soft);
-      overflow: hidden;
       display: flex;
       flex-direction: column;
-      min-height: 220px;
-    }
-
-    .ad-media {
-      position: relative;
-      background: #020617;
-    }
-
-    .ad-media img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-    }
-
-    .ad-body {
-      padding: 12px 12px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 170px;
       font-size: 13px;
     }
 
-    .ad-pill {
+    .partner-pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #9ca3af;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .partner-name {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 6px;
+      margin-bottom: 2px;
+    }
+
+    .partner-meta {
       font-size: 11px;
       color: #9ca3af;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
+      margin-bottom: 6px;
     }
 
-    .ad-title {
-      font-size: 14px;
-      font-weight: 600;
+    .partner-text {
+      margin: 0 0 6px;
+      color: #e5e7eb;
     }
 
-    .ad-text {
+    .partner-goal {
       font-size: 12px;
+      margin: 0;
       color: #9ca3af;
     }
 
-    .ad-footer {
-      margin-top: 8px;
+    .partner-goal span {
+      color: #e5e7eb;
+    }
+
+    .partner-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 8px;
+      margin-top: 8px;
+    }
+
+    .btn-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 13px;
+      font-size: 11px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: #0f172a;
+      color: #e5e7eb;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.9);
+      text-decoration: none;
+      transition: transform 0.16s ease, box-shadow 0.16s ease,
+        background 0.16s ease;
+    }
+
+    .btn-chip:hover {
+      background: #111827;
+      transform: translateY(-1px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 1);
+    }
+
+    .btn-chip.alt {
+      background: linear-gradient(135deg, #f97316, #fbbf24);
+      color: #111827;
+      box-shadow: 0 14px 32px rgba(249, 115, 22, 0.7);
+    }
+
+    /* HOW IT WORKS */
+
+    .how-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 900px) {
+      .how-grid {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      }
+    }
+
+    .how-main {
+      background: radial-gradient(circle at top, #02081f, #020617);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      padding: 16px 16px 14px;
+      box-shadow: var(--shadow-soft);
+      font-size: 14px;
+      color: #e5e7eb;
+    }
+
+    .how-main ul {
+      padding-left: 18px;
+      margin: 8px 0 0;
+      font-size: 13px;
+    }
+
+    .how-main li {
+      margin-bottom: 4px;
+    }
+
+    .how-side {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+      padding: 14px 14px 12px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .how-side strong {
+      color: #e5e7eb;
+    }
+
+    /* BLOG PREVIEW */
+
+    .blog-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 900px) {
+      .blog-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .blog-card {
+      background: radial-gradient(circle at top, #02081f, #020617);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      padding: 14px 14px 12px;
+      font-size: 13px;
+      color: #e5e7eb;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .blog-tag {
       font-size: 11px;
       color: #9ca3af;
     }
 
-    .ad-meta {
+    .blog-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .blog-meta {
       font-size: 11px;
+      color: #6b7280;
     }
 
-    .btn-pill {
-      border-radius: var(--radius-pill);
-      padding: 7px 13px;
-      font-size: 11px;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      background: #f97316;
-      color: #111827;
-      box-shadow: 0 14px 32px rgba(248, 181, 0, 0.55);
-      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s;
-    }
-
-    .btn-pill:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(248, 181, 0, 0.7);
-      background: #fb923c;
-    }
-
-    .btn-pill.secondary {
-      background: rgba(15, 23, 42, 0.95);
-      color: #e5e7eb;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.85);
-    }
-
-    .btn-pill.secondary:hover {
-      border-color: #e5e7eb;
-    }
-
-    /* CUSTOM NOTE / HOW TO EDIT */
-
-    .custom-note {
-      margin-top: 20px;
-      border-radius: 16px;
-      padding: 12px 14px;
-      border: 1px dashed var(--border-dashed);
-      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), #020617);
-      font-size: 0.84rem;
-      color: var(--text-muted);
-    }
-
-    .custom-note strong {
-      color: #e5e7eb;
-    }
-
-    .custom-note code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-      font-size: 0.8rem;
-      background: rgba(15, 23, 42, 0.9);
-      padding: 2px 6px;
-      border-radius: 6px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: #e5e7eb;
+    .blog-card a.btn-chip {
+      margin-top: 4px;
+      align-self: flex-start;
     }
 
     /* FOOTER */
@@ -467,8 +589,8 @@
       <span>AdDev Studio</span>
     </a>
     <nav class="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/ads.html" class="active">Ads</a>
+      <a href="/index.html" class="active">Home</a>
+      <a href="/ads.html">Ads</a>
       <a href="/affiliate.html">Affiliate</a>
       <a href="/blog.html">Blog</a>
       <a href="/resources.html">Resources</a>
@@ -481,214 +603,355 @@
   <div class="page">
 
     <!-- HERO -->
-    <section class="hero-ads" aria-labelledby="ads-hero-title">
-      <div class="hero-pill">
-        <span>AD</span> Ads Center · Banners & Promo Campaigns
-      </div>
-
-      <div class="hero-grid">
-        <div class="hero-main">
-          <h1 id="ads-hero-title">Ads & promotions powered by global brands.</h1>
-          <p>
-            This page is your central hub for visual campaigns from AliExpress, Tion, Alibaba,
-            British Council and other affiliate partners connected to AdDev Studio.
-          </p>
-          <div class="hero-tags">
-            <span>Affiliate banners</span>
-            <span>High–intent clicks</span>
-            <span>Brand–safe layouts</span>
-            <span>SEO–friendly page</span>
-          </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="hero-kicker">
+          <span class="badge">Affiliate & Ads Hub</span>
+          Built on Admitad & global brands
         </div>
-
-        <aside class="hero-side" aria-label="Ad strategy">
-          <div class="hero-side-title">Ad strategy</div>
-          <h3>Visual-first performance marketing</h3>
-          <p>
-            Use this page as a flexible canvas: update banners as campaigns change,
-            rotate seasonal offers and send your traffic here from social profiles, blogs,
-            or email newsletters.
-          </p>
-          <div class="hero-side-footer">
-            <span>Easy banner rotation</span>
-            <span>Multi-vertical offers</span>
-          </div>
-        </aside>
+        <h1 id="hero-title" class="hero-title">
+          Build, promote & earn with AdDev Studio.
+        </h1>
+        <p class="hero-subtitle">
+          A curated space for affiliate marketers, creators and small businesses.
+          Discover trusted programs, performance ads and guides that help you turn
+          traffic into real revenue.
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag">Affiliate partner stack</span>
+          <span class="hero-tag">SEO-friendly landing pages</span>
+          <span class="hero-tag">Dark mode UI</span>
+          <span class="hero-tag">Beginner-friendly guides</span>
+        </div>
+        <div class="hero-actions">
+          <a href="/ads.html" class="btn-primary">
+            <span>Open Ads Center</span><span>↗</span>
+          </a>
+          <a href="/affiliate.html" class="btn-secondary">
+            <span>Browse Affiliate Programs</span>
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span><b>10+</b> live affiliate partners</span>
+          <span><b>Multi-vertical:</b> travel, tech, education, smart home</span>
+          <span><b>Powered by:</b> Admitad Network</span>
+        </div>
       </div>
+
+      <aside class="hero-side" aria-label="How AdDev Studio works">
+        <div class="hero-side-label">How it works</div>
+        <div class="hero-side-title">One hub for offers & campaigns</div>
+        <p>
+          We connect curated brands to clean, SEO-focused landing pages.
+          You send traffic to these hubs and track performance via your
+          affiliate dashboards.
+        </p>
+        <div class="hero-side-list">
+          <span>Trusted brands only</span>
+          <span>Affiliate-safe layout</span>
+          <span>Fast for mobile</span>
+          <span>Easy to update</span>
+        </div>
+      </aside>
     </section>
 
-    <!-- BANNERS / IMAGE ADS -->
-    <section class="section" aria-label="Banner ads">
+    <!-- TOP PARTNERS -->
+    <section class="section" aria-label="Top affiliate partners">
       <div class="section-header">
-        <div class="section-label">Banner Ads</div>
-        <h2 class="section-title">Featured promotions</h2>
+        <div class="section-label">Partners</div>
+        <h2 class="section-title">Top affiliate partners featured on AdDev Studio</h2>
         <p class="section-sub">
-          These cards use your personal affiliate links. Replace the images or add new cards
-          to highlight fresh campaigns whenever you want.
+          These are some of the core brands we highlight across our pages.
+          All buttons below use your personal tracking links from Admitad and partner networks.
         </p>
       </div>
 
-      <div class="ad-grid">
+      <div class="partners-grid">
         <!-- AliExpress -->
-        <article class="ad-card">
-          <a href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <!-- REPLACE THIS IMAGE URL WITH ANY ALIEXPRESS BANNER IMAGE YOU PREFER -->
-            <img src="https://ae01.alicdn.com/kf/Sb9bf1a3b30f84c5fa5e505ccaa32d170W.jpg"
-                 alt="AliExpress deals banner" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">AliExpress · Global shopping</div>
-            <div class="ad-title">AliExpress Deals & Campaigns</div>
-            <p class="ad-text">
-              Flash sales, coupons and global shipping with your affiliate link.
+        <article class="partner-card">
+          <div>
+            <div class="partner-pill">AliExpress · Global shopping</div>
+            <div class="partner-name">AliExpress Deals</div>
+            <div class="partner-meta">Vertical: E-commerce · Worldwide</div>
+            <p class="partner-text">
+              Flash sales, coupons and mega campaigns across millions of products.
+              Works great with deal blogs, coupon pages and social promos.
             </p>
-            <div class="ad-footer">
-              <div class="ad-meta">E-commerce • Worldwide</div>
-              <a href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill">
-                <span>Shop AliExpress</span><span>↗</span>
-              </a>
-            </div>
+            <p class="partner-goal">
+              Goal: <span>Clicks and order conversions on global campaigns.</span>
+            </p>
           </div>
-        </article>
-
-        <!-- Tion Smart Devices -->
-        <article class="ad-card">
-          <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <!-- REPLACE IMAGE IF YOU HAVE A BETTER TION BANNER -->
-            <img src="https://cdn.pixabay.com/photo/2020/01/17/16/25/smart-home-4779613_1280.jpg"
-                 alt="Tion smart home air devices" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">Tion · Smart home air tech</div>
-            <div class="ad-title">Smart AirTech for Modern Homes</div>
-            <p class="ad-text">
-              Promote cleaner indoor air, smart ventilation and climate control solutions.
-            </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Smart home • AirTech</div>
-              <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill secondary">
-                <span>Explore Tion</span><span>↗</span>
-              </a>
-            </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#6b7280;">E-commerce • Global</span>
+            <a href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-chip alt">
+              <span>Shop AliExpress</span><span>↗</span>
+            </a>
           </div>
         </article>
 
         <!-- Alibaba -->
-        <article class="ad-card">
-          <a href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <!-- REPLACE IMAGE WITH ANY ALIBABA BANNER OR PRODUCT VISUAL -->
-            <img src="https://cdn.pixabay.com/photo/2017/08/06/10/47/shopping-2596086_1280.jpg"
-                 alt="Alibaba wholesale banner" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">Alibaba · B2B marketplace</div>
-            <div class="ad-title">Alibaba Wholesale Offers</div>
-            <p class="ad-text">
-              Drive bulk orders and factory-direct sourcing for global buyers and resellers.
+        <article class="partner-card">
+          <div>
+            <div class="partner-pill">Alibaba · B2B marketplace</div>
+            <div class="partner-name">Alibaba Wholesale</div>
+            <div class="partner-meta">Vertical: Wholesale · B2B</div>
+            <p class="partner-text">
+              Factory-direct sourcing for resellers, dropshippers and import businesses.
+              Perfect for B2B, sourcing and entrepreneurship content.
             </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Wholesale • B2B</div>
-              <a href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill">
-                <span>Open Alibaba</span><span>↗</span>
-              </a>
-            </div>
+            <p class="partner-goal">
+              Goal: <span>Lead generation and bulk order requests.</span>
+            </p>
+          </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#6b7280;">Sourcing • B2B</span>
+            <a href="https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-chip">
+              <span>Open Alibaba</span><span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Tion -->
+        <article class="partner-card">
+          <div>
+            <div class="partner-pill">Tion · Smart home air tech</div>
+            <div class="partner-name">Tion Smart Devices</div>
+            <div class="partner-meta">Vertical: Smart home · AirTech</div>
+            <p class="partner-text">
+              Smart ventilation and air purification systems for modern apartments and homes.
+              Ideal for health, home improvement and sustainability audiences.
+            </p>
+            <p class="partner-goal">
+              Goal: <span>Device sales and bundle upgrades.</span>
+            </p>
+          </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#6b7280;">Home · Health</span>
+            <a href="https://rzekl.com/g/1q2r9vphv547bcc10bc53787886fbc/?erid=2bL9aMPo2e49hMef4pe18cxctN"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-chip">
+              <span>Explore Tion</span><span>↗</span>
+            </a>
           </div>
         </article>
 
         <!-- British Council -->
-        <article class="ad-card">
-          <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <!-- BRITISH COUNCIL PROMO IMAGE -->
-            <img src="https://cdn.pixabay.com/photo/2015/01/08/18/30/learn-593312_1280.jpg"
-                 alt="British Council English & exams" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">British Council · Education</div>
-            <div class="ad-title">English & Exam Programs</div>
-            <p class="ad-text">
-              Perfect for language learners, study abroad guides and education blogs.
+        <article class="partner-card">
+          <div>
+            <div class="partner-pill">British Council · Education</div>
+            <div class="partner-name">British Council Programs</div>
+            <div class="partner-meta">Vertical: Education · English & exams</div>
+            <p class="partner-text">
+              English courses, exam prep and study programs. Great for education blogs,
+              test prep content and student communities.
             </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Education • Global</div>
-              <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill secondary">
-                <span>Promote British Council</span><span>↗</span>
-              </a>
-            </div>
+            <p class="partner-goal">
+              Goal: <span>Course sign-ups and exam registrations.</span>
+            </p>
+          </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#6b7280;">Education · Global</span>
+            <a href="https://dhwnh.com/g/lzq981ev1d47bcc10bc57ca55a9ed7/"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-chip">
+              <span>Promote British Council</span><span>↗</span>
+            </a>
           </div>
         </article>
 
         <!-- ItaliaRail -->
-        <article class="ad-card">
-          <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <!-- ITALIARAIL BANNER IMAGE -->
-            <img src="https://cdn.pixabay.com/photo/2016/10/13/09/07/railway-1730527_1280.jpg"
-                 alt="ItaliaRail train tickets" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">ItaliaRail · Travel</div>
-            <div class="ad-title">ItaliaRail Train Tickets</div>
-            <p class="ad-text">
-              Great for travel content, itineraries and city guide blogs about Italy and Europe.
+        <article class="partner-card">
+          <div>
+            <div class="partner-pill">ItaliaRail · Travel</div>
+            <div class="partner-name">ItaliaRail Tickets</div>
+            <div class="partner-meta">Vertical: Travel · EU train tickets</div>
+            <p class="partner-text">
+              Rail passes and train tickets for Italy and Europe. Strong fit for travel blogs,
+              Europe itineraries and city guides.
             </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Travel • EU</div>
-              <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill">
-                <span>Promote ItaliaRail</span><span>↗</span>
-              </a>
-            </div>
+            <p class="partner-goal">
+              Goal: <span>Ticket bookings and multi-city passes.</span>
+            </p>
+          </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#6b7280;">Travel · Europe</span>
+            <a href="https://ujhjj.com/g/ca326rdm5v47bcc10bc5ef1cea9751/"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-chip">
+              <span>Promote ItaliaRail</span><span>↗</span>
+            </a>
           </div>
         </article>
 
         <!-- LunaProxy -->
-        <article class="ad-card">
-          <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/"
-             target="_blank" rel="noopener noreferrer" class="ad-media">
-            <!-- LUNAPROXY VISUAL -->
-            <img src="https://cdn.pixabay.com/photo/2015/10/18/18/00/office-995148_1280.jpg"
-                 alt="LunaProxy networking & proxy tools" />
-          </a>
-          <div class="ad-body">
-            <div class="ad-pill">LunaProxy · Tools</div>
-            <div class="ad-title">LunaProxy Residential & Datacenter</div>
-            <p class="ad-text">
-              Ideal for growth hackers, scrapers and analytics users who need stable proxies.
+        <article class="partner-card">
+          <div>
+            <div class="partner-pill">LunaProxy · Proxy tools</div>
+            <div class="partner-name">LunaProxy</div>
+            <div class="partner-meta">Vertical: Tools · Data & scraping</div>
+            <p class="partner-text">
+              Residential and datacenter proxies for growth hacking, scraping and analytics.
+              Works well with tech, SaaS and marketing automation content.
             </p>
-            <div class="ad-footer">
-              <div class="ad-meta">Tools • Proxies</div>
-              <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/"
-                 target="_blank" rel="noopener noreferrer"
-                 class="btn-pill secondary">
-                <span>Open LunaProxy</span><span>↗</span>
-              </a>
-            </div>
+            <p class="partner-goal">
+              Goal: <span>Subscription sign-ups and API usage.</span>
+            </p>
+          </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#6b7280;">Tools · B2B</span>
+            <a href="https://vxrlm.com/g/jqzp7g4r0b47bcc10bc5bb83e0e1ca/"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-chip secondary">
+              <span>Open LunaProxy</span><span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Italki -->
+        <article class="partner-card">
+          <div>
+            <div class="partner-pill">italki · Language learning</div>
+            <div class="partner-name">italki Tutors</div>
+            <div class="partner-meta">Vertical: Education · Languages</div>
+            <p class="partner-text">
+              1-to-1 lessons with tutors worldwide. Perfect for language blogs, study abroad
+              content and productivity channels.
+            </p>
+            <p class="partner-goal">
+              Goal: <span>New student sign-ups and lesson bookings.</span>
+            </p>
+          </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#6b7280;">Languages · Global</span>
+            <a href="https://flcoz.com/g/9ks8krpbbq47bcc10bc59911c0dd7a/"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-chip">
+              <span>Promote italki</span><span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Aurabits -->
+        <article class="partner-card">
+          <div>
+            <div class="partner-pill">Aurabits · AI & SaaS</div>
+            <div class="partner-name">Aurabits AI Tools</div>
+            <div class="partner-meta">Vertical: AI · Digital products</div>
+            <p class="partner-text">
+              AI tools and digital products designed for creators and marketers.
+              Great fit for content about automation, workflows and monetization.
+            </p>
+            <p class="partner-goal">
+              Goal: <span>Tool sign-ups and paid plan upgrades.</span>
+            </p>
+          </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#6b7280;">AI · Creators</span>
+            <a href="https://tywhh.com/g/1i7jtay89b47bcc10bc53f9789bf0e/"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-chip">
+              <span>Join Aurabits</span><span>↗</span>
+            </a>
           </div>
         </article>
       </div>
+    </section>
 
-      <div class="custom-note">
-        <strong>How to update banners:</strong><br />
-        – To change a banner image, just replace the <code>src="..."</code> inside
-        <code>&lt;img&gt;</code> for that card.<br />
-        – To add a new banner, duplicate one full
-        <code>&lt;article class="ad-card"&gt;...&lt;/article&gt;</code> block and update the
-        <code>href</code>, text and image.<br />
-        – All buttons use your personal affiliate links, so every click or purchase
-        goes through your tracking URLs.
+    <!-- HOW ADDEV STUDIO WORKS -->
+    <section class="section" aria-label="How AdDev Studio works">
+      <div class="section-header">
+        <div class="section-label">Workflow</div>
+        <h2 class="section-title">How AdDev Studio fits into your affiliate setup</h2>
+        <p class="section-sub">
+          Think of this website as a central landing hub. You plug in offers, content and
+          campaigns – and then send traffic from social media, blogs, or paid ads.
+        </p>
+      </div>
+
+      <div class="how-grid">
+        <div class="how-main">
+          <h3 style="margin-top:0;margin-bottom:6px;">A simple 3-step flow</h3>
+          <ul>
+            <li><strong>1. Pick offers:</strong> Choose the brands and categories that match your audience.</li>
+            <li><strong>2. Link & tag:</strong> Use your tracking links from Admitad and other networks.</li>
+            <li><strong>3. Send traffic:</strong> Point bio links, blog CTAs and ads to relevant pages here.</li>
+          </ul>
+          <p style="margin-top:10px;">
+            Over time you can add more pages (niche blog posts, specific campaign hubs,
+            seasonal promo sections) without breaking your structure or design.
+          </p>
+        </div>
+
+        <aside class="how-side">
+          <strong>Powered by Admitad Network.</strong>
+          <p style="margin-top:6px;">
+            Many of the offers you see here run through
+            <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k"
+               target="_blank" rel="noopener noreferrer">Admitad Partner Network</a>,
+            giving you unified reporting, payouts and tracking.
+          </p>
+          <p style="margin-top:6px;">
+            You stay in control: you decide which offers to highlight, how to structure
+            content and where to send visitors first.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- BLOG PREVIEW -->
+    <section class="section" aria-label="Blog highlights">
+      <div class="section-header">
+        <div class="section-label">Blog</div>
+        <h2 class="section-title">Latest guides from the AdDev Studio blog</h2>
+        <p class="section-sub">
+          Use these articles as education for visitors or your own checklists
+          when planning campaigns and improving landing pages.
+        </p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-tag">AI · Marketing</div>
+          <div class="blog-title">10 AI Tools That Can Replace a Mini Marketing Team</div>
+          <p style="margin:4px 0 2px;">
+            A practical look at AI tools that help with content, ads, research and
+            analytics – especially useful for solo creators.
+          </p>
+          <div class="blog-meta">Approx. 8 min read</div>
+          <a href="/blog-ai-tools.html" class="btn-chip">
+            <span>Read article</span><span>↗</span>
+          </a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-tag">SEO · Beginner</div>
+          <div class="blog-title">SEO for Small Businesses: The Practical Starter Guide</div>
+          <p style="margin:4px 0 2px;">
+            Step-by-step basics: keywords, on-page SEO and local visibility for
+            small business websites.
+          </p>
+          <div class="blog-meta">Approx. 10 min read</div>
+          <a href="/blog-seo-beginners.html" class="btn-chip">
+            <span>Read article</span><span>↗</span>
+          </a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-tag">Affiliate · Strategy</div>
+          <div class="blog-title">Affiliate Marketing 2025: Build Smart Income Streams</div>
+          <p style="margin:4px 0 2px;">
+            How to structure affiliate pages, choose offers and avoid common beginner mistakes
+            when monetizing content.
+          </p>
+          <div class="blog-meta">Approx. 9 min read</div>
+          <a href="/blog-affiliate-marketing.html" class="btn-chip">
+            <span>Read article</span><span>↗</span>
+          </a>
+        </article>
       </div>
     </section>
 
@@ -699,8 +962,9 @@
   <div class="footer-inner">
     <div>© 2025 AdDev Studio — All rights reserved.</div>
     <div class="disclosure">
-      Affiliate Disclosure: Some links on this page are affiliate links. If you click through
-      and make a purchase, AdDev Studio may earn a commission at no extra cost to you.
+      Affiliate Disclosure: Some links on this website are affiliate links. If you click
+      through and make a purchase or signup, AdDev Studio may earn a commission at no
+      extra cost to you.
     </div>
   </div>
 </footer>
