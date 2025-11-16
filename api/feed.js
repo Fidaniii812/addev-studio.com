@@ -1,7 +1,23 @@
+
 export default function handler(req, res) {
   res.status(200).json({
-    title: "Addev Studio Feed",
-    message: "API is working correctly!",
-    timestamp: new Date().toISOString()
+    ads: [
+      {
+        title: "AliExpress Deals",
+        url: "https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/",
+        image: "/assets/aliexpress-banner.jpg"
+      },
+      {
+        title: "italki Online Lessons",
+        url: "https://flcoz.com/g/9ks8krpbbq47bcc10bc59911c0dd7a/",
+        image: "/assets/italki-banner.jpg"
+      },
+      {
+        title: "Alibaba Business",
+        url: "https://rzekl.com/g/pm1aev55cl47bcc10bc5219aa26f6f/",
+        image: "/assets/alibaba-banner.jpg"
+      }
+    ],
+    updated: new Date().toISOString()
   });
 }
