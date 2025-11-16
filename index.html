@@ -331,6 +331,60 @@
       min-height: 170px;
       font-size: 13px;
     }
+
+    /* KARTELA E MADHE E ADMITAD – PARTNERI KRYESOR */
+    .partner-card.admitad-main {
+      background: radial-gradient(circle at top left, #6c4cf2, #1a1038);
+      border: 1px solid rgba(190, 145, 255, 0.9);
+      box-shadow: 0 24px 60px rgba(108, 76, 242, 0.7);
+      color: #f9fafb;
+    }
+    @media (min-width: 900px) {
+      .partners-grid .partner-card.admitad-main {
+        grid-column: 1 / -1; /* ta bëjmë më të madhe se tjerat */
+      }
+    }
+    .partner-card.admitad-main .partner-pill {
+      border-color: rgba(248, 250, 252, 0.7);
+      color: #e5e7ff;
+      background: rgba(15, 23, 42, 0.35);
+    }
+    .partner-card.admitad-main .partner-name {
+      color: #fdf2ff;
+      font-size: 17px;
+    }
+    .partner-card.admitad-main .partner-meta {
+      color: #e0e7ff;
+    }
+    .partner-card.admitad-main .partner-text {
+      color: #f3e8ff;
+    }
+    .partner-card.admitad-main .partner-goal {
+      color: #e0e7ff;
+    }
+    .partner-card.admitad-main .partner-goal span {
+      color: #ffffff;
+    }
+    .partner-card.admitad-main .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .partner-card.admitad-main .btn-chip.primary {
+      background: #f9fafb;
+      color: #4b3acb;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.9);
+    }
+    .partner-card.admitad-main .btn-chip.primary:hover {
+      background: #e5e7ff;
+    }
+    .partner-card.admitad-main .btn-chip.secondary {
+      background: rgba(15, 23, 42, 0.3);
+      border: 1px solid rgba(248, 250, 252, 0.6);
+      color: #f9fafb;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.9);
+    }
+
     .partner-pill {
       font-size: 11px;
       padding: 4px 8px;
@@ -510,13 +564,6 @@
       <a href="/blog.html">Blog</a>
       <a href="/resources.html">Resources</a>
       <a href="/contact.html">Contact</a>
-      <!-- BUTONI I RI I ADMITAD -->
-      <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn-chip alt">
-        <span>Login Admitad</span><span>↗</span>
-      </a>
     </nav>
   </div>
 </header>
@@ -589,6 +636,43 @@
       </div>
 
       <div class="partners-grid">
+
+        <!-- ADMITAD – PARTNERI KRYESOR, KARTELË E MADHE -->
+        <article class="partner-card admitad-main">
+          <div>
+            <div class="partner-pill">
+              ★ Primary Partner · Admitad Network
+            </div>
+            <div class="partner-name">Admitad Partner Network</div>
+            <div class="partner-meta">
+              Vertical: Affiliate Network · Global programs · Performance tracking
+            </div>
+            <p class="partner-text">
+              AdDev Studio uses <b>Admitad</b> as its main affiliate network partner.
+              From one dashboard you can join programs like AliExpress, Alibaba, British Council,
+              ItaliaRail, LunaProxy and many more – track clicks, conversions and payouts.
+            </p>
+            <p class="partner-goal">
+              Goal: <span>Centralize all your affiliate offers, logins and reporting in one place.</span>
+            </p>
+          </div>
+          <div class="partner-footer">
+            <span style="font-size:11px;color:#e5e7ff;">Primary partner • Publisher hub</span>
+            <div class="btn-row">
+              <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn-chip primary">
+                <span>Sign up on Admitad</span><span>↗</span>
+              </a>
+              <a href="https://www.admitad.com/affiliate-publishers/?ref=kaw95ey05k"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn-chip secondary">
+                <span>Login to Admitad</span><span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
         <!-- AliExpress -->
         <article class="partner-card">
           <div>
