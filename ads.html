@@ -1,119 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auto Ads - Addev Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reklamat Automatike</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f3f3f3;
-            padding: 20px;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
 
-        .ad-card {
-            background: white;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        }
+    h1 {
+        margin-bottom: 25px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #222;
+    }
 
-        .ad-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
+    .ad-container {
+        max-width: 500px;
+        margin: 20px auto;
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        text-align: left;
+    }
 
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+    .ad-image {
+        width: 100%;
+        border-radius: 10px;
+    }
 
-        .price {
-            color: green;
-            font-size: 17px;
-            font-weight: bold;
-        }
+    .ad-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
 
-        .share-btns {
-            margin-top: 10px;
-            display: flex;
-            gap: 10px;
-        }
+    .ad-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 10px;
+    }
 
-        .share-btns button {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    .share-buttons {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
 
-        .fb { background: #1877f2; }
-        .wa { background: #25d366; }
-        .tw { background: #1da1f2; }
-    </style>
+    .share-buttons a {
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    #loading {
+        font-size: 18px;
+        color: #555;
+    }
+</style>
+
 </head>
-
 <body>
 
-    <h2>Reklamat automatike</h2>
-    <div id="ads"></div>
+<h1>Reklamat automatike</h1>
 
-    <script>
-        async function loadAds() {
-            try {
-                const res = await fetch("https://addev-studio-com.vercel.app/api/feed");
-                const data = await res.json();
+<div id="loading">Duke u ngarkuar reklamat...</div>
+<div id="ads"></div>
 
-                const container = document.getElementById("ads");
-                container.innerHTML = "";
+<script>
+// Merr reklamat nga feed.js
+fetch("/api/feed")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("loading").style.display = "none";
 
-                data.forEach(ad => {
-                    const html = `
-                    <div class="ad-card">
-                        <img src="${ad.image}" alt="">
-                        <div class="title">${ad.title}</div>
-                        <div class="price">${ad.price}</div>
-                        <a href="${ad.link}" target="_blank">
-                            <button style="width:100%;margin-top:10px;background:#ff6600;color:white;padding:10px;border:none;border-radius:8px;font-weight:bold;">
-                                Shiko Ofertën
-                            </button>
-                        </a>
+    const adsBox = document.getElementById("ads");
 
-                        <div class="share-btns">
-                            <button class="fb" onclick="shareFB('${ad.link}')">Facebook</button>
-                            <button class="wa" onclick="shareWA('${ad.link}')">WhatsApp</button>
-                            <button class="tw" onclick="shareTW('${ad.link}')">Twitter</button>
-                        </div>
-                    </div>`;
-                    
-                    container.innerHTML += html;
-                });
+    data.ads.forEach(ad => {
+      adsBox.innerHTML += `
+        <div class="ad-container">
+          <img src="${ad.image}" class="ad-image" alt="Reklama">
 
-            } catch (e) {
-                console.log("Error loading ads:", e);
-            }
-        }
+          <div class="ad-title">${ad.title}</div>
 
-        function shareFB(url) {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`);
-        }
+          <a href="${ad.url}" class="ad-btn" target="_blank">Hap reklamën</a>
 
-        function shareWA(url) {
-            window.open(`https://wa.me/?text=${encodeURIComponent(url)}`);
-        }
-
-        function shareTW(url) {
-            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`);
-        }
-
-        loadAds();
-    </script>
+          <div class="share-buttons">
+            <a href="https://facebook.com/sharer/sharer.php?u=${encodeURIComponent(ad.url)}" target="_blank">📘</a>
+            <a href="https://t.me/share/url?url=${encodeURIComponent(ad.url)}" target="_blank">📨</a>
+            <a href="https://x.com/share?url=${encodeURIComponent(ad.url)}" target="_blank">✖️</a>
+          </div>
+        </div>
+      `;
+    });
+  })
+  .catch(err => {
+    document.getElementById("loading").innerText = "Error duke marrë reklamat!";
+  });
+</script>
 
 </body>
 </html>
