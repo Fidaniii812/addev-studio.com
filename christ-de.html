@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>CHRIST Jewelry – Luxury Watches & Rings</title>
@@ -11,9 +11,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* HERO SECTION */
 .hero-christ {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338');
+  url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338');
   background-size: cover;
   background-position: center;
   color: white;
@@ -37,6 +38,7 @@ body {
   line-height: 1.6;
 }
 
+/* BUTTON */
 .cta-button {
   display: inline-block;
   padding: 15px 30px;
@@ -51,12 +53,27 @@ body {
 .cta-button:hover {
   background-color: #b8901f;
 }
-</style>
 
+/* GENERAL SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.light-bg {
+  background: #f8f8f8;
+}
+
+.dark-bg {
+  background: #111;
+  color: white;
+}
+</style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero-christ">
   <div class="hero-content">
     <h1>Luxury Jewelry & Watches – Timeless German Craftsmanship</h1>
@@ -69,29 +86,43 @@ body {
     </a>
   </div>
 </section>
-  <section class="christ-info">
-  <div style="padding:40px; text-align:center;">
-    <h2>About CHRIST</h2>
-    <p>
-      CHRIST is one of Germany’s leading luxury jewelry and watch retailers,
-      offering premium brands, timeless elegance, and trusted craftsmanship
-      for over 150 years.
-    </p>
-  </div>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About CHRIST</h2>
+  <p>
+    CHRIST is one of Germany’s leading luxury jewelry and watch retailers,
+    offering premium brands, timeless elegance, and trusted craftsmanship
+    for over 150 years.
+  </p>
 </section>
-  <section style="background:#f8f8f8; padding:40px; text-align:center;">
+
+<!-- WHY CHOOSE -->
+<section class="section light-bg">
   <h2>Why Choose CHRIST?</h2>
   <p>✔ 150+ Years of Heritage</p>
   <p>✔ Premium German Craftsmanship</p>
   <p>✔ Exclusive Luxury Brands</p>
   <p>✔ Trusted Across Germany</p>
 </section>
-  <section style="padding:40px; text-align:center;">
+
+<!-- CATEGORIES -->
+<section class="section">
   <h2>Popular Categories</h2>
   <p>💍 Engagement Rings</p>
   <p>⌚ Luxury Watches</p>
   <p>📿 Elegant Necklaces</p>
   <p>🎁 Gift Collections</p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section dark-bg">
+  <h2>Ready to Discover Timeless Luxury?</h2>
+  <p>Explore CHRIST’s exclusive collections and premium craftsmanship today.</p>
+  <br>
+  <a href="#" class="cta-button" target="_blank">
+    Shop Now at CHRIST
+  </a>
 </section>
 
 </body>
