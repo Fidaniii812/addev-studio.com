@@ -7,87 +7,154 @@
 
 <style>
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f4f6f9;
-    text-align:center;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f6f9;
+  color:#222;
 }
 
 header{
-    padding:60px 20px;
-    background:#0f172a;
-    color:white;
+  background:#0f172a;
+  color:white;
+  padding:40px 20px;
+  text-align:center;
 }
 
 header h1{
-    font-size:38px;
-    margin-bottom:10px;
+  margin:0;
+  font-size:32px;
 }
 
 header p{
-    font-size:18px;
-    opacity:0.9;
+  opacity:0.8;
+  margin-top:10px;
 }
 
-.card-section{
-    padding:80px 20px;
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
 }
 
 .card{
-    background:white;
-    max-width:500px;
-    margin:auto;
-    padding:40px 30px;
-    border-radius:10px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  margin-bottom:40px;
 }
 
 .card h2{
-    margin-bottom:15px;
-}
-
-.card p{
-    font-size:17px;
-    margin-bottom:25px;
+  margin-bottom:15px;
 }
 
 .button{
-    display:inline-block;
-    padding:15px 30px;
-    background:#22c55e;
-    color:black;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:6px;
-    transition:0.3s;
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#22c55e;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+  transition:0.3s;
 }
 
 .button:hover{
-    background:#16a34a;
+  background:#16a34a;
+}
+
+.products{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.product-box{
+  background:white;
+  padding:25px;
+  width:260px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+  font-size:14px;
+  opacity:0.8;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
-<h1>AdDev Studio</h1>
-<p>Supporting Mental Clarity & Daily Focus</p>
+  <h1>AdDev Studio</h1>
+  <p>Supporting Mental Clarity & Daily Focus</p>
 </header>
 
-<section class="card-section">
-<div class="card">
-<h2>Struggling With Brain Fog?</h2>
-<p>
-Discover a natural brain-support formula designed to help improve focus,
-memory clarity and daily productivity.
-</p>
+<section>
+  <div class="container">
+    <div class="card">
+      <h2>Struggling With Brain Fog?</h2>
+      <p>
+        Discover a natural brain-support formula designed to help improve
+        focus, memory clarity and daily productivity.
+      </p>
 
-<a href="synaptigen-review.html" class="button">
-Learn More →
-</a>
-</div>
+      <a href="http://synaptigen24.com/text.php#aff=Addev-studiocom" 
+         target="_blank" 
+         class="button">
+         Learn More About Synaptigen →
+      </a>
+    </div>
+  </div>
 </section>
+
+<section style="background:#eef2f7;">
+  <div class="container">
+
+    <h2 style="margin-bottom:40px;">🔥 Top Performance Essentials</h2>
+
+    <div class="products">
+
+      <div class="product-box">
+        <h3>🧠 Synaptigen</h3>
+        <p>Support memory, focus & mental clarity naturally.</p>
+        <a href="http://synaptigen24.com/text.php#aff=Addev-studiocom"
+           target="_blank"
+           class="button">
+           Learn More →
+        </a>
+      </div>
+
+      <div class="product-box">
+        <h3>😴 Deep Sleep Support</h3>
+        <p>Better sleep = sharper mind & improved daily performance.</p>
+        <a href="#"
+           class="button"
+           style="background:#0f172a;">
+           Coming Soon
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  This website is not the official product site.  
+  Results may vary. Always consult a healthcare professional.
+</footer>
 
 </body>
 </html>
