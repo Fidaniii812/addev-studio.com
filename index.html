@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +13,32 @@ crossorigin="anonymous"></script>
 <style>
 
 body{
-font-family: Arial;
+font-family:Arial;
 background:#f4f6f8;
 margin:0;
-padding:0;
-text-align:center;
+}
+
+nav{
+background:#0b2c3d;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
 }
 
 header{
 background:#0b2c3d;
 color:white;
-padding:40px 20px;
-}
-
-header h1{
-margin:0;
+padding:40px;
+text-align:center;
 }
 
 .container{
@@ -43,10 +53,7 @@ padding:25px;
 margin:20px 0;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.card h2{
-margin-top:0;
+text-align:center;
 }
 
 button{
@@ -66,6 +73,7 @@ background:#27ae60;
 footer{
 background:#0b2c3d;
 color:white;
+text-align:center;
 padding:25px;
 margin-top:40px;
 }
@@ -75,6 +83,20 @@ margin-top:40px;
 </head>
 
 <body>
+
+<nav>
+
+<div><b>AdDev Studio</b></div>
+
+<div>
+<a href="/">Home</a>
+<a href="#">AI Tools</a>
+<a href="#">Blog</a>
+<a href="#">Contact</a>
+</div>
+
+</nav>
+
 
 <header>
 
@@ -87,8 +109,6 @@ margin-top:40px;
 
 <div class="container">
 
-
-<!-- NOTTA AI -->
 
 <div class="card">
 
@@ -105,8 +125,6 @@ margin-top:40px;
 </div>
 
 
-<!-- SIDER AI -->
-
 <div class="card">
 
 <h2>Sider AI</h2>
@@ -121,8 +139,6 @@ margin-top:40px;
 
 </div>
 
-
-<!-- GLOBAL ESIM -->
 
 <div class="card">
 
@@ -139,8 +155,6 @@ margin-top:40px;
 </div>
 
 
-<!-- PICTORY -->
-
 <div class="card">
 
 <h2>Pictory AI</h2>
@@ -155,8 +169,6 @@ margin-top:40px;
 
 </div>
 
-
-<!-- FACELESS YOUTUBE -->
 
 <div class="card">
 
@@ -182,6 +194,6 @@ margin-top:40px;
 
 </footer>
 
-</body>
 
+</body>
 </html>
