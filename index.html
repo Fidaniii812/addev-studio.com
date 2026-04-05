@@ -1,108 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AdDev Studio</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#020617,#0f172a);
-  color: white;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 20px;
-  color: #22c55e;
-}
-
-.hero {
-  text-align: center;
-  padding: 80px 20px 40px;
-}
-
-.hero h1 {
-  font-size: 36px;
-}
-
-.hero span {
-  color: #22c55e;
-}
-
-.hero p {
-  opacity: 0.7;
-}
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  max-width: 500px;
-  margin: auto;
-}
-
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 25px;
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #22c55e;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdDev Studio | AI Solutions Hub</title>
+    <link rel="stylesheet" href="style-unique.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        .tool-card {
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: #4CAF50;
+        }
+        .tool-card h3 { color: #4CAF50; margin-bottom: 15px; }
+        .tool-card p { font-size: 0.9rem; color: #ccc; margin-bottom: 20px; }
+    </style>
 </head>
-
 <body>
 
-<nav>
-  <div class="logo">AdDev</div>
-</nav>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">ADDEV <span>STUDIO</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="#tools" class="nav-link">AI Tools</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<div class="hero">
-  <h1>Discover the Best <span>AI Tools</span></h1>
-  <p>Simple tools that save time and make money online</p>
-</div>
+    <main>
+        <section class="hero-section">
+            <div class="header-container">
+                <h1 class="hero-title">Unlock Your Potential <br> with <span style="color: #4CAF50;">Pro AI Tools</span></h1>
+                <p class="hero-subtitle">Hand-picked Artificial Intelligence solutions to streamline your workflow and boost creativity. All in one place.</p>
+            </div>
+        </section>
 
-<div class="cards">
+        <section id="tools" style="padding: 4rem 0;">
+            <div class="header-container">
+                <h2 style="text-align: center;">Featured AI Partners</h2>
+                <div class="tool-grid">
+                    
+                    <div class="tool-card">
+                        <h3>Notta AI</h3>
+                        <p>Best-in-class AI transcription service for meetings, interviews, and audio files.</p>
+                        <a href="https://www.notta.ai/en?fpr=fidan70" class="btn" style="width: 100%; text-align: center;">Get Started</a>
+                    </div>
 
-  <div class="card">
-    <h2>🤖 AI Tools</h2>
-    <p>Boost productivity with AI</p>
-    <a href="ai-tools.html">Explore</a>
-  </div>
+                    <div class="tool-card">
+                        <h3>Pictory AI</h3>
+                        <p>Automatically create short, highly-sharable branded videos from your long-form content.</p>
+                        <a href="https://pictory.ai?ref=fidan33" class="btn" style="width: 100%; text-align: center;">Try for Free</a>
+                    </div>
 
-  <div class="card">
-    <h2>👕 Fashion Deals</h2>
-    <p>Coming soon</p>
-    <a href="#">Soon</a>
-  </div>
+                    <div class="tool-card">
+                        <h3>Sider AI</h3>
+                        <p>Your ultimate AI sidebar for ChatGPT, Claude, and Gemini while browsing.</p>
+                        <a href="https://sider.ai/invited?c=6d0f5298a092c73365851480f745e7f6" class="btn" style="width: 100%; text-align: center;">Install Extension</a>
+                    </div>
 
-  <div class="card">
-    <h2>📱 Tech Deals</h2>
-    <p>Coming soon</p>
-    <a href="#">Soon</a>
-  </div>
+                    <div class="tool-card">
+                        <h3>Global YO</h3>
+                        <p>Smart connectivity and entertainment solutions for global travelers.</p>
+                        <a href="https://www.globalyo.com/?gyref=GY4R3X" class="btn" style="width: 100%; text-align: center;">Explore Global YO</a>
+                    </div>
 
-</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">ADDEV <span>STUDIO</span></div>
+            <p class="copyright-text">&copy; 2024 AdDev Studio. International AI Hub based in Germany.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
