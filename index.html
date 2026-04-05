@@ -3,209 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AdDev Studio | AI Tools & Online Income</title>
+<title>AdDev Studio</title>
 
 <style>
-
-/* RESET */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fa;
+  background: linear-gradient(135deg,#020617,#0f172a);
+  color: white;
 }
 
-/* NAVBAR PREMIUM */
-.navbar {
+nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: #0b2c3d;
-  padding: 15px 25px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 20px 30px;
 }
 
 .logo {
-  color: #fff;
-  font-size: 20px;
   font-weight: bold;
+  font-size: 20px;
+  color: #22c55e;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #00ff99;
-}
-
-/* MOBILE MENU */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #0b2c3d;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
-/* HEADER */
-header {
-  background: #0b2c3d;
-  color: white;
+.hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 80px 20px 40px;
 }
 
-/* CONTENT */
-.container {
-  max-width: 900px;
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero span {
+  color: #22c55e;
+}
+
+.hero p {
+  opacity: 0.7;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 500px;
   margin: auto;
-  padding: 30px;
 }
 
 .card {
-  background: white;
+  background: rgba(255,255,255,0.05);
   padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  text-align: center;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
 }
 
-button {
-  background: #2ecc71;
-  border: none;
-  padding: 12px 25px;
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #22c55e;
   color: white;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
 }
-
-button:hover {
-  background: #27ae60;
-}
-
-/* FOOTER */
-footer {
-  background: #0b2c3d;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
 </style>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">AdDev Studio</div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <ul class="nav-links" id="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="#">Tools</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
+<nav>
+  <div class="logo">AdDev</div>
 </nav>
 
-<!-- HEADER -->
-<header>
-  <h1>AdDev Studio</h1>
-  <p>The Ultimate Hub for AI Tools & Online Income</p>
-</header>
+<div class="hero">
+  <h1>Discover the Best <span>AI Tools</span></h1>
+  <p>Simple tools that save time and make money online</p>
+</div>
 
-<!-- CONTENT -->
-<div class="container">
+<div class="cards">
 
   <div class="card">
-    <h2>Notta AI</h2>
-    <p>AI transcription and subtitle generator.</p>
-    <a href="https://yepetp.com/g/7gbdp8tygu47bcc10bc5f50bb56640/" target="_blank">
-      <button>Start Free with Notta AI</button>
-    </a>
+    <h2>🤖 AI Tools</h2>
+    <p>Boost productivity with AI</p>
+    <a href="ai-tools.html">Explore</a>
   </div>
 
   <div class="card">
-    <h2>Sider AI</h2>
-    <p>All-in-one AI assistant for productivity.</p>
-    <a href="https://ytebb.com/g/n1cpvof3rn47bcc10bc51173005d71/" target="_blank">
-      <button>Try Sider AI</button>
-    </a>
+    <h2>👕 Fashion Deals</h2>
+    <p>Coming soon</p>
+    <a href="#">Soon</a>
   </div>
 
   <div class="card">
-    <h2>Global YO eSIM</h2>
-    <p>Fast internet in 190+ countries.</p>
-    <a href="https://zmigc.com/g/hpyhrzofyp47bcc10bc57801e98dae/" target="_blank">
-      <button>Get Global eSIM</button>
-    </a>
-  </div>
-
-  <div class="card">
-    <h2>Pictory AI</h2>
-    <p>Create viral AI videos automatically.</p>
-    <a href="https://pictory.ai/?ref=fidan50" target="_blank">
-      <button>Create AI Videos</button>
-    </a>
-  </div>
-
-  <div class="card">
-    <h2>Faceless YouTube</h2>
-    <p>Build automated YouTube channels.</p>
-    <a href="https://www.checkout-ds24.com/redir/603007/Addev-studiocom/" target="_blank">
-      <button>Start Now</button>
-    </a>
+    <h2>📱 Tech Deals</h2>
+    <p>Coming soon</p>
+    <a href="#">Soon</a>
   </div>
 
 </div>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 AdDev Studio
-</footer>
-
-<!-- JS -->
-<script>
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
