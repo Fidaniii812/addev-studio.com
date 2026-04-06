@@ -1,35 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AdDev Studio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #020617, #020617);
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #020617;
+  border-bottom: 1px solid #0f172a;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #22c55e;
+}
+
+/* HERO */
+.container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+p {
+  color: #94a3b8;
+}
+
+/* CARDS */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 15px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* BUTTON */
+button {
+  background: #22c55e;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #16a34a;
+}
+</style>
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav style="display:flex;justify-content:space-between;padding:15px;background:#020617;color:white;">
+<nav>
   <div><b>AdDev Studio</b></div>
   <div>
-    <a href="index.html" style="color:white;margin-right:15px;">Home</a>
-    <a href="tools.html" style="color:white;margin-right:15px;">Tools</a>
-    <a href="money.html" style="color:white;">Make Money</a>
+    <a href="index.html">Home</a>
+    <a href="tools.html">Tools</a>
+    <a href="money.html">Make Money</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="container">
-  <h1>Best Tools & Online Deals</h1>
-  <p>Simple tools and ways to make money online</p>
+  <h1>Best Tools & Online Deals 🚀</h1>
+  <p>Discover simple tools and real ways to make money online</p>
 
-  <div class="card">
-    <h2>Free AI Tools</h2>
-    <p>Boost your productivity</p>
-    <a href="tools.html"><button>Explore Tools</button></a>
+  <div class="grid">
+
+    <!-- TOOLS -->
+    <div class="card">
+      <h2>Free AI Tools</h2>
+      <p>Boost productivity with powerful AI tools</p>
+      <a href="tools.html">
+        <button>Explore Tools</button>
+      </a>
+    </div>
+
+    <!-- MONEY -->
+    <div class="card">
+      <h2>Make Money Online</h2>
+      <p>Start earning online step by step</p>
+      <a href="money.html">
+        <button>Start Now</button>
+      </a>
+    </div>
+
   </div>
+</div>
 
-  <div class="card">
-    <h2>Make Money Online</h2>
-    <p>Learn how to earn online</p>
-    <a href="money.html"><button>Start Now</button></a>
+<!-- FEATURED LINKS -->
+<div class="container">
+  <h2>🔥 Featured Tools</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Notta AI</h3>
+      <p>Convert audio to text instantly</p>
+      <a href="https://ypetp.com/g/7gbdp8tygu47bcc10bc5f50bb56640/" target="_blank">
+        <button>Try Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Sider AI</h3>
+      <p>Your AI assistant while browsing</p>
+      <a href="https://ytebb.com/g/n1cpv0f3rn47bcc10bc51173005d71/" target="_blank">
+        <button>Try Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Global Yo</h3>
+      <p>Mobile deals worldwide</p>
+      <a href="https://zmgig.com/g/hphyrzofyp47bcc10bc57801e98dae/" target="_blank">
+        <button>Check Offer</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Faceless YouTube</h3>
+      <p>Make money without showing your face</p>
+      <a href="https://www.checkout-ds24.com/redir/603007/Addev-studiocom/" target="_blank">
+        <button>Learn More</button>
+      </a>
+    </div>
+
   </div>
 </div>
 
