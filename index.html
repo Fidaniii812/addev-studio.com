@@ -1,171 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AdDev Studio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Slowmind Deals</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #020617, #020617);
-  color: white;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
 }
 
 /* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  background: #020617;
-  border-bottom: 1px solid #0f172a;
+
+.navbar{
+    width:100%;
+    padding:18px 25px;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-nav a {
-  color: white;
-  margin-left: 15px;
-  text-decoration: none;
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#38bdf8;
 }
 
-nav a:hover {
-  color: #22c55e;
+.nav-links{
+    display:flex;
+    gap:18px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    font-size:15px;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
 }
 
 /* HERO */
-.container {
-  padding: 60px 20px;
-  text-align: center;
+
+.hero{
+    text-align:center;
+    padding:70px 20px 40px;
 }
 
-h1 {
-  font-size: 34px;
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
 }
 
-p {
-  color: #94a3b8;
+.hero p{
+    color:#cbd5e1;
+    font-size:18px;
 }
 
 /* CARDS */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:20px 0 60px;
 }
 
-.card {
-  background: #0f172a;
-  padding: 25px;
-  border-radius: 15px;
-  margin: 15px;
-  max-width: 320px;
-  width: 100%;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  transition: 0.3s;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:20px;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* BUTTON */
-button {
-  background: #22c55e;
-  border: none;
-  padding: 12px 20px;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 10px;
-  font-weight: bold;
+.card:hover{
+    transform:translateY(-6px);
+    background:#334155;
 }
 
-button:hover {
-  background: #16a34a;
+.card h2{
+    margin-bottom:12px;
+    font-size:22px;
 }
+
+.card p{
+    color:#cbd5e1;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
 </style>
-
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav>
-  <div><b>AdDev Studio</b></div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="tools.html">Tools</a>
-    <a href="money.html">Make Money</a>
-  </div>
-</nav>
 
-<!-- HERO -->
-<div class="container">
-  <h1>Best Tools & Online Deals 🚀</h1>
-  <p>Discover simple tools and real ways to make money online</p>
+<div class="navbar">
+    <div class="logo">Slowmind</div>
 
-  <div class="grid">
-
-    <!-- TOOLS -->
-    <div class="card">
-      <h2>Free AI Tools</h2>
-      <p>Boost productivity with powerful AI tools</p>
-      <a href="tools.html">
-        <button>Explore Tools</button>
-      </a>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Deals</a>
+        <a href="#">Travel</a>
+        <a href="#">Shop</a>
     </div>
-
-    <!-- MONEY -->
-    <div class="card">
-      <h2>Make Money Online</h2>
-      <p>Start earning online step by step</p>
-      <a href="money.html">
-        <button>Start Now</button>
-      </a>
-    </div>
-
-  </div>
 </div>
 
-<!-- FEATURED LINKS -->
+<!-- HERO -->
+
+<section class="hero">
+    <h1>Top Online Deals 🔥</h1>
+    <p>Curated affiliate offers & trending online shopping links.</p>
+</section>
+
+<!-- CARDS -->
+
 <div class="container">
-  <h2>🔥 Featured Tools</h2>
 
-  <div class="grid">
+<div class="cards">
 
-    <div class="card">
-      <h3>Notta AI</h3>
-      <p>Convert audio to text instantly</p>
-      <a href="https://ypetp.com/g/7gbdp8tygu47bcc10bc5f50bb56640/" target="_blank">
-        <button>Try Now</button>
-      </a>
-    </div>
+    <!-- PIXAMANIA -->
 
     <div class="card">
-      <h3>Sider AI</h3>
-      <p>Your AI assistant while browsing</p>
-      <a href="https://ytebb.com/g/n1cpv0f3rn47bcc10bc51173005d71/" target="_blank">
-        <button>Try Now</button>
-      </a>
+        <h2>PixamaniaDE</h2>
+        <p>Discover trending products and online offers.</p>
+
+        <a class="btn"
+        href="https://tatrck.com/h/0Hu30--d0OTC?model=cpa"
+        target="_blank">
+        Visit Offer
+        </a>
     </div>
+
+    <!-- FASTWEB -->
 
     <div class="card">
-      <h3>Global Yo</h3>
-      <p>Mobile deals worldwide</p>
-      <a href="https://zmgig.com/g/hphyrzofyp47bcc10bc57801e98dae/" target="_blank">
-        <button>Check Offer</button>
-      </a>
+        <h2>FastwebIT</h2>
+        <p>Explore digital services and special online deals.</p>
+
+        <a class="btn"
+        href="https://tatrck.com/h/0Hu30--d0OhN?model=cpa"
+        target="_blank">
+        Explore
+        </a>
     </div>
+
+    <!-- CROC -->
 
     <div class="card">
-      <h3>Faceless YouTube</h3>
-      <p>Make money without showing your face</p>
-      <a href="https://www.checkout-ds24.com/redir/603007/Addev-studiocom/" target="_blank">
-        <button>Learn More</button>
-      </a>
+        <h2>CrocDe</h2>
+        <p>Fashion & lifestyle products with great prices.</p>
+
+        <a class="btn"
+        href="https://tatrck.com/h/0Hu30--d0P1g?model=cpa"
+        target="_blank">
+        Shop Now
+        </a>
     </div>
 
-  </div>
+    <!-- AUTOEUROPE -->
+
+    <div class="card">
+        <h2>AutoeuropeDe</h2>
+        <p>Travel and car rental offers across Europe.</p>
+
+        <a class="btn"
+        href="https://tatrck.com/h/0Hu30--d0PWd?model=cpa"
+        target="_blank">
+        Book Now
+        </a>
+    </div>
+
+    <!-- ALIEXPRESS -->
+
+    <div class="card">
+        <h2>AliExpress</h2>
+        <p>Trending products, gadgets and cheap online deals.</p>
+
+        <a class="btn"
+        href="https://rzekl.com/g/1e8d11449447bcc10bc516525dc3e8/"
+        target="_blank">
+        Open Store
+        </a>
+    </div>
+
+    <!-- DIAMONDORO -->
+
+    <div class="card">
+        <h2>Diamondoro Rings</h2>
+        <p>Elegant jewelry & premium rings collection.</p>
+
+        <a class="btn"
+        href="https://tc.tradetracker.net/?c=17128&m=12&a=506264&r=&u=%2Fringe"
+        target="_blank">
+        View Collection
+        </a>
+    </div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+    © 2026 Slowmind • Affiliate Deals & Shopping Links
 </div>
 
 </body>
